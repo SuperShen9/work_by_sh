@@ -15,6 +15,7 @@ for row in range(2, ws.max_row + 1):
     list1.append(ws['A' + str(row)].value)
     # list2.append(ws['B' + str(row)].value)
 for row1 in range(2,sheet1.max_row+1):
+    # if sheet1['C' + str(row1)].value !=None:
     sheet1['D' + str(row1)]=sheet1['C' + str(row1)].value.replace(' ','')
     for i in range(1,len(sheet1['D' + str(row1)].value)):
         if sheet1['D' + str(row1)].value[i:i+2] in list1:
@@ -37,23 +38,22 @@ f_sheet['D1']='Flag'
 key_dup={}
 key_lob={}
 for row2 in range(2,sheet2.max_row+1):
-    if sheet2['A' + str(row2)].value != None \
-        and sheet2['B' + str(row2)].value != None \
-        and sheet2['C' + str(row2)].value != None \
-        and sheet2['D' + str(row2)].value != None :
+    if sheet2['A' + str(row2)].value != None:
         key_o = sheet2['A' + str(row2)].value
         val_o = '与OPPT重复'
         key_dup.setdefault(key_o, val_o)
+    if sheet2['B' + str(row2)].value != None:
         key_l = sheet2['B' + str(row2)].value
         val_l = '与Leads重复'
         key_dup.setdefault(key_l, val_l)
+    if sheet2['C' + str(row2)].value != None:
         key_s = sheet2['C' + str(row2)].value
         val_s = '与SDR重复'
         key_dup.setdefault(key_s, val_s)
+    if sheet2['D' + str(row2)].value != None :
         key_b = sheet2['D' + str(row2)].value
         val_b = 'LOB数据'
         key_lob.setdefault(key_b, val_b)
-
 for row1 in range(2,sheet1.max_row+1):
     if sheet1['D' + str(row1)].value in key_dup.keys():
         sheet1['G' + str(row1)]=key_dup[sheet1['D' + str(row1)].value]
@@ -79,9 +79,7 @@ i1 = 2
 for row3 in range(2, sheet1.max_row + 1):
     if  sheet1['E' + str(row3)].value!= None \
         and sheet1['G' + str(row3)].value == None \
-        and sheet1['H' + str(row3)].value == None \
-        and sheet1['I' + str(row3)].value == None \
-        and sheet1['J' + str(row3)].value == None :
+        and sheet1['H' + str(row3)].value == None :
         k_3=sheet1['E' + str(row3)].value
         if len(k_3)==2 or len(k_3)==3:
             for ky3 in key_dup.keys():
@@ -95,7 +93,7 @@ for row3 in range(2, sheet1.max_row + 1):
                         sheet1['G' + str(row3)] = 'NON DUP'
 for row3 in range(2, sheet1.max_row + 1):
     if sheet1['E' + str(row3)].value != None \
-            and sheet1['I' + str(row3)].value == None \
+            and sheet1['I' + str(row3)].value == None\
             and sheet1['J' + str(row3)].value == None:
         k_4 = sheet1['E' + str(row3)].value
         if len(k_4) == 2 or len(k_4) == 3:
