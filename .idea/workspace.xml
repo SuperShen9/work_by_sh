@@ -1,57 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca588774-a6b4-4ec2-9580-1307895269be" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CN_DATA_Map.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Danny.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EN_DATA_Map.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/M_Text.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/N_Text.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TTT/M_Text.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TTT/N_Text.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TTT/TTT.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TTT/city.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TTT/hebing_excel.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TTT/hebing_new.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TTT/mapping.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TTT/randomquiz.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/8.1introduce.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/8.2zzsearch.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/Excel_TEXT.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/Z_TEXT.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz_answer1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz_answer2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz_answer3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz_answer4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz_answer5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz_answer6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz_answer7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/capitalquiz_answer8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/k_demo.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/k_login.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/k_reg.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/l_randomquiz.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ceshi/picture.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/kw_learning/reg.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reviews/8.1introduce.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reviews/8.2zzsearch.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reviews/Excel_L.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reviews/example.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reviews/homework7.2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reviews/homework7.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reviews/str_review.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="ca588774-a6b4-4ec2-9580-1307895269be" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +17,18 @@
     <favorites_list name="untitled2" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CIN_hb.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CIN_hb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -670,14 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CIN_hb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fankui_hb.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -690,6 +643,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CIN_hb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
