@@ -3,7 +3,7 @@ import os,openpyxl
 from openpyxl.cell import get_column_letter
 from openpyxl.styles import Font,Style
 os.chdir('D:\superflag')
-wbf = openpyxl.load_workbook('inbound_flag.xlsx')
+wbf = openpyxl.load_workbook('Inbound_flag.xlsx')
 sheetcity = wbf.get_sheet_by_name('Sheet1')
 hang1 = sheetcity.max_row + 1
 spam = {}
@@ -11,9 +11,9 @@ for row in range(2, hang1 + 1):
     flag = sheetcity['A' + str(row)].value
     number = sheetcity['B' + str(row)].value
     spam.setdefault(flag, number)
-os.chdir('D:\\zlianxi\inbound_hb')
+os.chdir('D:\\zlianxi\Inbound_hb')
 k1=0
-for foldername,subfolder,excels in os.walk('D:\\zlianxi\inbound_hb'):
+for foldername,subfolder,excels in os.walk('D:\\zlianxi\Inbound_hb'):
     baocun = openpyxl.Workbook()
     sheet = baocun.create_sheet(index=0, title='data')
     for excel in excels:

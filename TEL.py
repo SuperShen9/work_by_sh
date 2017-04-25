@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import os,openpyxl,re
-os.chdir('D:\zlianxi\z1super')
+os.chdir('D:\zlianxi\SAP_TEL_CLEAN')
 or_wb=openpyxl.load_workbook('tel.xlsx')
 sheet1=or_wb.get_sheet_by_name('Sheet1')
 post=or_wb.get_sheet_by_name('post')

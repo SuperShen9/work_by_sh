@@ -5,15 +5,15 @@ from openpyxl.styles import Font,Style
 os.chdir('D:\superflag')
 wbf = openpyxl.load_workbook('hehe.xlsx')
 sheetcity = wbf.get_sheet_by_name('Sheet1')
-hang1 = sheetcity.get_highest_row() + 1
+hang1 = sheetcity.max_row + 1
 spam = {}
 for row in range(2, hang1):
     flag = sheetcity['A' + str(row)].value
     number = sheetcity['B' + str(row)].value
     spam.setdefault(flag, number)
-os.chdir('D:\zzzzsuper')
+os.chdir('D:\zlianxi\Fankui_hb')
 k1=0
-for foldername,subfolder,excels in os.walk('D:\zzzzsuper'):
+for foldername,subfolder,excels in os.walk('D:\zlianxi\Fankui_hb'):
     baocun = openpyxl.Workbook()
     sheet = baocun.create_sheet(index=0, title='data')
     for excel in excels:
