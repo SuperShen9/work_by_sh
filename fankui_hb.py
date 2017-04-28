@@ -13,7 +13,8 @@ for row in range(2, hang1):
     spam.setdefault(flag, number)
 os.chdir('D:\zlianxi\Fankui_hb')
 k1=0
-for foldername,subfolder,excels in os.walk('D:\zlianxi\Fankui_hb'):
+filepath=unicode('D:\zlianxi\HLJ_project','utf-8')
+for foldername,subfolder,excels in os.walk(filepath):
     baocun = openpyxl.Workbook()
     sheet = baocun.create_sheet(index=0, title='data')
     for excel in excels:
