@@ -13,7 +13,7 @@ for row in range(2, hang1):
     spam.setdefault(flag, number)
 os.chdir('D:\zlianxi\Fankui_hb')
 k1=0
-filepath=unicode('D:\zlianxi\HLJ_project','utf-8')
+filepath=unicode('D:\zlianxi\Fankui_hb','utf-8')
 for foldername,subfolder,excels in os.walk(filepath):
     baocun = openpyxl.Workbook()
     sheet = baocun.create_sheet(index=0, title='data')
@@ -39,6 +39,28 @@ for foldername,subfolder,excels in os.walk(filepath):
         k1 += hang - 1
 sheet.freeze_panes='A2'
 baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
+from datetime import *
+time1=datetime.today()
+hang2 = sheet.max_row + 1
+for i in range(2,hang2):
+    sheet['Y'+str(i)]=str(time1.year)+'-'+str(time1.month)+'-'+str(time1.day)
+    sheet['AW' + str(i)] = str(time1.year) + '-' + str(time1.month) + '-' + str(time1.day)
+    if sheet['AI'+str(i)].value=='':
+        sheet['AS' + str(i)]='N'
+    else:
+        sheet['AS' + str(i)] = 'Y'
+    if sheet['AO'+str(i)].value=='':
+        sheet['AU' + str(i)]='N'
+    else:
+        sheet['AU' + str(i)] = 'Y'
+    if sheet['AV' + str(i)].value =='':
+        sheet['AT' + str(i)] = 'N'
+    else:
+        sheet['AT' + str(i)] = 'Y'
+    if sheet['R' + str(i)].value =='Hong Kong':
+        sheet['R' + str(i)] ='香港'
+        sheet['S' + str(i)]= '香港'
+
 baocun.save('baocun.xlsx')
 
 

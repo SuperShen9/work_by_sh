@@ -1,5 +1,19 @@
 # -*- coding: utf-8 -*-
-list1=['J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y',
-        'Z','AA','AB','AC','AD','AE','AF','AG','AH','AI','AJ','AK','AL']
-for y in list1:
-    print y
+import os,openpyxl,datetime
+from datetime import *
+os.chdir('D:\zlianxi\\text')
+wb = openpyxl.load_workbook('data.xlsx')
+sheet=wb.active
+time1=datetime.today()
+sheet['B2']=time1
+sheet['B3']=time1.year
+sheet['B4']=time1.month
+sheet['B5']=time1.day
+sheet['B6']=str(time1.year)+'-'+str(time1.month)+'-'+str(time1.day)
+
+
+
+
+
+
+wb.save('data.xlsx')
