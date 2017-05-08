@@ -10,10 +10,4 @@ sheet['B3']=time1.year
 sheet['B4']=time1.month
 sheet['B5']=time1.day
 sheet['B6']=str(time1.year)+'-'+str(time1.month)+'-'+str(time1.day)
-
-
-
-
-
-
 wb.save('data.xlsx')

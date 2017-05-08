@@ -40,11 +40,11 @@ key_lob={}
 for row2 in range(2,sheet2.max_row+1):
     if sheet2['A' + str(row2)].value != None:
         key_o = sheet2['A' + str(row2)].value
-        val_o = '与OPPT重复'
+        val_o = '与leads重复'
         key_dup.setdefault(key_o, val_o)
     if sheet2['B' + str(row2)].value != None:
         key_l = sheet2['B' + str(row2)].value
-        val_l = '与Leads重复'
+        val_l = '与OPPT重复'
         key_dup.setdefault(key_l, val_l)
     if sheet2['C' + str(row2)].value != None:
         key_s = sheet2['C' + str(row2)].value
