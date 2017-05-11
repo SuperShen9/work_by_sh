@@ -39,9 +39,9 @@ for row in range(2,hang1):
         sheet3['B' + str(j)] = sheet2['B' + str(row)].value
         sheet3['C' + str(j)] = dod.encode('utf-8').strip()
         j+=1
-hang3 = sheet3.max_row + 1
-list1=['D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X']
 
+hang3 = sheet3.max_row + 1
+list1=['E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X']
 for row in range(2,hang3):
     if sheet3['C' + str(row)].value != '':
         dodata2 = sheet3['C' + str(row)].value.replace('联系人:','') \
@@ -57,11 +57,25 @@ for row in range(2,hang3):
         sheet3['A' + str(row)] = ''
         sheet3['B' + str(row)] = ''
 
+jj=2
+for row in range(2,hang1):
+    dodata1 = sheet2['C' + str(row)].value.strip().split('|')
+    for dod1 in dodata1:
+        d=list(dodata1)
+        d.remove(dod1)
+        sheet3['D'+ str(jj)]='\n\n'.join(d)
+        jj+=1
+
+for row in range(2,hang3):
+    if sheet3['C' + str(row)].value == '':
+        sheet3['D' + str(row)] = ''
+
 sheet3.freeze_panes = 'A2'
 sheet3['A1']='ID'
 sheet3['B1']='工程名称'
 sheet3['C1']='业主 / 开发商'
-sheet3['D1']='分列start'
+sheet3['D1']='备注'
+sheet3['E1']='分列start'
 
 sheet2.freeze_panes = 'A2'
 sheet2['A1']='ID'
