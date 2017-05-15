@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="9866a502-aed4-4726-b917-b86c033e5740" name="Default" comment="" />
+=======
+    <list default="true" id="ca588774-a6b4-4ec2-9580-1307895269be" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TEXT.py" afterPath="$PROJECT_DIR$/TEXT.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linda_cf.py" afterPath="$PROJECT_DIR$/linda_cf.py" />
+    </list>
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,6 +17,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="untitled" />
@@ -21,6 +30,26 @@
             <state relative-caret-position="289">
               <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="19" selection-end-column="0" />
               <folding />
+=======
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="untitled2" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="linda_cf.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/linda_cf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+              <folding>
+                <element signature="e#232#327#0" expanded="false" />
+                <element signature="e#423#518#0" expanded="false" />
+              </folding>
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
             </state>
           </provider>
         </entry>
@@ -34,15 +63,73 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>file</find>
+      <find>get_highest_column</find>
+      <find>get_highest_row()</find>
+      <find>inboun</find>
+    </findStrings>
+  </component>
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/EN_jianhua.py" />
         <option value="$PROJECT_DIR$/hheh1.py" />
         <option value="$PROJECT_DIR$/TEXT.py" />
+=======
+        <option value="$USER_HOME$/Desktop/demo.py" />
+        <option value="$PROJECT_DIR$/youdao.py" />
+        <option value="$USER_HOME$/hello.py" />
+        <option value="$PROJECT_DIR$/demo.py" />
+        <option value="$PROJECT_DIR$/login.py" />
+        <option value="$PROJECT_DIR$/introduce.txt" />
+        <option value="$PROJECT_DIR$/introduce.py" />
+        <option value="$PROJECT_DIR$/intro_new.txt" />
+        <option value="$PROJECT_DIR$/hehe.py" />
+        <option value="$PROJECT_DIR$/randomquiz.py" />
+        <option value="$PROJECT_DIR$/8.2zzsearch.py" />
+        <option value="$PROJECT_DIR$/Z_TEXT.py" />
+        <option value="$PROJECT_DIR$/nihao.txt" />
+        <option value="$PROJECT_DIR$/nihao.py" />
+        <option value="$PROJECT_DIR$/Excel_TEXT.py" />
+        <option value="$PROJECT_DIR$/del.py" />
+        <option value="$PROJECT_DIR$/TTT0324.py" />
+        <option value="$PROJECT_DIR$/N_Text.py" />
+        <option value="$PROJECT_DIR$/hebing.py" />
+        <option value="$PROJECT_DIR$/Danny.py" />
+        <option value="$PROJECT_DIR$/super.py" />
+        <option value="$PROJECT_DIR$/picture.py" />
+        <option value="$PROJECT_DIR$/ceshi/inbound_hb.py" />
+        <option value="$PROJECT_DIR$/TTT.py" />
+        <option value="$PROJECT_DIR$/ceshi/CIN_hb.py" />
+        <option value="$PROJECT_DIR$/1111" />
+        <option value="$PROJECT_DIR$/CN_DATA_Map.py" />
+        <option value="$PROJECT_DIR$/EN_DATA_Map.py" />
+        <option value="$PROJECT_DIR$/ceshi/Mapping_plus.py" />
+        <option value="$PROJECT_DIR$/TEL.py" />
+        <option value="$PROJECT_DIR$/EN_jianhua.py" />
+        <option value="$PROJECT_DIR$/inbound_hb.py" />
+        <option value="$PROJECT_DIR$/M_Text.py" />
+        <option value="$PROJECT_DIR$/spacial_industry.py" />
+        <option value="$PROJECT_DIR$/Z TEXT.py" />
+        <option value="$PROJECT_DIR$/EN_fuzzy_yh.py" />
+        <option value="$PROJECT_DIR$/HLJ_project.py" />
+        <option value="$PROJECT_DIR$/CIN_hb.py" />
+        <option value="$PROJECT_DIR$/HLJ_hb.py" />
+        <option value="$PROJECT_DIR$/HLJ_htc.py" />
+        <option value="$PROJECT_DIR$/fankui_hb.py" />
+        <option value="$PROJECT_DIR$/TW_DATA_Map.py" />
+        <option value="$PROJECT_DIR$/TEXT.py" />
+        <option value="$PROJECT_DIR$/linda_cf.py" />
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
       </list>
     </option>
   </component>
@@ -52,7 +139,10 @@
     <option name="width" value="1456" />
     <option name="height" value="876" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -68,20 +158,34 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="Scratches" />
+      <pane id="Scope" />
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="untitled" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="untitled" />
+=======
+              <option name="myItemId" value="untitled2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled2" />
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
@@ -102,6 +206,87 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.TEXT">
+=======
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.linda_cf">
+    <configuration default="false" name="HLJ_hb" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="untitled" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HLJ_hb.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HLJ_htc" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="untitled" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HLJ_htc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TW_DATA_Map" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="untitled" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TW_DATA_Map.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="linda_cf" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="untitled" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/linda_cf.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
     <configuration default="false" name="TEXT" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -117,7 +302,10 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TEXT.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+<<<<<<< HEAD
       <option name="EMULATE_TERMINAL" value="false" />
+=======
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -131,11 +319,18 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <module name="untitled" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+=======
+      <module name="untitled2" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
       <method />
     </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
@@ -147,7 +342,30 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <module name="untitled" />
+=======
+      <module name="untitled2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="untitled2" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -159,7 +377,11 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <module name="untitled" />
+=======
+      <module name="untitled2" />
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -178,6 +400,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <module name="untitled" />
       <option name="_new_regexPattern" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
@@ -191,12 +414,87 @@
     <recent_temporary>
       <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Python.TEXT" />
+=======
+      <module name="untitled2" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="untitled2" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="untitled2" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.HLJ_hb" />
+      <item index="1" class="java.lang.String" itemvalue="Python.HLJ_htc" />
+      <item index="2" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
+      <item index="3" class="java.lang.String" itemvalue="Python.linda_cf" />
+      <item index="4" class="java.lang.String" itemvalue="Python.TEXT" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.linda_cf" />
+        <item index="1" class="java.lang.String" itemvalue="Python.TEXT" />
+        <item index="2" class="java.lang.String" itemvalue="Python.HLJ_hb" />
+        <item index="3" class="java.lang.String" itemvalue="Python.HLJ_htc" />
+        <item index="4" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+<<<<<<< HEAD
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9866a502-aed4-4726-b917-b86c033e5740" name="Default" comment="" />
@@ -204,6 +502,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1494814064270</updated>
+=======
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca588774-a6b4-4ec2-9580-1307895269be" name="Default" comment="" />
+      <created>1488164917465</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1488164917465</updated>
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
     </task>
     <servers />
   </component>
@@ -217,6 +527,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.247851" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -238,11 +549,55 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+=======
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13892807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43741587" sideWeight="0.5112835" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4051144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496474" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21265142" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43741587" sideWeight="0.4887165" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32258064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32795697" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33898306" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20521861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
+<<<<<<< HEAD
     <breakpoint-manager />
     <watches-manager />
   </component>
@@ -270,27 +625,159 @@
         <state relative-caret-position="17">
           <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
           <folding />
+=======
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fankui_hb.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/8.2zzsearch.py" />
+    <entry file="file://$PROJECT_DIR$/nihao.txt" />
+    <entry file="file://$PROJECT_DIR$/introduce.txt" />
+    <entry file="file://$PROJECT_DIR$/nihao.py" />
+    <entry file="file://$PROJECT_DIR$/Excel_TEXT.py" />
+    <entry file="file://$PROJECT_DIR$/8.1introduce.py" />
+    <entry file="file://$PROJECT_DIR$/del.py" />
+    <entry file="file://$PROJECT_DIR$/TTT0324.py" />
+    <entry file="file://$PROJECT_DIR$/hebing.py" />
+    <entry file="file://$PROJECT_DIR$/N_Text.py" />
+    <entry file="file://$PROJECT_DIR$/Z_TEXT.py" />
+    <entry file="file://$PROJECT_DIR$/l_randomquiz.py" />
+    <entry file="file://$PROJECT_DIR$/M_Text.py" />
+    <entry file="file://$PROJECT_DIR$/super.jpg" />
+    <entry file="file://$PROJECT_DIR$/super.py" />
+    <entry file="file://$PROJECT_DIR$/picture.py" />
+    <entry file="file://$PROJECT_DIR$/TEL.py" />
+    <entry file="file://$PROJECT_DIR$/TTT.py" />
+    <entry file="file://$PROJECT_DIR$/ceshi/inbound_hb.py" />
+    <entry file="file://$PROJECT_DIR$/1111" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/pywin32-218.win-amd64-py2.7.exe" />
+    <entry file="file://$PROJECT_DIR$/EN_DATA_Map.py" />
+    <entry file="file://$PROJECT_DIR$/Danny.py" />
+    <entry file="file://$PROJECT_DIR$/ceshi/k_demo.py" />
+    <entry file="file://$PROJECT_DIR$/ceshi/Excel_TEXT.py" />
+    <entry file="file://$PROJECT_DIR$/ceshi/8.2zzsearch.py" />
+    <entry file="file://$PROJECT_DIR$/ceshi/8.1introduce.py" />
+    <entry file="file://$PROJECT_DIR$/ceshi/picture.py" />
+    <entry file="file://$PROJECT_DIR$/ceshi/k_login.py" />
+    <entry file="file://$PROJECT_DIR$/ceshi/l_randomquiz.py" />
+    <entry file="file://$PROJECT_DIR$/ceshi/Z_TEXT.py" />
+    <entry file="file://$PROJECT_DIR$/CN_DATA_Map.py" />
+    <entry file="file://$PROJECT_DIR$/Mapping_plus.py" />
+    <entry file="file://$PROJECT_DIR$/M_Text.py" />
+    <entry file="file://$PROJECT_DIR$/N_Text.py" />
+    <entry file="file://$PROJECT_DIR$/Z TEXT.py" />
+    <entry file="file://$PROJECT_DIR$/CIN_hb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inbound_hb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EN_fuzzy_yh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HLJ_project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TEL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="67" column="22" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="67" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Z_Text_Mapping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spacial_industry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TW_DATA_Map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="29" column="46" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="29" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HLJ_htc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fankui_hb.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="23" lean-forward="true" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+=======
+        <state relative-caret-position="-665">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/hheh1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/EN_jianhua.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HLJ_hb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="39" />
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TEXT.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="289">
           <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="19" selection-end-column="0" />
           <folding />
@@ -312,5 +799,23 @@
         </settings>
       </state>
     </states>
+=======
+        <state relative-caret-position="306">
+          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linda_cf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding>
+            <element signature="e#232#327#0" expanded="false" />
+            <element signature="e#423#518#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 3b18a43d12fae7b0811738201479f38e00a22b9b
   </component>
 </project>

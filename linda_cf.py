@@ -19,6 +19,7 @@ if 'sheet3' in wbf.get_sheet_names():
 else:
     wbf.create_sheet(index=3, title='sheet3')
 
+
 sheet2=wbf.get_sheet_by_name('sheet2')
 sheet3=wbf.get_sheet_by_name('sheet3')
 
@@ -82,5 +83,5 @@ sheet2['B1']='工程名称'
 sheet2['C1']='去除换行符'
 sheet2['D1']='原始数据列'
 
-# dodata[0].encode('utf-8').strip()
+
 wbf.save('data.xlsx')
