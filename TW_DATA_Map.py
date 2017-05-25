@@ -19,10 +19,19 @@ for row1 in range(2,sheet1.max_row+1):
     sheet1['D' + str(row1)]=sheet1['C' + str(row1)].value.replace(' ','')
     for i in range(1,len(sheet1['D' + str(row1)].value)):
         if sheet1['D' + str(row1)].value[i:i+2] in list1:
-            sheet1['E' + str(row1)] = sheet1['D' + str(row1)].value[:i].replace('國際','')
+            sheet1['E' + str(row1)] = sheet1['D' + str(row1)].value[:i].replace('國際',''). \
+                replace('韓商', '').replace('荷蘭商', '').replace('瑞士商', '').replace('百慕達商', ''). \
+                replace('愛爾蘭商', '').replace('英商', '').replace('香港商', '').replace('新加坡商', ''). \
+                replace('美商', '').replace('亞商', '').replace('群島商','').replace('台灣','')
             sheet1['F' + str(row1)] = sheet1['D' + str(row1)].value[i:i+2].\
                 replace('企業','').replace('股份','').replace('有限','').replace('公司','')
             break
+        else:
+            sheet1['E' + str(row1)] = sheet1['D' + str(row1)].value.replace('群島商','').\
+            replace('韓商','').replace('荷蘭商','').replace('瑞士商','').replace('百慕達商',''). \
+            replace('愛爾蘭商', '').replace('英商', '').replace('香港商', '').replace('新加坡商', ''). \
+            replace('美商', '').replace('亞商', '').replace('台灣','')
+
 if 'Find_M' in or_wb.get_sheet_names():
     or_wb.remove_sheet(or_wb.get_sheet_by_name('Find_M'))
     or_wb.create_sheet(index=2, title='Find_M')
