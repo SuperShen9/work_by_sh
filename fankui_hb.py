@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import os,openpyxl,xlrd
-from openpyxl.cell import get_column_letter
-from openpyxl.styles import Font,Style
+from openpyxl.utils import get_column_letter
+from openpyxl.styles import Font
+from openpyxl.styles.colors import RED
 os.chdir('D:\superflag')
 wbf = openpyxl.load_workbook('hehe.xlsx')
 sheetcity = wbf.get_sheet_by_name('Sheet1')
@@ -27,10 +28,10 @@ for foldername,subfolder,excels in os.walk(filepath):
                 kk = get_column_letter(spam[sheet1.cell(0, k).value.lower()])
                 sheet[kk + '1'] = sheet1.cell(0, k).value
                 sheet['A1'] = '来源'
-                fontobj = Font(name='Arial', size=12, bold=True)
-                styleobj = Style(font=fontobj)
-                sheet['A1'].style = styleobj
-                sheet[kk + '1'].style = styleobj
+                ft = Font(name='Arial', size=12, bold=True)
+                ft1 = Font(name='Arial', size=12, bold=True, color=RED)
+                sheet['A1'].font = ft1
+                sheet[kk + '1'].font = ft
                 j = 2
                 for i in range(1, hang):
                     sheet['A' + str(j + k1)] = excel

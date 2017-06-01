@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import os,openpyxl
-from openpyxl.cell import get_column_letter
+from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font,Style
 os.chdir('D:\superflag')
 wbf = openpyxl.load_workbook('Inbound_flag.xlsx')
