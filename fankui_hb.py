@@ -45,6 +45,7 @@ hang2 = sheet.max_row + 1
 for i in range(2,hang2):
     sheet['Y'+str(i)]=str(time1.year)+'-'+str(time1.month)+'-'+str(time1.day)
     sheet['AW' + str(i)] = str(time1.year) + '-' + str(time1.month) + '-' + str(time1.day)
+    sheet['B' + str(i)] ='KDB00CI'
     if sheet['AI'+str(i)].value=='':
         sheet['AS' + str(i)]='N'
     else:
