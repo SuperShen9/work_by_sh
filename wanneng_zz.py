@@ -6,13 +6,20 @@ from openpyxl.styles import Font
 from openpyxl.styles.colors import RED
 os.chdir('D:\superflag')
 wbf = openpyxl.load_workbook('wanneng_zz.xlsx')
-sheetcity = wbf.get_sheet_by_name('Sheet1')
+sheetcity = wbf.get_sheet_by_name('cisco db')
+sheetcity1 = wbf.get_sheet_by_name('Nexus db')
 hang1 = sheetcity.max_row + 1
+hang3 = sheetcity1.max_row + 1
 spam = {}
 for row in range(2, hang1):
     flag = sheetcity['A' + str(row)].value.lower()
     number = sheetcity['B' + str(row)].value
     spam.setdefault(flag, number)
+spam1 = {}
+for row in range(2, hang3):
+    flag = sheetcity1['A' + str(row)].value.lower()
+    number = sheetcity1['B' + str(row)].value
+    spam1.setdefault(flag, number)
 os.chdir('D:\zlianxi\wanneng_zz')
 file = 'baocun.xlsx'
 if os.path.exists(file):
@@ -25,13 +32,20 @@ for foldername,subfolder,excels in os.walk(filepath):
     sheet1 = wb.sheets()[0]
     hang = sheet1.nrows+1
     lie = sheet1.ncols
-
-    for k in range(lie):
-        if sheet1.cell(0, k).value.lower() in spam.keys():
-            kk = get_column_letter(spam[sheet1.cell(0, k).value.lower()])
-            sheet[kk + '1'] = sheet1.cell(0, k).value
-            for i in range(2, hang):
-                sheet[kk + str(i)] = sheet1.cell(i-1, k).value
+    if excels[0].find('Cisco Database')>=0:
+        for k in range(lie):
+            if sheet1.cell(0, k).value.lower() in spam.keys():
+                kk = get_column_letter(spam[sheet1.cell(0, k).value.lower()])
+                sheet[kk + '1'] = sheet1.cell(0, k).value
+                for i in range(2, hang):
+                    sheet[kk + str(i)] = sheet1.cell(i-1, k).value
+    elif excels[0].find('Nexus')>=0:
+        for k in range(lie):
+            if sheet1.cell(0, k).value.lower() in spam1.keys():
+                kk = get_column_letter(spam1[sheet1.cell(0, k).value.lower()])
+                sheet[kk + '1'] = sheet1.cell(0, k).value
+                for i in range(2, hang):
+                    sheet[kk + str(i)] = sheet1.cell(i-1, k).value
 sheet.freeze_panes='A2'
 baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
 from datetime import *
