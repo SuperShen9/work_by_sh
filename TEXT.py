@@ -13,7 +13,8 @@ from datetime import *
 # wb.save('data.xlsx')
 
 list1=['1','2','3','4']
-
+a='abcsdfer'
+print a.find('1')
 
 
 
