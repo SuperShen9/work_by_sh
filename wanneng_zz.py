@@ -71,14 +71,14 @@ for i in range(2,hang2):
     sheet['X' + str(i)] = 'Hong Kong'
     sheet['AB' + str(i)] = 'Partner_Led_Customer:'+sheet['AB' + str(i)].value
 if excels[0].split(' ')[1]=='Nexus':
-    print '****************'+'\n'+'Nexus数据'
+    print '*'*12 + '\n'+'Nexus数据'
     for i in range(2, hang2):
         sheet['A' + str(i)] = '001483747'
 elif excels[0].split('-')[0]=='Cisco Database':
-    print '****************'+'\n'+'Cisco DB数据'
+    print '*'*12 +'\n'+'Cisco DB数据'
     for i in range(2, hang2):
         sheet['A' + str(i)] = '001483995'
 else:
     print '请检查数据类型'
-print '\n'+'数据条数：'+ str(hang-2)+'\n'+'****************'
+print '\n'+'数据条数：'+ str(hang-2)+'\n'+'*'*12
 baocun.save('baocun.xlsx')
