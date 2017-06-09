@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import os,openpyxl
 from openpyxl.utils import get_column_letter
-from openpyxl.styles import Font,Style
+from openpyxl.styles import Font
+from openpyxl.styles.colors import RED
 os.chdir('D:\superflag')
 wbf = openpyxl.load_workbook('Inbound_flag.xlsx')
 sheetcity = wbf.get_sheet_by_name('Sheet1')
@@ -12,6 +13,9 @@ for row in range(2, hang1 + 1):
     number = sheetcity['B' + str(row)].value
     spam.setdefault(flag, number)
 os.chdir('D:\\zlianxi\Inbound_hb')
+file = 'baocun.xlsx'
+if os.path.exists(file):
+    os.remove(file)
 k1=0
 for foldername,subfolder,excels in os.walk('D:\\zlianxi\Inbound_hb'):
     baocun = openpyxl.Workbook()
@@ -26,10 +30,9 @@ for foldername,subfolder,excels in os.walk('D:\\zlianxi\Inbound_hb'):
             if sheet1[liebiao+'6'].value in spam.keys():
                 kk = get_column_letter(spam[sheet1[liebiao+'6'].value])
                 sheet[kk + '1']=sheet1[liebiao + '6'].value
-                fontobj = Font(name='Arial', size=12, bold=True)
-                styleobj = Style(font=fontobj)
-                sheet['A1'].style = styleobj
-                sheet[kk + '1'].style = styleobj
+                ft = Font(name='Arial', size=12, bold=True)
+                ft1 = Font(name='Arial', size=12, bold=True, color=RED)
+                sheet['A1'].font = ft1
                 j = 2
                 for i in range(7,hang):
                     sheet['A'+str(j+k1)] = str(excel)

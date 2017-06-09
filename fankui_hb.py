@@ -5,7 +5,7 @@ from openpyxl.styles import Font
 from openpyxl.styles.colors import RED
 os.chdir('D:\superflag')
 wbf = openpyxl.load_workbook('hehe.xlsx')
-sheetcity = wbf.get_sheet_by_name('Sheet2')
+sheetcity = wbf.get_sheet_by_name('Sheet1')
 hang1 = sheetcity.max_row + 1
 spam = {}
 for row in range(2, hang1):
@@ -43,25 +43,25 @@ baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
 from datetime import *
 time1=datetime.today()
 hang2 = sheet.max_row + 1
-# for i in range(2,hang2):
-#     sheet['Y'+str(i)]=str(time1.year)+'-'+str(time1.month)+'-'+str(time1.day)
-#     sheet['AW' + str(i)] = str(time1.year) + '-' + str(time1.month) + '-' + str(time1.day)
-#     sheet['B' + str(i)] ='KDB00CI'
-#     if sheet['AI'+str(i)].value=='':
-#         sheet['AS' + str(i)]='N'
-#     else:
-#         sheet['AS' + str(i)] = 'Y'
-#     if sheet['AO'+str(i)].value=='':
-#         sheet['AU' + str(i)]='N'
-#     else:
-#         sheet['AU' + str(i)] = 'Y'
-#     if sheet['AV' + str(i)].value =='':
-#         sheet['AT' + str(i)] = 'N'
-#     else:
-#         sheet['AT' + str(i)] = 'Y'
-#     if sheet['R' + str(i)].value =='Hong Kong':
-#         sheet['R' + str(i)] ='香港'
-#         sheet['S' + str(i)]= '香港'
+for i in range(2,hang2):
+    sheet['Y'+str(i)]=str(time1.year)+'-'+str(time1.month)+'-'+str(time1.day)
+    sheet['AW' + str(i)] = str(time1.year) + '-' + str(time1.month) + '-' + str(time1.day)
+    sheet['B' + str(i)] ='KDB00CI'
+    if sheet['AI'+str(i)].value=='':
+        sheet['AS' + str(i)]='N'
+    else:
+        sheet['AS' + str(i)] = 'Y'
+    if sheet['AO'+str(i)].value=='':
+        sheet['AU' + str(i)]='N'
+    else:
+        sheet['AU' + str(i)] = 'Y'
+    if sheet['AV' + str(i)].value =='':
+        sheet['AT' + str(i)] = 'N'
+    else:
+        sheet['AT' + str(i)] = 'Y'
+    if sheet['R' + str(i)].value =='Hong Kong':
+        sheet['R' + str(i)] ='香港'
+        sheet['S' + str(i)]= '香港'
 
 baocun.save('baocun.xlsx')
 
