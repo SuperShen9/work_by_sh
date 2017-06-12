@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import os,openpyxl,xlrd
-from openpyxl.cell import get_column_letter
-from openpyxl.styles import Font,Style
+from openpyxl.utils import get_column_letter
+from openpyxl.styles import Font
 os.chdir('D:\superflag')
 wbf = openpyxl.load_workbook('CIN_hb.xlsx')
 sheetcity = wbf.get_sheet_by_name('Sheet1')
@@ -12,8 +12,12 @@ for row in range(1,hang1):
     number = sheetcity['B' + str(row)].value
     spam.setdefault(flag, number)
 os.chdir('D:\\zlianxi\CIN_hb')
+file = 'baocun.xlsx'
+if os.path.exists(file):
+    os.remove(file)
 k1=0
-for foldername,subfolder,excels in os.walk('D:\\zlianxi\CIN_hb'):
+path1=unicode('D:\\zlianxi\CIN_hb')
+for foldername,subfolder,excels in os.walk(path1):
     baocun = openpyxl.Workbook()
     sheet = baocun.create_sheet(index=0, title='data')
     for excel in excels:
@@ -27,9 +31,8 @@ for foldername,subfolder,excels in os.walk('D:\\zlianxi\CIN_hb'):
                 sheet[kk + '1'] = sheet1.cell(0, k).value
                 sheet['A1'] = '来源'
                 fontobj = Font(name='Arial', size=12, bold=True)
-                styleobj = Style(font=fontobj)
-                sheet['A1'].style = styleobj
-                sheet[kk + '1'].style = styleobj
+                sheet['A1'].font = fontobj
+                sheet[kk + '1'].font  = fontobj
                 j = 2
                 for i in range(1, hang):
                     sheet['A' + str(j + k1)] = str(excel)
