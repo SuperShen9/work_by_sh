@@ -32,16 +32,30 @@ for foldername,subfolder,excels in os.walk(filepath):
             if sheet1[liebiao+'6'].value in spam.keys():
                 kk = get_column_letter(spam[sheet1[liebiao+'6'].value])
                 sheet[kk + '1']=sheet1[liebiao + '6'].value
-                ft = Font(name='Arial', size=12, bold=True)
-                ft1 = Font(name='Arial', size=12, bold=True, color=RED)
-                sheet['A1'].font = ft1
                 j = 2
                 for i in range(7,hang):
                     sheet['A'+str(j+k1)] = str(excel)
                     sheet[kk+str(j+k1)] =sheet1[liebiao+str(i)].value
                     j+=1
         k1+=hang-2
+
 sheet.freeze_panes='A2'
+
+ft = Font(name='Arial', size=12, bold=True)
+ft1 = Font(name='Arial', size=12, bold=True, color=RED)
 sheet['A1'] = '来源'
+sheet['B1'] = '规则'
+sheet['C1'] = '备用列'
+sheet['A1'].font = ft1
+sheet['B1'].font = ft
 baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
+hang2 = sheet.max_row + 1
+list1=[1480,1297,1428,1477,1380,1376,1375,1378,1379,1986,1951,1952,2788,2786,2787]
+list2=[565,2188,1746,2367,1174,2905,2937,2924,2912,1986,2115,2123,2114]
+list3=[001334998,001335073,001335026,001335026,001335074]
+for i in range(2,hang2):
+    if sheet['O'+str(i)].value in list1:
+        sheet['B' + str(i)]='马英规则'
+
+
 baocun.save('baocun.xlsx')
