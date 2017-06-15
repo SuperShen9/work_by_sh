@@ -50,16 +50,30 @@ sheet['A1'].font = ft1
 sheet['B1'].font = ft
 baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
 hang2 = sheet.max_row + 1
-list1=[1480,1297,1428,1477,1380,1376,1375,1378,1379,1951,1952,2788,2786,2787]
-list2=[2905,2924,2912,1986,2115,2123,2114]
+list1=['1480','1297','1428','1477','1380','1376','1375','1378','1379','1951','1952','2788','2786','2787']
+list2=['2905','2924','2912','1986','2115','2123','2114']
 
 for i in range(2,hang2):
     if sheet['O'+str(i)].value in list1:
         sheet['B' + str(i)]='马英规则'
     elif sheet['O'+str(i)].value in list2 and sheet['AB'+str(i)].value =='SEM':
         sheet['B' + str(i)] = '日常'
-    elif sheet['O'+str(i)].value ==2937:
+    elif sheet['O'+str(i)].value =='2937':
         sheet['B' + str(i)] = '日常'
+    elif sheet['O'+str(i)].value =='2905' and sheet['V'+str(i)].value == '001346890'\
+            or sheet['O'+str(i)].value =='2924' and sheet['V'+str(i)].value == '001346892' \
+            or sheet['O' + str(i)].value == '2924' and sheet['V' + str(i)].value == '001346892' \
+            or sheet['O' + str(i)].value == '2912' and sheet['V' + str(i)].value == '001346893' \
+            or sheet['O' + str(i)].value == '565' and sheet['V' + str(i)].value == '001334998' \
+            or sheet['O' + str(i)].value == '2188' and sheet['V' + str(i)].value == '001335073' \
+            or sheet['O' + str(i)].value == '1746' and sheet['V' + str(i)].value == '001335026' \
+            or sheet['O' + str(i)].value == '2367' and sheet['V' + str(i)].value == '001335026' \
+            or sheet['O' + str(i)].value == '1174' and sheet['V' + str(i)].value == '001335074':
+        sheet['B' + str(i)] = '日常'
+    elif sheet['O'+str(i)].value =='1986' and sheet['V' + str(i)].value != 'SEM':
+        sheet['B' + str(i)] = '马英规则'
+    elif sheet['A'+str(i)].value ==None:
+        sheet['B' + str(i)] = '空列删除'
 
 
 
