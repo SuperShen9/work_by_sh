@@ -47,6 +47,11 @@ for foldername,subfolder,excels in os.walk(filepath):
                 for i in range(2, hang):
                     sheet[kk + str(i)] = sheet1.cell(i-1, k).value
 sheet.freeze_panes='A2'
+ft1 = Font(name='Arial', size=12, bold=True, color=RED)
+sheet['E1'].font = ft1
+sheet['F1'].font = ft1
+sheet['N1'].font = ft1
+sheet['S1'].font = ft1
 baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
 from datetime import *
 import time
