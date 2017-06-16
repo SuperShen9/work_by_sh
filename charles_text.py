@@ -40,7 +40,6 @@ for foldername,subfolder,excels in os.walk(filepath):
         k1+=hang-2
 
 sheet.freeze_panes='A2'
-
 ft = Font(name='Arial', size=12, bold=True)
 ft1 = Font(name='Arial', size=12, bold=True, color=RED)
 sheet['A1'] = '来源'
@@ -52,7 +51,6 @@ baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
 hang2 = sheet.max_row + 1
 list1=['1480','1297','1428','1477','1380','1376','1375','1378','1379','1951','1952','2788','2786','2787']
 list2=['2905','2924','2912','1986','2115','2123','2114']
-
 for i in range(2,hang2):
     if sheet['O'+str(i)].value in list1:
         sheet['B' + str(i)]='马英规则'
@@ -74,7 +72,4 @@ for i in range(2,hang2):
         sheet['B' + str(i)] = '马英规则'
     elif sheet['A'+str(i)].value ==None:
         sheet['B' + str(i)] = '空列删除'
-
-
-
 baocun.save('baocun.xlsx')
