@@ -10,6 +10,7 @@ sheetcity = wbf.active
 hang1 = sheetcity.max_row + 1
 spam = {}
 for row in range(2, hang1 + 1):
+    print row
     flag = sheetcity['A' + str(row)].value
     number = sheetcity['B' + str(row)].value
     spam.setdefault(flag, number)
@@ -23,7 +24,7 @@ for foldername,subfolder,excels in os.walk(filepath):
     baocun = openpyxl.Workbook()
     sheet = baocun.create_sheet(index=0, title='data')
     for excel in excels:
-        wb=openpyxl.load_workbook(str(excel))
+        wb=openpyxl.load_workbook(excel)
         sheet1 = wb.active
         hang = sheet1.max_row+1
         lie = sheet1.max_column+1
@@ -34,7 +35,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[kk + '1']=sheet1[liebiao + '6'].value
                 j = 2
                 for i in range(7,hang):
-                    sheet['A'+str(j+k1)] = str(excel)
+                    sheet['A'+str(j+k1)] = excel
                     sheet[kk+str(j+k1)] =sheet1[liebiao+str(i)].value
                     j+=1
         k1+=hang-2
