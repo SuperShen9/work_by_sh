@@ -10,7 +10,6 @@ sheetcity = wbf.active
 hang1 = sheetcity.max_row + 1
 spam = {}
 for row in range(2, hang1 + 1):
-    print row
     flag = sheetcity['A' + str(row)].value
     number = sheetcity['B' + str(row)].value
     spam.setdefault(flag, number)
@@ -39,7 +38,6 @@ for foldername,subfolder,excels in os.walk(filepath):
                     sheet[kk+str(j+k1)] =sheet1[liebiao+str(i)].value
                     j+=1
         k1+=hang-2
-
 sheet.freeze_panes='A2'
 ft = Font(name='Arial', size=12, bold=True)
 ft1 = Font(name='Arial', size=12, bold=True, color=RED)
