@@ -33,6 +33,7 @@ for foldername,subfolder,excels in os.walk(filepath):
     sheet1 = wb.active
     hang = sheet1.max_row+1
     lie = sheet1.max_column+1
+    print '列数统计：%s'%(lie-1)
     choose=raw_input('请输入你的模板：1-MDUT；2-NGCC \n')
     if choose=='1':
         for k in range(1, lie):
@@ -54,12 +55,49 @@ for foldername,subfolder,excels in os.walk(filepath):
                     sheet['A' + str(j)] = excels[0]
                     sheet[kk + str(j)] = sheet1[liebiao + str(j)].value
                     j += 1
+    else:
+        print '请输入正常指令'
 ft = Font(name='Arial', size=12, bold=True)
 ft1 = Font(name='Arial', size=12, bold=True, color=RED)
 sheet['A1'] = '文件名称'
 sheet['B1'] = '备用列'
 sheet['A1'].font = ft1
 sheet['B1'].font = ft
+from datetime import *
+import time
+time2=time.strftime('%b-%Y',time.localtime())
+time1=datetime.today()
+hang2 = sheet.max_row + 1
+if choose=='1':
+    for i in range(2,hang2):
+        sheet['L' + str(i)] = 'Hong Kong'
+        sheet['M' + str(i)] = 'Hong Kong'
+        sheet['N' + str(i)] = '999077'
+        sheet['T' + str(i)] = 'End User'
+        sheet['V' + str(i)] = 'Yes'
+        sheet['W' + str(i)] = 'Onsite'
+        sheet['X' + str(i)] = str(time1.day) + '-' + str(time2)
+        sheet['Y' + str(i)] = 'HK'
+        sheet['Z' + str(i)] = 'Hong Kong'
+elif choose=='2':
+    for i in range(2, hang2):
+        sheet['H' + str(i)] = 'Hong Kong'
+        sheet['I' + str(i)] = 'Hong Kong'
+        sheet['J' + str(i)] = 'Hong Kong'
+        sheet['K' + str(i)] = '999077'
+        sheet['P' + str(i)] = 'Yes'
+        # sheet['Q' + str(i)] = 'Yes'
+        # sheet['W' + str(i)] = str(time1.day) + '-' + str(time2)
+        sheet['X' + str(i)] = 'andyzha'
+        sheet['AH' + str(i)] = 'PARTNER-LED'
+        sheet['AS' + str(i)] = 'No'
+        if sheet['AM' + str(i)].value ==None:
+            sheet['AM' + str(i)] = 'Partner_Led_Customer:'
+        else:
+            sheet['AM' + str(i)] = 'Partner_Led_Customer:' + sheet['AM' + str(i)].value
+
+
+
 
 baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
 baocun.save('baocun.xlsx')
