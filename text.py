@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
 # author:Super
-spam={'super':123,'super':456}
-print spam
+from datetime import *
+import time
+time2=time.strftime('%b-%Y',time.localtime())
+time1=datetime.today()
+print time1.day
+print time2

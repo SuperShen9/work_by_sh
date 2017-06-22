@@ -86,8 +86,8 @@ elif choose=='2':
         sheet['J' + str(i)] = 'Hong Kong'
         sheet['K' + str(i)] = '999077'
         sheet['P' + str(i)] = 'Yes'
-        # sheet['Q' + str(i)] = 'Yes'
-        # sheet['W' + str(i)] = str(time1.day) + '-' + str(time2)
+
+        sheet['W' + str(i)] = str(time1.day) + '-' + str(time2)+' 12:00:00 AM'
         sheet['X' + str(i)] = 'andyzha'
         sheet['AH' + str(i)] = 'PARTNER-LED'
         sheet['AS' + str(i)] = 'No'
@@ -95,7 +95,10 @@ elif choose=='2':
             sheet['AM' + str(i)] = 'Partner_Led_Customer:'
         else:
             sheet['AM' + str(i)] = 'Partner_Led_Customer:' + sheet['AM' + str(i)].value
-
+        if sheet['O' + str(i)].value != None:
+            sheet['Q' + str(i)] = 'Yes'
+        else:
+            sheet['Q' + str(i)] = ''
 
 
 
