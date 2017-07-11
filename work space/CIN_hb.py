@@ -35,7 +35,7 @@ for foldername,subfolder,excels in os.walk(path1):
                 sheet[kk + '1'].font  = fontobj
                 j = 2
                 for i in range(1, hang):
-                    sheet['A' + str(j + k1)] = str(excel)
+                    sheet['A' + str(j + k1)] = excel
                     sheet[kk + str(j + k1)] = sheet1.cell(i, k).value
                     j += 1
         k1 += hang - 1

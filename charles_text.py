@@ -27,6 +27,7 @@ for foldername,subfolder,excels in os.walk(filepath):
         sheet1 = wb.active
         hang = sheet1.max_row+1
         lie = sheet1.max_column+1
+        print excel
         for k in range(1,lie):
             liebiao=get_column_letter(k)
             if sheet1[liebiao+'6'].value in spam.keys():
@@ -71,4 +72,7 @@ list2=['2905','2924','2912','1986','2115','2123','2114']
 #         sheet['B' + str(i)] = '马英规则'
 #     elif sheet['A'+str(i)].value ==None:
 #         sheet['B' + str(i)] = '空列删除'
+for i in range(2,hang2):
+    if sheet['A' + str(i)].value == None:
+        sheet['B' + str(i)] = '空列删除'
 baocun.save('baocun.xlsx')
