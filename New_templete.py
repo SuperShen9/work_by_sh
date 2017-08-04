@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # author:Super
 # 该代码需要从第三列开始放入
-import os,openpyxl,xlrd
+import os,openpyxl
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font
 from openpyxl.styles.colors import RED
