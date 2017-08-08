@@ -45,7 +45,7 @@ for foldername,subfolder,excels in os.walk(filepath):
     wb=openpyxl.load_workbook(excels[0])
     sheet1 = wb.active
     hang = sheet1.max_row+1
-    lie = sheet1.max_column
+    lie = sheet1.max_column+1
     print '数据量统计：%s'%(hang-2)
     choose=raw_input('请输入你的模板：1-response；2-NGCC；3-leads \n')
     if choose=='1':
