@@ -93,7 +93,8 @@ if choose=='1':
     for i in range(2,hang2):
         sheet['D' + str(i)] = 'Others'
         sheet['E' + str(i)] = 'Data Cleansing'
-        sheet['J' + str(i)] = str(time2)
+        if sheet['J' + str(i)] ==None:
+            sheet['J' + str(i)] = str(time2)
         if sheet['U' + str(i)] == 'Hong Kong':
             sheet['S' + str(i)]='HONG KONG'
             sheet['T' + str(i)]='Hong Kong'
@@ -104,7 +105,8 @@ elif choose=='2':
     for i in range(2,hang2):
         sheet['D' + str(i)] = 'Call Center'
         sheet['E' + str(i)] = 'Called'
-        sheet['J' + str(i)] = str(time2)
+        if sheet['J' + str(i)] ==None:
+            sheet['J' + str(i)] = str(time2)
         if sheet['AL' + str(i)].value!=None:
             sheet['AL' + str(i)] = 'Partner_Led_Customer:' + sheet['AL' + str(i)].value
         else:
@@ -118,8 +120,10 @@ elif choose=='2':
 elif choose=='3':
     for i in range(2,hang2):
         sheet['D' + str(i)] = 'Live Event'
+        sheet['E' + str(i)] = 'Feedback Survey'
         # sheet['E' + str(i)] = 'Feedback Survey'
-        sheet['J' + str(i)] = str(time2)
+        if sheet['J' + str(i)] ==None:
+            sheet['J' + str(i)] = str(time2)
         sheet['AL' + str(i)] = 'BANT'
         sheet['AN' + str(i)] = 'YES'
         sheet['AO' + str(i)] = 'YES'
