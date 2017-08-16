@@ -186,7 +186,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
                 if sheet[lb_1 + str(jj)].value != None :
                     for cp_id in b:
-                        sheet[lb_1+ str(jj)] = sheet[lb_1 + str(jj)].value.replace(str(cp_id),in_pro.get(cp_id))
+                        sheet[lb_1+ str(jj)] = str(sheet[lb_1 + str(jj)].value).replace(str(cp_id),in_pro.get(cp_id))
 
 sheet.freeze_panes='A2'
 Clean_data.save('Clean_data.xlsx')
