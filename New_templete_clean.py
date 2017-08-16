@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
 # author:Super
 import os,openpyxl,pprint,re
-# from TTT import *
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font
 from openpyxl.styles.colors import RED
+from openpyxl.styles.colors import GREEN
+from openpyxl.styles.colors import BLUE
+ft1 = Font(name='Arial', size=11, bold=True, color=RED)
+ft2 = Font(name='Arial', size=11, bold=True, color=GREEN)
+ft3 = Font(name='Arial', size=11, bold=True, color=BLUE)
 os.chdir('D:\zlianxi\New_templete_clean')
 wbf = openpyxl.load_workbook('Templete.xlsx')
 sheet_tem = wbf.get_sheet_by_name('Sheet1')
@@ -104,9 +108,11 @@ for foldername,subfolder,excels in os.walk(filepath):
         for jj in range(2,hang1):
             if sheet[lb + '1'].value in list1:
                 sheet[lb_1 + '1'] = '标准segment'
+                sheet[lb_1 + '1'].font=ft1
                 sheet[lb_1 + str(jj)] = segment.get(sheet[lb + str(jj)].value)
             if sheet[lb + '1'].value in list2:
                 sheet[lb_1 + '1'] = '检验AM'
+                sheet[lb_1 + '1'].font = ft1
                 if sheet[lb + str(jj)].value!=None :
                     if sheet[lb + str(jj)].value in AM:
                         sheet[lb_1 + str(jj)] = AM.get(sheet[lb + str(jj)].value)
@@ -114,34 +120,44 @@ for foldername,subfolder,excels in os.walk(filepath):
                         sheet[lb_1 + str(jj)] ='XXXX'
             if sheet[lb + '1'].value in list3:
                 sheet[lb_1 + '1'] = '标准職稱'
+                sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = job.get(sheet[lb + str(jj)].value)
             if sheet[lb + '1'].value in list4:
                 sheet[lb_1 + '1'] = '标准部門'
+                sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = dept.get(sheet[lb + str(jj)].value)
             if sheet[lb + '1'].value in list5:
                 sheet[lb_1 + '1'] = '标准行业'
+                sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = indu.get(sheet[lb + str(jj)].value)
             if sheet[lb + '1'].value in list6:
                 sheet[lb_1 + '1'] = '标准产品'
+                sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = in_pro.get(sheet[lb + str(jj)].value)
             if sheet[lb + '1'].value in list7:
                 sheet[lb_1 + '1'] = '标准时间'
+                sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = b_time.get(sheet[lb + str(jj)].value)
             if sheet[lb + '1'].value in list8:
                 sheet[lb_1 + '1'] = '标准金额'
+                sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = b_bug.get(sheet[lb + str(jj)].value)
             if sheet[lb + '1'].value in list9:
                 sheet[lb_1 + '1'] = '标准姓名'
+                sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value.strip()
             if sheet[lb + '1'].value in list10:
                 sheet[lb_1 + '1'] = '标准公司名稱'
+                sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value.strip()
             if sheet[lb + '1'].value in list11:
                 sheet[lb_1 + '1'] = '标准電話'
+                sheet[lb_1 + '1'].font = ft1
                 mo = num_Regex.findall(str(sheet[lb + str(jj)].value))
                 sheet[lb_1 + str(jj)] = '-'.join(mo)
             if sheet[lb + '1'].value in list12:
                 sheet[lb_1 + '1'] = '邮箱检查'
+                sheet[lb_1 + '1'].font = ft1
                 if '@' not in sheet[lb + str(jj)].value:
                     sheet[lb_1 + str(jj)] = '没有@'
                 else:
@@ -152,21 +168,25 @@ for foldername,subfolder,excels in os.walk(filepath):
                             break
             if sheet[lb + '1'].value in list13:
                 sheet[lb_1 + '1'] = '标准手机'
+                sheet[lb_1 + '1'].font = ft1
                 mo = num_Regex.findall(str(sheet[lb + str(jj)].value))
                 sheet[lb_1 + str(jj)] = '/'.join(mo)
             if sheet[lb + '1'].value in list14:
                 sheet[lb_1 + '1'] = '标准地址'
+                sheet[lb_1 + '1'].font = ft1
                 if sheet[lb + str(jj)].value!=None:
                     sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value[3:]
             if sheet[lb + '1'].value in list15:
                 sheet[lb_m + '1'] = 'JOB LEVEL'
+                sheet[lb_m + '1'].font = ft2
                 sheet[lb_m + str(jj)] = job_level.get(sheet[lb + str(jj)].value)
             if sheet[lb + '1'].value in list6:
-                sheet[lb_m + '1'] = '标准产品'
+                sheet[lb_1 + '1'] = '标准产品'
+                sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
                 if sheet[lb_1 + str(jj)].value != None :
                     for cp_id in b:
                         sheet[lb_1+ str(jj)] = sheet[lb_1 + str(jj)].value.replace(str(cp_id),in_pro.get(cp_id))
 
-
+sheet.freeze_panes='A2'
 Clean_data.save('Clean_data.xlsx')

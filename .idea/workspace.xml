@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a513f9a3-7fb3-47a1-93f4-1f10a2c43067" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/New_templete_clean.py" afterPath="$PROJECT_DIR$/New_templete_clean.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TTT.py" afterPath="$PROJECT_DIR$/TTT.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,34 +17,21 @@
       <file leaf-file-name="New_templete_clean.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="166" column="46" lean-forward="true" selection-start-line="166" selection-start-column="46" selection-end-line="166" selection-end-column="46" />
+            <state relative-caret-position="317">
+              <caret line="178" column="47" lean-forward="true" selection-start-line="178" selection-start-column="47" selection-end-line="178" selection-end-column="47" />
               <folding>
                 <element signature="e#39#67#0" expanded="true" />
-                <element signature="e#3574#3684#0" expanded="false" />
-                <element signature="e#3748#4045#0" expanded="false" />
-                <element signature="e#4109#4210#0" expanded="false" />
-                <element signature="e#4274#4376#0" expanded="false" />
-                <element signature="e#4440#4542#0" expanded="false" />
-                <element signature="e#4606#4710#0" expanded="false" />
-                <element signature="e#4774#4878#0" expanded="false" />
-                <element signature="e#4942#5045#0" expanded="false" />
-                <element signature="e#5109#5209#0" expanded="false" />
-                <element signature="e#5274#5376#0" expanded="false" />
-                <element signature="e#5441#5591#0" expanded="false" />
-                <element signature="e#5656#6095#0" expanded="false" />
-                <element signature="e#6160#6310#0" expanded="false" />
-                <element signature="e#6375#6527#0" expanded="false" />
+                <element signature="e#718#2361#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TTT.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TTT.py">
+      <file leaf-file-name="wanneng_zz.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/work space/wanneng_zz.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            <state relative-caret-position="255">
+              <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -118,6 +104,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="work space" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -353,7 +353,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.504298" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43607" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20592193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21265142" sideWeight="0.495702" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19380888" sideWeight="0.49713466" order="7" side_tool="false" content_ui="tabs" />
@@ -377,7 +377,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -465,13 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/work space/wanneng_zz.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="48" column="23" lean-forward="false" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/work space/TW_DATA_Map.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="657">
@@ -529,26 +522,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/work space/wanneng_zz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="50" column="22" lean-forward="true" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="166" column="46" lean-forward="true" selection-start-line="166" selection-start-column="46" selection-end-line="166" selection-end-column="46" />
+        <state relative-caret-position="317">
+          <caret line="178" column="47" lean-forward="true" selection-start-line="178" selection-start-column="47" selection-end-line="178" selection-end-column="47" />
           <folding>
             <element signature="e#39#67#0" expanded="true" />
-            <element signature="e#3574#3684#0" expanded="false" />
-            <element signature="e#3748#4045#0" expanded="false" />
-            <element signature="e#4109#4210#0" expanded="false" />
-            <element signature="e#4274#4376#0" expanded="false" />
-            <element signature="e#4440#4542#0" expanded="false" />
-            <element signature="e#4606#4710#0" expanded="false" />
-            <element signature="e#4774#4878#0" expanded="false" />
-            <element signature="e#4942#5045#0" expanded="false" />
-            <element signature="e#5109#5209#0" expanded="false" />
-            <element signature="e#5274#5376#0" expanded="false" />
-            <element signature="e#5441#5591#0" expanded="false" />
-            <element signature="e#5656#6095#0" expanded="false" />
-            <element signature="e#6160#6310#0" expanded="false" />
-            <element signature="e#6375#6527#0" expanded="false" />
+            <element signature="e#718#2361#0" expanded="false" />
           </folding>
         </state>
       </provider>
