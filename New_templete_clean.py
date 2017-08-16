@@ -55,8 +55,6 @@ for row in range(2,hang_tem):
         key_o = sheet_tem['R' + str(row)].value
         val_o = sheet_tem['S' + str(row)].value
         job_level.setdefault(key_o, val_o)
-
-
 os.chdir('D:\zlianxi\New_templete_clean\clean')
 file = 'Clean_data.xlsx'
 if os.path.exists(file):
@@ -78,7 +76,8 @@ list13=[u'手機']
 list14=[u'地址']
 list15=[u'标准職稱']
 list_email=[' ',',','/','\\','@.','.@','..']
-
+a = range(1,22)
+b = list(reversed(a))
 num_Regex=re.compile(r'\d+')
 email_Regex=re.compile(r'\s|，|。|；|：|/|\\|@.|.@|\.\.')
 for foldername,subfolder,excels in os.walk(filepath):
@@ -96,7 +95,6 @@ for foldername,subfolder,excels in os.walk(filepath):
         i+=1
         for j in range(1, hang):
             sheet[liebiao1 + str(j)] = sheet1[liebiao + str(j)].value
-
     hang1 = sheet.max_row + 1
     lie1 = sheet.max_column + 1
     for kk in range(1 , lie1):
@@ -163,7 +161,12 @@ for foldername,subfolder,excels in os.walk(filepath):
             if sheet[lb + '1'].value in list15:
                 sheet[lb_m + '1'] = 'JOB LEVEL'
                 sheet[lb_m + str(jj)] = job_level.get(sheet[lb + str(jj)].value)
-
+            if sheet[lb + '1'].value in list6:
+                sheet[lb_m + '1'] = '标准产品'
+                sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
+                if sheet[lb_1 + str(jj)].value != None :
+                    for cp_id in b:
+                        sheet[lb_1+ str(jj)] = sheet[lb_1 + str(jj)].value.replace(str(cp_id),in_pro.get(cp_id))
 
 
 Clean_data.save('Clean_data.xlsx')
