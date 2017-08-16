@@ -1,16 +1,12 @@
 # -*- coding: utf-8 -*-
 # author:Super
-segment={'PL-NN':'Partner_Led_Customer:',\
-         'SP-CHT':'Service_Provider:',\
-         'COMM NAMED-TAM':'Partner_Led_Customer:',\
-         'COMM NAMED-VSAM':'Partner_Led_Customer:',\
-         'ENT-FSI':'ENT:',\
-         'ENT':'ENT:',\
-         'PS':'Public Sector:',\
-         'COM-N':'Partner_Led_Customer:',\
-         'COM-NN':'Partner_Led_Customer:',\
-         'SP':'Service_Provider:'}
-AM=['tiflee', 'fredyche', 'ticheng2', 'stanleyw', 'janchian',\
-    'alexhuan', 'autsai', 'mingcche', 'tommli', 'janetyua',\
-    'jaslu', 'jeffrlin',	'eritsai',	'jimhung', 'lwenchi',\
-    'resun', 'yuanwang',	'wilslin', 'cindhuan', 'fenwu']
+import re
+num_Regex=re.compile(r'\d+')
+a='qweqedqwq'
+
+print a[2:]
+# mo=num_Regex.findall('03 - 3283001 # 370')
+# mo1=num_Regex.findall('033283001370')
+# print mo
+# print '-'.join(mo)
+# print '-'.join(mo1)
