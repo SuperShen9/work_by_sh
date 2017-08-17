@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 # author:Super
 import os,openpyxl,pprint,re
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font
 from openpyxl.styles.colors import RED
@@ -79,7 +82,8 @@ list12=['Email']
 list13=[u'手機']
 list14=[u'地址']
 list15=[u'标准職稱']
-list_email=[' ',',','/','\\','@.','.@','..']
+list16=[u'具體預算(USD)']
+list_email=[' ',',','/','\\','@.','.@','..','，','。',':','；']
 a = range(1,22)
 b = list(reversed(a))
 num_Regex=re.compile(r'\d+')
@@ -158,14 +162,15 @@ for foldername,subfolder,excels in os.walk(filepath):
             if sheet[lb + '1'].value in list12:
                 sheet[lb_1 + '1'] = '邮箱检查'
                 sheet[lb_1 + '1'].font = ft1
-                if '@' not in sheet[lb + str(jj)].value:
-                    sheet[lb_1 + str(jj)] = '没有@'
-                else:
-                    for l_e in list_email:
-                        sheet[lb_1 + str(jj)] =sheet[lb + str(jj)].value.find(l_e)
-                        if sheet[lb_1 + str(jj)].value > 0:
-                            sheet[lb_1 + str(jj)]='出现'+l_e+'字符'
-                            break
+                if sheet[lb + str(jj)].value!=None:
+                    if '@' not in sheet[lb + str(jj)].value:
+                        sheet[lb_1 + str(jj)] = '没有@'
+                    else:
+                        for l_e in list_email:
+                            sheet[lb_1 + str(jj)] =sheet[lb + str(jj)].value.find(l_e)
+                            if sheet[lb_1 + str(jj)].value > 0:
+                                sheet[lb_1 + str(jj)]='出现'+l_e+'字符'
+                                break
             if sheet[lb + '1'].value in list13:
                 sheet[lb_1 + '1'] = '标准手机'
                 sheet[lb_1 + '1'].font = ft1
@@ -180,13 +185,59 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_m + '1'] = 'JOB LEVEL'
                 sheet[lb_m + '1'].font = ft2
                 sheet[lb_m + str(jj)] = job_level.get(sheet[lb + str(jj)].value)
+# --------------------------------------------------------------------------------------------
+#             if sheet[lb + '1'].value in list6:
+#                 sheet[lb_1 + '1'] = '标准产品'
+#                 sheet[lb_1 + '1'].font = ft1
+#                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
+#                 if sheet[lb_1 + str(jj)].value != None :
+#                     for cp_id in b:
+#                         sheet[lb_1+ str(jj)] = str(sheet[lb_1 + str(jj)].value).replace(str(cp_id),in_pro.get(cp_id))
+# ------------------------------------------------------------------------------------------------
             if sheet[lb + '1'].value in list6:
                 sheet[lb_1 + '1'] = '标准产品'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
                 if sheet[lb_1 + str(jj)].value != None :
-                    for cp_id in b:
-                        sheet[lb_1+ str(jj)] = str(sheet[lb_1 + str(jj)].value).replace(str(cp_id),in_pro.get(cp_id))
+                    sheet[lb_1 + str(jj)]=sheet[lb_1 + str(jj)].value.replace(';','|')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('；', '|')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(' ', '')
+                    sheet[lb_1 + str(jj)] = str(sheet[lb_1 + str(jj)].value).replace('雲端基礎架構與管理', 'INFRASTRUCTURE AND CLOUD MANAGEMENT')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心網路', 'DATA CENTER NETWORKING')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心伺服器', 'DATA CENTER VIRTUALIZATION - UNIFIED COMPUTING')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('網路安全', 'SECURITY - NETWORK SECURITY')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('路由器', 'ROUTERS')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('交換器', 'SWITCHES')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('無線', 'WIRELESS LAN')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('超融合基礎架構', 'CONVERGED AND HYPERCONVERGED INFRASTRUCTURE')
+            if sheet[lb + '1'].value in list16:
+                sheet[lb_1 + '1'] = '标准金额'
+                sheet[lb_1 + '1'].font = ft3
+                k_b=sheet[lb + str(jj)].value
+                if k_b>=0 and k_b<1:
+                    sheet[lb_1 + str(jj)] ='$0 - $999'
+                elif k_b>=1 and k_b<5:
+                    sheet[lb_1 + str(jj)] = '$1000 - $4999'
+                elif k_b >= 5 and k_b < 15:
+                    sheet[lb_1 + str(jj)] = '$5000 - $14,999'
+                elif k_b>=15 and k_b<25:
+                    sheet[lb_1 + str(jj)] = '$15,000 - $24,999'
+                elif k_b >= 25 and k_b < 50:
+                    sheet[lb_1 + str(jj)] = '$25,000 - $49,999'
+                elif k_b >= 50 and k_b < 100:
+                    sheet[lb_1 + str(jj)] = '$50,000 - $99,999'
+                elif k_b >= 100 and k_b < 200:
+                    sheet[lb_1 + str(jj)] = '$100,000-$199,999'
+                elif k_b >= 200 and k_b < 500:
+                    sheet[lb_1 + str(jj)] = '$200,000-$499,999'
+                elif k_b >= 500 and k_b < 1000:
+                    sheet[lb_1 + str(jj)] = '$500,000-$999,999'
+                elif k_b >= 1000:
+                    sheet[lb_1 + str(jj)] = '$1,000,000+'
+
+
+
+
 
 sheet.freeze_panes='A2'
 Clean_data.save('Clean_data.xlsx')

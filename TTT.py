@@ -2,11 +2,11 @@
 # author:Super
 import re
 num_Regex=re.compile(r'\d+')
-a={1:'aaaa',2:'rrr'}
-for i in range(1,3):
-    print 'b1b2'.replace(str(i),a[i])
+# a={1:'aaaa',2:'rrr'}
+# for i in range(1,3):
+#     print 'b1b2'.replace(str(i),a[i])
 
-
+print  '路由器1'.replace('路由器', 'ROUTERS')
 
 # a = range(1,21)
 # b = list(reversed(a))
