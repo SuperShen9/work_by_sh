@@ -26,6 +26,7 @@ in_pro={}
 b_time={}
 b_bug={}
 job_level={}
+city={}
 for row in range(2,hang_tem):
     if sheet_tem['A' + str(row)].value != None:
         key_o = sheet_tem['A' + str(row)].value
@@ -63,6 +64,10 @@ for row in range(2,hang_tem):
         key_o = sheet_tem['R' + str(row)].value
         val_o = sheet_tem['S' + str(row)].value
         job_level.setdefault(key_o, val_o)
+    if sheet_tem['T' + str(row)].value != None:
+        key_o = sheet_tem['T' + str(row)].value
+        val_o = sheet_tem['U' + str(row)].value
+        city.setdefault(key_o, val_o)
 os.chdir('D:\zlianxi\New_templete_clean\clean')
 file = 'Clean_data.xlsx'
 if os.path.exists(file):
@@ -90,6 +95,7 @@ b = list(reversed(a))
 num_Regex=re.compile(r'\d+')
 sub_Regex=re.compile(r'^886-|^86-')
 gz02_Regex=re.compile(r'^02')
+
 #copy
 email_Regex=re.compile(r'\s|，|,|:|：|;|；|。|\||/|\\|@\.|\.@|\.\.|!|#|$|\*')
 for foldername,subfolder,excels in os.walk(filepath):
@@ -112,7 +118,10 @@ for foldername,subfolder,excels in os.walk(filepath):
     for kk in range(1 , lie1):
         lb=get_column_letter(kk)
         lb_1=get_column_letter(kk+1)
-        lb_m = get_column_letter(lie1)
+        lb_m = get_column_letter(lie1+1)
+        lb_m2 = get_column_letter(lie1 + 2)
+        lb_m3 = get_column_letter(lie1 + 3)
+        lb_m4 = get_column_letter(lie1 + 4)
         for jj in range(2,hang1):
             if sheet[lb + '1'].value in list1:
                 sheet[lb_1 + '1'] = '标准segment'
@@ -197,38 +206,61 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + str(jj)] = '/'.join(mo)
             if sheet[lb + '1'].value in list14:
                 sheet[lb_1 + '1'] = '标准地址'
+                sheet[lb_m2 + '1'] = 'post'
+                sheet[lb_m2 + '1'].font=ft3
                 sheet[lb_1 + '1'].font = ft1
                 if sheet[lb + str(jj)].value!=None:
-                    sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value[3:]
+                    if sheet[lb + str(jj)].value[:5].isdigit() is True:
+                        sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value[5:]
+                        sheet[lb_m2 + str(jj)] = sheet[lb + str(jj)].value[:3]
+                    elif sheet[lb + str(jj)].value[:4].isdigit() is True:
+                        sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value[4:]
+                        sheet[lb_m2 + str(jj)] = sheet[lb + str(jj)].value[:3]
+                    elif sheet[lb + str(jj)].value[:3].isdigit() is True:
+                        sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value[3:]
+                        sheet[lb_m2 + str(jj)] = sheet[lb + str(jj)].value[:3]
+                    else:
+                        sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
+            if sheet[lb + '1'].value =='标准地址':
+                sheet[lb_m3 + '1'] = 'city'
+                sheet[lb_m3 + '1'].font = ft3
+                sheet[lb_m4 + '1'] = 'post2'
+                sheet[lb_m4 + '1'].font = ft3
+                if sheet[lb + str(jj)].value!=None:
+                    if sheet[lb + str(jj)].value[:3] in city.keys():
+                        sheet[lb_m3 + str(jj)] = sheet[lb + str(jj)].value[:3]
+                        sheet[lb_m4 + str(jj)] = city[sheet[lb + str(jj)].value[:3]]
+                        sheet[lb + str(jj)]=sheet[lb + str(jj)].value[3:]
+
             if sheet[lb + '1'].value in list15:
                 sheet[lb_m + '1'] = 'JOB LEVEL'
                 sheet[lb_m + '1'].font = ft2
                 sheet[lb_m + str(jj)] = job_level.get(sheet[lb + str(jj)].value)
 # --------------------------------数字版产品--------------------------------------------------------
-            if sheet[lb + '1'].value in list6:
-                sheet[lb_1 + '1'] = '标准产品'
-                sheet[lb_1 + '1'].font = ft1
-                sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
-                if sheet[lb_1 + str(jj)].value != None :
-                    for cp_id in b:
-                        sheet[lb_1+ str(jj)] = str(sheet[lb_1 + str(jj)].value).replace(str(cp_id),in_pro.get(cp_id))
-# ---------------------------------文字版产品--------------------------------------------------------
 #             if sheet[lb + '1'].value in list6:
 #                 sheet[lb_1 + '1'] = '标准产品'
 #                 sheet[lb_1 + '1'].font = ft1
 #                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
 #                 if sheet[lb_1 + str(jj)].value != None :
-#                     sheet[lb_1 + str(jj)]=sheet[lb_1 + str(jj)].value.replace(';','|')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('；', '|')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(' ', '')
-#                     sheet[lb_1 + str(jj)] = str(sheet[lb_1 + str(jj)].value).replace('雲端基礎架構與管理', 'INFRASTRUCTURE AND CLOUD MANAGEMENT')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心網路', 'DATA CENTER NETWORKING')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心伺服器', 'DATA CENTER VIRTUALIZATION - UNIFIED COMPUTING')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('網路安全', 'SECURITY - NETWORK SECURITY')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('路由器', 'ROUTERS')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('交換器', 'SWITCHES')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('無線', 'WIRELESS LAN')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('超融合基礎架構', 'CONVERGED AND HYPERCONVERGED INFRASTRUCTURE')
+#                     for cp_id in b:
+#                         sheet[lb_1+ str(jj)] = str(sheet[lb_1 + str(jj)].value).replace(str(cp_id),in_pro.get(cp_id))
+# ---------------------------------文字版产品--------------------------------------------------------
+            if sheet[lb + '1'].value in list6:
+                sheet[lb_1 + '1'] = '标准产品'
+                sheet[lb_1 + '1'].font = ft1
+                sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
+                if sheet[lb_1 + str(jj)].value != None :
+                    sheet[lb_1 + str(jj)]=sheet[lb_1 + str(jj)].value.replace(';','|')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('；', '|')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(' ', '')
+                    sheet[lb_1 + str(jj)] = str(sheet[lb_1 + str(jj)].value).replace('雲端基礎架構與管理', 'INFRASTRUCTURE AND CLOUD MANAGEMENT')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心網路', 'DATA CENTER NETWORKING')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心伺服器', 'DATA CENTER VIRTUALIZATION - UNIFIED COMPUTING')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('網路安全', 'SECURITY - NETWORK SECURITY')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('路由器', 'ROUTERS')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('交換器', 'SWITCHES')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('無線', 'WIRELESS LAN')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('超融合基礎架構', 'CONVERGED AND HYPERCONVERGED INFRASTRUCTURE')
             if sheet[lb + '1'].value in list16:
                 sheet[lb_1 + '1'] = '标准金额'
                 sheet[lb_1 + '1'].font = ft3
@@ -253,7 +285,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                     sheet[lb_1 + str(jj)] = '$500,000-$999,999'
                 elif k_b >= 1000:
                     sheet[lb_1 + str(jj)] = '$1,000,000+'
-
+                sheet[lb + str(jj)]=str(sheet[lb + str(jj)].value)+'000'
 
 
 

@@ -6,7 +6,12 @@ num_Regex=re.compile(r'\d+')
 # for i in range(1,3):
 #     print 'b1b2'.replace(str(i),a[i])
 
-print  '路由器1'.replace('路由器', 'ROUTERS')
+# print  '路由器1'.replace('路由器', 'ROUTERS')
+a='as22dfgghhhgd'
+
+print a[2:4].isdigit()
+print a[2:3].isalpha()
+
 
 # a = range(1,21)
 # b = list(reversed(a))

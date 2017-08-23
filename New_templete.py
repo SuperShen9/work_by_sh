@@ -101,16 +101,19 @@ if choose=='1':
         else:
             sheet['S' + str(i)] = 'TAIWAN'
             sheet['T' + str(i)] = '台湾'
+
+# 长数字不能使用字符串的使用方法
 elif choose=='2':
     for i in range(2,hang2):
         sheet['D' + str(i)] = 'Call Center'
         sheet['E' + str(i)] = 'Called'
         if sheet['J' + str(i)] ==None:
             sheet['J' + str(i)] = str(time2)
-        if sheet['AL' + str(i)].value!=None:
-            sheet['AL' + str(i)] = 'Partner_Led_Customer:' + sheet['AL' + str(i)].value
-        else:
+        if sheet['AL' + str(i)].value==None:
             sheet['AL' + str(i)] = 'Partner_Led_Customer:'
+        elif sheet['AL' + str(i)].value[:8]!='Partner_':
+            sheet['AL' + str(i)] = 'Partner_Led_Customer:' + sheet['AL' + str(i)].value
+
         if sheet['U' + str(i)] == 'Hong Kong':
             sheet['S' + str(i)]='HONG KONG'
             sheet['T' + str(i)]='Hong Kong'
@@ -121,7 +124,6 @@ elif choose=='3':
     for i in range(2,hang2):
         sheet['D' + str(i)] = 'Live Event'
         sheet['E' + str(i)] = 'Feedback Survey'
-        # sheet['E' + str(i)] = 'Feedback Survey'
         if sheet['J' + str(i)] ==None:
             sheet['J' + str(i)] = str(time2)
         sheet['AL' + str(i)] = 'BANT'
