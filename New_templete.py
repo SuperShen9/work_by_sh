@@ -114,9 +114,10 @@ elif choose=='2':
         elif sheet['AL' + str(i)].value[:8]!='Partner_':
             sheet['AL' + str(i)] = 'Partner_Led_Customer:' + sheet['AL' + str(i)].value
 
-        if sheet['U' + str(i)] == 'Hong Kong':
+        if sheet['U' + str(i)].value == 'Hong Kong':
             sheet['S' + str(i)]='HONG KONG'
             sheet['T' + str(i)]='Hong Kong'
+            sheet['V' + str(i)] = '999077'
         else:
             sheet['S' + str(i)] = 'TAIWAN'
             sheet['T' + str(i)] = '台湾'
@@ -130,9 +131,10 @@ elif choose=='3':
         sheet['AN' + str(i)] = 'YES'
         sheet['AO' + str(i)] = 'YES'
         sheet['AP' + str(i)] = 'YES'
-        if sheet['U' + str(i)] == 'Hong Kong':
+        if sheet['U' + str(i)].value == 'Hong Kong':
             sheet['S' + str(i)]='HONG KONG'
             sheet['T' + str(i)]='Hong Kong'
+            sheet['V' + str(i)] = '999077'
         else:
             sheet['S' + str(i)] = 'TAIWAN'
             sheet['T' + str(i)] = '台湾'

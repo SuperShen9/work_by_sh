@@ -77,15 +77,15 @@ list1=['Segment']
 list2=['AM']
 list3=[u'職稱']
 list4=[u'部門']
-list5=[u'產業別']
+list5=[u'產業別','Industry']
 list6=[u'有興趣投資的IT解決方案?(可複選)']
 list7=[u'專案時程']
 list8=[u'專案預算(USD)']
-list9=[u'姓名']
-list10=[u'完整公司名稱']
-list11=[u'公司電話/分機']
+list9=[u'姓名','Last Name']
+list10=[u'完整公司名稱','Company / Account']
+list11=[u'公司電話/分機','Phone']
 list12=['Email']
-list13=[u'手機']
+list13=[u'手機','Mobile']
 list14=[u'地址']
 list15=[u'标准職稱']
 list16=[u'具體預算(USD)']
@@ -93,7 +93,7 @@ list16=[u'具體預算(USD)']
 a = range(1,22)
 b = list(reversed(a))
 num_Regex=re.compile(r'\d+')
-sub_Regex=re.compile(r'^886-|^86-')
+sub_Regex=re.compile(r'^886-|^86-|^\+886-')
 gz02_Regex=re.compile(r'^02')
 
 #copy
@@ -170,7 +170,7 @@ for foldername,subfolder,excels in os.walk(filepath):
             if sheet[lb + '1'].value in list11:
                 sheet[lb_1 + '1'] = '标准電話'
                 sheet[lb_1 + '1'].font = ft1
-                mo_sub = sub_Regex.sub('0',str(sheet[lb + str(jj)].value))
+                mo_sub = sub_Regex.sub('',str(sheet[lb + str(jj)].value))
                 mo_gz02 = gz02_Regex.sub('02-',mo_sub)
                 mo = num_Regex.findall(mo_gz02)
                 sheet[lb_1 + str(jj)] = '-'.join(mo)
@@ -231,6 +231,12 @@ for foldername,subfolder,excels in os.walk(filepath):
                         sheet[lb_m3 + str(jj)] = sheet[lb + str(jj)].value[:3]
                         sheet[lb_m4 + str(jj)] = city[sheet[lb + str(jj)].value[:3]]
                         sheet[lb + str(jj)]=sheet[lb + str(jj)].value[3:]
+
+            if sheet[lb + '1'].value == 'City':
+                sheet[lb_1 + '1'] = 'post'
+                sheet[lb_1 + '1'].font = ft3
+                sheet[lb_1 + str(jj)] = city.get(sheet[lb + str(jj)].value)
+
 
             if sheet[lb + '1'].value in list15:
                 sheet[lb_m + '1'] = 'JOB LEVEL'
