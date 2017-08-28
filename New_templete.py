@@ -95,9 +95,10 @@ if choose=='1':
         sheet['E' + str(i)] = 'Data Cleansing'
         if sheet['J' + str(i)] ==None:
             sheet['J' + str(i)] = str(time2)
-        if sheet['U' + str(i)] == 'Hong Kong':
+        if sheet['U' + str(i)].value == 'Hong Kong':
             sheet['S' + str(i)]='HONG KONG'
             sheet['T' + str(i)]='Hong Kong'
+            sheet['V' + str(i)] = '999077'
         else:
             sheet['S' + str(i)] = 'TAIWAN'
             sheet['T' + str(i)] = '台湾'
