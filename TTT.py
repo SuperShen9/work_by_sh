@@ -58,24 +58,27 @@
 # f.write(message)
 # f.close()
 
-f = open("div.html",'w')
-message = """
-<html>
-<head>
-<meta charset="utf-8">
-<title>div</title>
-</head>
-<body>
-    <div id="outer">
-        <div id="inner1">
-            <input type="text"/>
-    </div> 
-    <div id="inner2">
-        <button>赞</button>
-    </div>
-</body>
-</html>
-"""
-f.write(message)
-f.close()
+# f = open("div.html",'w')
+# message = """
+# <html>
+# <head>
+# <meta charset="utf-8">
+# <title>div</title>
+# </head>
+# <body>
+#     <div id="outer">
+#         <div id="inner1">
+#             <input type="text"/>
+#     </div>
+#     <div id="inner2">
+#         <button>赞</button>
+#     </div>
+# </body>
+# </html>
+# """
+# f.write(message)
+# f.close()
 
+a='super beal made'
+b=a.split(' ')
+print len(b)

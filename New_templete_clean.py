@@ -27,6 +27,7 @@ b_time={}
 b_bug={}
 job_level={}
 city={}
+sex={}
 for row in range(2,hang_tem):
     if sheet_tem['A' + str(row)].value != None:
         key_o = sheet_tem['A' + str(row)].value
@@ -68,6 +69,10 @@ for row in range(2,hang_tem):
         key_o = sheet_tem['T' + str(row)].value
         val_o = sheet_tem['U' + str(row)].value
         city.setdefault(key_o, val_o)
+    if sheet_tem['V' + str(row)].value != None:
+        key_o = sheet_tem['V' + str(row)].value
+        val_o = sheet_tem['W' + str(row)].value
+        sex.setdefault(key_o, val_o)
 os.chdir('D:\zlianxi\New_templete_clean\clean')
 file = 'Clean_data.xlsx'
 if os.path.exists(file):
@@ -81,8 +86,8 @@ list5=[u'產業別','Industry']
 list6=[u'有興趣投資的IT解決方案?(可複選)']
 list7=[u'專案時程']
 list8=[u'專案預算(USD)']
-list9=[u'姓名','Last Name','lastname']
-list10=[u'完整公司名稱','Company / Account','companyname']
+list9=[u'姓名','last name','Last Name']
+list10=[u'完整公司名稱','company / account','company name','Company Name']
 list11=[u'公司電話/分機','Phone','TEL']
 list12=['Email','email']
 list13=[u'手機','Mobile','mobile']
@@ -114,7 +119,7 @@ for foldername,subfolder,excels in os.walk(filepath):
         for j in range(1, hang):
             sheet[liebiao1 + str(j)] = sheet1[liebiao + str(j)].value
     hang1 = sheet.max_row + 1
-    lie1 = sheet.max_column + 1
+    lie1 = sheet.max_column+1
     for kk in range(1 , lie1):
         lb=get_column_letter(kk)
         lb_1=get_column_letter(kk+1)
@@ -159,6 +164,10 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + '1'] = '标准金额'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = b_bug.get(sheet[lb + str(jj)].value)
+            if sheet[lb + '1'].value =='sex':
+                sheet[lb_1 + '1'] = '标准性别'
+                sheet[lb_1 + '1'].font = ft1
+                sheet[lb_1 + str(jj)] = sex.get(sheet[lb + str(jj)].value)
             if sheet[lb + '1'].value in list9:
                 sheet[lb_1 + '1'] = '标准姓名'
                 sheet[lb_1 + '1'].font = ft1
@@ -243,30 +252,31 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_m + '1'].font = ft2
                 sheet[lb_m + str(jj)] = job_level.get(sheet[lb + str(jj)].value)
 # --------------------------------数字版产品--------------------------------------------------------
-#             if sheet[lb + '1'].value in list6:
-#                 sheet[lb_1 + '1'] = '标准产品'
-#                 sheet[lb_1 + '1'].font = ft1
-#                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
-#                 if sheet[lb_1 + str(jj)].value != None :
-#                     for cp_id in b:
-#                         sheet[lb_1+ str(jj)] = str(sheet[lb_1 + str(jj)].value).replace(str(cp_id),in_pro.get(cp_id))
-# ---------------------------------文字版产品--------------------------------------------------------
             if sheet[lb + '1'].value in list6:
                 sheet[lb_1 + '1'] = '标准产品'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
                 if sheet[lb_1 + str(jj)].value != None :
-                    sheet[lb_1 + str(jj)]=sheet[lb_1 + str(jj)].value.replace(';','|')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('；', '|')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(' ', '')
-                    sheet[lb_1 + str(jj)] = str(sheet[lb_1 + str(jj)].value).replace('雲端基礎架構與管理', 'INFRASTRUCTURE AND CLOUD MANAGEMENT')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心網路', 'DATA CENTER NETWORKING')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心伺服器', 'DATA CENTER VIRTUALIZATION - UNIFIED COMPUTING')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('網路安全', 'SECURITY - NETWORK SECURITY')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('路由器', 'ROUTERS')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('交換器', 'SWITCHES')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('無線', 'WIRELESS LAN')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('超融合基礎架構', 'CONVERGED AND HYPERCONVERGED INFRASTRUCTURE')
+                    for cp_id in b:
+                        sheet[lb_1+ str(jj)] = str(sheet[lb_1 + str(jj)].value).replace(str(cp_id),in_pro.get(cp_id))
+# ---------------------------------文字版产品--------------------------------------------------------
+#             if sheet[lb + '1'].value in list6:
+#                 sheet[lb_1 + '1'] = '标准产品'
+#                 sheet[lb_1 + '1'].font = ft1
+#                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
+#                 if sheet[lb_1 + str(jj)].value != None :
+#                     sheet[lb_1 + str(jj)]=sheet[lb_1 + str(jj)].value.replace(';','|')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('；', '|')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(' ', '')
+#                     sheet[lb_1 + str(jj)] = str(sheet[lb_1 + str(jj)].value).replace('雲端基礎架構與管理', 'INFRASTRUCTURE AND CLOUD MANAGEMENT')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心網路', 'DATA CENTER NETWORKING')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心伺服器', 'DATA CENTER VIRTUALIZATION - UNIFIED COMPUTING')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('網路安全', 'SECURITY - NETWORK SECURITY')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('路由器', 'ROUTERS')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('交換器', 'SWITCHES')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('無線', 'WIRELESS LAN')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('超融合基礎架構', 'CONVERGED AND HYPERCONVERGED INFRASTRUCTURE')
+# --------------------------------------------------------------------------------------------------------------------
             if sheet[lb + '1'].value in list16:
                 sheet[lb_1 + '1'] = '标准金额'
                 sheet[lb_1 + '1'].font = ft3
