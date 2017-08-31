@@ -79,6 +79,9 @@
 # f.write(message)
 # f.close()
 
-a='super beal made'
-b=a.split(' ')
-print len(b)
+# a='super beal made'
+# b=a.split(' ')
+# print len(b)
+a=input('please input:')
+if a==1:
+    print 'hehe'
