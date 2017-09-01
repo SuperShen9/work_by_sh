@@ -51,33 +51,36 @@ for foldername,subfolder,excels in os.walk(filepath):
     if choose=='1':
         for k in range(1, lie):
             liebiao = get_column_letter(k)
-            if sheet1[liebiao + '1'].value.lower() in spam.keys():
-                kk = get_column_letter(spam[sheet1[liebiao + '1'].value.lower()])
-                sheet[kk + '1'] = sheet1[liebiao + '1'].value
-                for j in range(2, hang):
-                    sheet['A' + str(j)] = excels[0]
-                    sheet[kk + str(j)] = sheet1[liebiao + str(j)].value
-                    j += 1
+            if sheet1[liebiao + '1'].value!=None:
+                if sheet1[liebiao + '1'].value.lower() in spam.keys():
+                    kk = get_column_letter(spam[sheet1[liebiao + '1'].value.lower()])
+                    sheet[kk + '1'] = sheet1[liebiao + '1'].value
+                    for j in range(2, hang):
+                        sheet['A' + str(j)] = excels[0]
+                        sheet[kk + str(j)] = sheet1[liebiao + str(j)].value
+                        j += 1
     elif choose=='2':
         for k in range(1, lie):
             liebiao = get_column_letter(k)
-            if sheet1[liebiao + '1'].value.lower() in spam1.keys():
-                kk = get_column_letter(spam1[sheet1[liebiao + '1'].value.lower()])
-                sheet[kk + '1'] = sheet1[liebiao + '1'].value
-                for j in range(2, hang):
-                    sheet['A' + str(j)] = excels[0]
-                    sheet[kk + str(j)] = sheet1[liebiao + str(j)].value
-                    j += 1
+            if sheet1[liebiao + '1'].value != None:
+                if sheet1[liebiao + '1'].value.lower() in spam1.keys():
+                    kk = get_column_letter(spam1[sheet1[liebiao + '1'].value.lower()])
+                    sheet[kk + '1'] = sheet1[liebiao + '1'].value
+                    for j in range(2, hang):
+                        sheet['A' + str(j)] = excels[0]
+                        sheet[kk + str(j)] = sheet1[liebiao + str(j)].value
+                        j += 1
     elif choose=='3':
         for k in range(1, lie):
             liebiao = get_column_letter(k)
-            if sheet1[liebiao + '1'].value.lower() in spam2.keys():
-                kk = get_column_letter(spam2[sheet1[liebiao + '1'].value.lower()])
-                sheet[kk + '1'] = sheet1[liebiao + '1'].value
-                for j in range(2, hang):
-                    sheet['A' + str(j)] = excels[0]
-                    sheet[kk + str(j)] = sheet1[liebiao + str(j)].value
-                    j += 1
+            if sheet1[liebiao + '1'].value != None:
+                if sheet1[liebiao + '1'].value.lower() in spam2.keys():
+                    kk = get_column_letter(spam2[sheet1[liebiao + '1'].value.lower()])
+                    sheet[kk + '1'] = sheet1[liebiao + '1'].value
+                    for j in range(2, hang):
+                        sheet['A' + str(j)] = excels[0]
+                        sheet[kk + str(j)] = sheet1[liebiao + str(j)].value
+                        j += 1
     else:
         print '-' * 50
         print '请输入 1 or 2 or 3'

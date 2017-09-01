@@ -345,5 +345,8 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
 
 
+
+
+
 sheet.freeze_panes='A2'
 Clean_data.save('Clean_data.xlsx')
