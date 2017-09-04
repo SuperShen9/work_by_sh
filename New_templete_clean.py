@@ -403,13 +403,14 @@ for foldername,subfolder,excels in os.walk(filepath):
                 +' '+sheet[lb_4 + str(jj)].value+' '+sheet[lb_6 + str(jj)].value
                 if sheet[lb_1 + str(jj)].value!=None:
                     sheet[lb_1 + str(jj)]= str(sheet[lb_1 + str(jj)].value).replace(' ,Hong Kong','') \
-                .replace(',Hong Kong', '').replace(' Hong Kong', '').replace('Hong Kong', '')
+                .replace(',Hong Kong', '').replace(' Hong Kong', '').replace('Hong Kong', '') \
+                .replace('  ', ' ').replace('  ', ' ').strip()
 
-            if sheet[lb + '1'].value =='Address*' :
-                sheet[lb_1 + '1'] = '标准地址'
-                sheet[lb_1 + '1'].font = ft1
-                sheet[lb_1 + str(jj)] = str(sheet[lb + str(jj)].value).replace(' ,Hong Kong','') \
-                .replace(',Hong Kong', '').replace(' Hong Kong', '').replace('Hong Kong', '')
+            # if sheet[lb + '1'].value =='Address*' :
+            #     sheet[lb_1 + '1'] = '标准地址'
+            #     sheet[lb_1 + '1'].font = ft1
+            #     sheet[lb_1 + str(jj)] = str(sheet[lb + str(jj)].value).replace(' ,Hong Kong','') \
+            #     .replace(',Hong Kong', '').replace(' Hong Kong', '').replace('Hong Kong', '')
 
 
 sheet.freeze_panes='A2'
