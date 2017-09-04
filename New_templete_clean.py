@@ -30,6 +30,7 @@ city={}
 sex={}
 pc_num={}
 wh_pro={}
+emp={}
 for row in range(2,hang_tem):
     if sheet_tem['A' + str(row)].value != None:
         key_o = sheet_tem['A' + str(row)].value
@@ -83,6 +84,10 @@ for row in range(2,hang_tem):
         key_o = sheet_tem['Z' + str(row)].value
         val_o = sheet_tem['AA' + str(row)].value
         wh_pro.setdefault(key_o, val_o)
+    if sheet_tem['AB' + str(row)].value != None:
+        key_o = sheet_tem['AB' + str(row)].value
+        val_o = sheet_tem['AC' + str(row)].value
+        emp.setdefault(key_o, val_o)
 os.chdir('D:\zlianxi\New_templete_clean\clean')
 file = 'Clean_data.xlsx'
 if os.path.exists(file):
@@ -92,21 +97,27 @@ list1=['Segment']
 list2=['AM']
 list3=[u'職稱']
 list4=[u'部門']
-list5=[u'產業別','Industry','Vertical*']
+list5=[u'產業別','Industry','Vertical*','Master Industry']
 list6=[u'有興趣投資的IT解決方案?(可複選)']
-list7=[u'專案時程']
+list6_wh=['Model','Cisco_Network_Set_TM_V2*']
+list7=[u'專案時程','Action Time']
 list8=[u'專案預算(USD)']
-list9=[u'姓名','last name','Last Name','Last Name*']
-list10=[u'完整公司名稱','company / account','company name','Company Name','Company_Name*','Company']
+list9=[u'姓名','last name','Last Name','Last Name*','Surname']
+list10=[u'完整公司名稱','company / account','company name','Company Name','Company_Name*','Company','Company name']
 list11=[u'公司電話/分機','Phone','TEL','Business Phone']
+list11_hk=['Phone Number*','Main Tel']
 list12=['Email','email','Email*','Email Address']
 list13=[u'手機','Mobile','mobile','Mobile Phone']
 list14=[u'地址','address']
 list15=[u'标准職稱']
 list16=[u'具體預算(USD)']
+list16_wh=[u'Total']
 list17=['# of PCs*']
-list18=['sex','Salutation_T1_V1*']
-# list_email=[' ',',','/','\\','@.','.@','..','，','。',':','；']
+list18=['sex','Salutation_T1_V1*','Mr/Ms']
+list19=['First name']
+list20=['Title']
+list21=['Range of HK Staff']
+list22=['Remark','IRM_Enquiry_FF_V1*']
 a = range(1,22)
 b = list(reversed(a))
 num_Regex=re.compile(r'\d+')
@@ -135,6 +146,9 @@ for foldername,subfolder,excels in os.walk(filepath):
     for kk in range(1 , lie1):
         lb=get_column_letter(kk)
         lb_1=get_column_letter(kk+1)
+        lb_2 = get_column_letter(kk + 2)
+        lb_4= get_column_letter(kk + 4)
+        lb_6 = get_column_letter(kk + 6)
         lb_m = get_column_letter(lie1+1)
         lb_m2 = get_column_letter(lie1 + 2)
         lb_m3 = get_column_letter(lie1 + 3)
@@ -180,15 +194,29 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + '1'] = '标准性别'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = sex.get(sheet[lb + str(jj)].value)
+            if sheet[lb + '1'].value in list21 :
+                sheet[lb_1 + '1'] = '标准人数'
+                sheet[lb_1 + '1'].font = ft1
+                sheet[lb_1 + str(jj)] = emp.get(sheet[lb + str(jj)].value)
             if sheet[lb + '1'].value in list9:
                 sheet[lb_1 + '1'] = '标准姓名'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value.strip()
+            if sheet[lb + '1'].value in list19:
+                sheet[lb_1 + '1'] = '标准姓名2'
+                sheet[lb_1 + '1'].font = ft1
+                if sheet[lb + str(jj)].value!=None:
+                    sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value.strip()
+            if sheet[lb + '1'].value in list20:
+                sheet[lb_1 + '1'] = '名片职务'
+                sheet[lb_1 + '1'].font = ft1
+                if sheet[lb + str(jj)].value!=None:
+                    sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value.strip()
             if sheet[lb + '1'].value in list10:
                 sheet[lb_1 + '1'] = '标准公司名稱'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value.strip()
-            if sheet[lb + '1'].value =='Phone Number*':
+            if sheet[lb + '1'].value in list11_hk:
                 sheet[lb_1 + '1'] = '标准電話'
                 sheet[lb_1 + '1'].font = ft1
                 if len(sheet[lb + str(jj)].value)<=9:
@@ -232,11 +260,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + '1'].font = ft1
                 mo = num_Regex.findall(str(sheet[lb + str(jj)].value))
                 sheet[lb_1 + str(jj)] = '/'.join(mo)
-            if sheet[lb + '1'].value =='Address*' :
-                sheet[lb_1 + '1'] = '标准地址'
-                sheet[lb_1 + '1'].font = ft1
-                sheet[lb_1 + str(jj)] = str(sheet[lb + str(jj)].value).replace(' ,Hong Kong','') \
-                .replace(',Hong Kong', '').replace(' Hong Kong', '').replace('Hong Kong', '')
+
             if sheet[lb + '1'].value in list14:
                 sheet[lb_1 + '1'] = '标准地址'
                 sheet[lb_m2 + '1'] = 'post'
@@ -275,7 +299,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_m + '1'] = 'JOB LEVEL'
                 sheet[lb_m + '1'].font = ft2
                 sheet[lb_m + str(jj)] = job_level.get(sheet[lb + str(jj)].value)
-            if sheet[lb + '1'].value == 'Cisco_Network_Set_TM_V2*':
+            if sheet[lb + '1'].value in list6_wh:
                 sheet[lb_1 + '1'] = '标准产品'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = wh_pro.get(sheet[lb + str(jj)].value)
@@ -330,12 +354,37 @@ for foldername,subfolder,excels in os.walk(filepath):
                 elif k_b >= 1000:
                     sheet[lb_1 + str(jj)] = '$1,000,000+'
                 sheet[lb + str(jj)]=str(sheet[lb + str(jj)].value)+'000'
+ # -------------------WH版---------------------------
+            if sheet[lb + '1'].value in list16_wh:
+                sheet[lb_1 + '1'] = '标准金额'
+                sheet[lb_1 + '1'].font = ft3
+                k_b=sheet[lb + str(jj)].value
+                if k_b>=0 and k_b<999:
+                    sheet[lb_1 + str(jj)] ='$0 - $999'
+                elif k_b>=999 and k_b<5000:
+                    sheet[lb_1 + str(jj)] = '$1000 - $4999'
+                elif k_b >= 5000 and k_b < 15000:
+                    sheet[lb_1 + str(jj)] = '$5000 - $14,999'
+                elif k_b>=15000 and k_b<25000:
+                    sheet[lb_1 + str(jj)] = '$15,000 - $24,999'
+                elif k_b >= 25000 and k_b < 50000:
+                    sheet[lb_1 + str(jj)] = '$25,000 - $49,999'
+                elif k_b >= 50000 and k_b < 100000:
+                    sheet[lb_1 + str(jj)] = '$50,000 - $99,999'
+                elif k_b >= 100000 and k_b < 200000:
+                    sheet[lb_1 + str(jj)] = '$100,000-$199,999'
+                elif k_b >= 200000 and k_b < 500000:
+                    sheet[lb_1 + str(jj)] = '$200,000-$499,999'
+                elif k_b >= 500000 and k_b < 1000000:
+                    sheet[lb_1 + str(jj)] = '$500,000-$999,999'
+                elif k_b >= 1000000:
+                    sheet[lb_1 + str(jj)] = '$1,000,000+'
             if sheet[lb + '1'].value in list17:
                 sheet[lb_1 + '1'] = '标准PC'
                 sheet[lb_1 + '1'].font = ft1
                 if sheet[lb + str(jj)].value!=None:
                     sheet[lb_1 + str(jj)] = pc_num.get(sheet[lb + str(jj)].value)
-            if sheet[lb + '1'].value == 'IRM_Enquiry_FF_V1*':
+            if sheet[lb + '1'].value in list22:
                 sheet[lb_1 + '1'] = '备注'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = 'Partner_Led_Customer:'+str(sheet[lb + str(jj)].value)
@@ -343,9 +392,24 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + '1'] = '活动日期'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
+            if sheet[lb + '1'].value == 'Source':
+                sheet[lb_1 + '1'] = '来源'
+                sheet[lb_1 + '1'].font = ft1
+                sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
+            if sheet[lb + '1'].value == 'Address 1' and sheet[lb_2 + '1'].value == 'Address 2' :
+                sheet[lb_1 + '1'] = '标准地址'
+                sheet[lb_1 + '1'].font = ft1
+                sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value+' '+sheet[lb_2 + str(jj)].value\
+                +' '+sheet[lb_4 + str(jj)].value+' '+sheet[lb_6 + str(jj)].value
+                if sheet[lb_1 + str(jj)].value!=None:
+                    sheet[lb_1 + str(jj)]= str(sheet[lb_1 + str(jj)].value).replace(' ,Hong Kong','') \
+                .replace(',Hong Kong', '').replace(' Hong Kong', '').replace('Hong Kong', '')
 
-
-
+            if sheet[lb + '1'].value =='Address*' :
+                sheet[lb_1 + '1'] = '标准地址'
+                sheet[lb_1 + '1'].font = ft1
+                sheet[lb_1 + str(jj)] = str(sheet[lb + str(jj)].value).replace(' ,Hong Kong','') \
+                .replace(',Hong Kong', '').replace(' Hong Kong', '').replace('Hong Kong', '')
 
 
 sheet.freeze_panes='A2'
