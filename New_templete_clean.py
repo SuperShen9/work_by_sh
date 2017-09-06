@@ -114,8 +114,9 @@ list16=[u'具體預算(USD)']
 list16_wh=[u'Total']
 list17=['# of PCs*']
 list18=['sex','Salutation_T1_V1*','Mr/Ms']
-list19=['First name','first name']
-list20=['Title','jobtitle']
+list19=['First name','first name','First Name*']
+list20=['Title','jobtitle','Job Title*']
+list20_depa=['DEPARTMENT*']
 list21=['Range of HK Staff']
 list22=['Remark','IRM_Enquiry_FF_V1*']
 a = range(1,22)
@@ -213,6 +214,11 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + '1'].font = ft1
                 if sheet[lb + str(jj)].value!=None:
                     sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value.strip()
+            if sheet[lb + '1'].value in list20_depa:
+                sheet[lb_1 + '1'] = '名片部门'
+                sheet[lb_1 + '1'].font = ft1
+                if sheet[lb + str(jj)].value!=None:
+                    sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value.strip()
             if sheet[lb + '1'].value in list10:
                 sheet[lb_1 + '1'] = '标准公司名稱'
                 sheet[lb_1 + '1'].font = ft1
@@ -224,6 +230,9 @@ for foldername,subfolder,excels in os.walk(filepath):
                 if len(sheet[lb + str(jj)].value)<=9:
                     mo = num_Regex.findall(sheet[lb + str(jj)].value)
                     sheet[lb_1 + str(jj)]='852-' +str(''.join(mo))
+
+
+#长度大于10的代码优化
 
             if sheet[lb + '1'].value in list11:
                 sheet[lb_1 + '1'] = '标准電話'
@@ -408,11 +417,12 @@ for foldername,subfolder,excels in os.walk(filepath):
                 .replace(',Hong Kong', '').replace(' Hong Kong', '').replace('Hong Kong', '') \
                 .replace('  ', ' ').replace('  ', ' ').strip()
 
-            # if sheet[lb + '1'].value =='Address*' :
-            #     sheet[lb_1 + '1'] = '标准地址'
-            #     sheet[lb_1 + '1'].font = ft1
-            #     sheet[lb_1 + str(jj)] = str(sheet[lb + str(jj)].value).replace(' ,Hong Kong','') \
-            #     .replace(',Hong Kong', '').replace(' Hong Kong', '').replace('Hong Kong', '')
+            if sheet[lb + '1'].value =='Address*' :
+                sheet[lb_1 + '1'] = '标准地址'
+                sheet[lb_1 + '1'].font = ft1
+                sheet[lb_1 + str(jj)] = str(sheet[lb + str(jj)].value).replace(', Hong Kong.','') \
+                    .replace(' ,Hong Kong', '').replace(',Hong Kong', '').replace(' Hong Kong', '').\
+                    replace('Hong Kong', '')
 
 
 sheet.freeze_panes='A2'
