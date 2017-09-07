@@ -154,6 +154,7 @@ for foldername,subfolder,excels in os.walk(filepath):
         lb_m2 = get_column_letter(lie1 + 2)
         lb_m3 = get_column_letter(lie1 + 3)
         lb_m4 = get_column_letter(lie1 + 4)
+        lb_m5 = get_column_letter(lie1 + 5)
         for jj in range(2,hang1):
             if sheet[lb + '1'].value in list1:
                 sheet[lb_1 + '1'] = '标准segment'
@@ -226,10 +227,16 @@ for foldername,subfolder,excels in os.walk(filepath):
                     sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value.strip()
             if sheet[lb + '1'].value in list11_hk:
                 sheet[lb_1 + '1'] = '标准電話'
+                sheet[lb_m5 + '1'] = '备用電話'
                 sheet[lb_1 + '1'].font = ft1
                 if len(sheet[lb + str(jj)].value)<=9:
                     mo = num_Regex.findall(sheet[lb + str(jj)].value)
                     sheet[lb_1 + str(jj)]='852-' +str(''.join(mo))
+                elif len(sheet[lb + str(jj)].value)>9:
+                    mo = num_Regex.findall(sheet[lb + str(jj)].value[:9])
+                    sheet[lb_1 + str(jj)] = '852-' + str(''.join(mo))
+                    mo_by= num_Regex.findall(sheet[lb + str(jj)].value[9:])
+                    sheet[lb_m5 + str(jj)] = '852-' + str(''.join(mo_by))
 
 
 #长度大于10的代码优化
@@ -399,10 +406,6 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + '1'] = '备注'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = 'Partner_Led_Customer:'+str(sheet[lb + str(jj)].value)
-            if sheet[lb + '1'].value == 'Submit Date' :
-                sheet[lb_1 + '1'] = '活动日期'
-                sheet[lb_1 + '1'].font = ft1
-                sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
             if sheet[lb + '1'].value == 'Source':
                 sheet[lb_1 + '1'] = '来源'
                 sheet[lb_1 + '1'].font = ft1
@@ -421,9 +424,17 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + '1'] = '标准地址'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = str(sheet[lb + str(jj)].value).replace(', Hong Kong.','') \
+                    .replace(', Hong Kong', '').replace(' ，Hong Kong', '')\
                     .replace(' ,Hong Kong', '').replace(',Hong Kong', '').replace(' Hong Kong', '').\
                     replace('Hong Kong', '')
 
+            if sheet[lb + '1'].value == 'Country*senda':
+                sheet[lb_1 + '1'] = '来源'
+                sheet[lb_2 + '1'] = 'city'
+                sheet[lb_1 + '1'].font = ft2
+                sheet[lb_2 + '1'].font = ft2
+                sheet[lb_1 + str(jj)] ='Senda'
+                sheet[lb_2 + str(jj)] = 'Hong Kong'
 
 sheet.freeze_panes='A2'
 Clean_data.save('Clean_data.xlsx')
