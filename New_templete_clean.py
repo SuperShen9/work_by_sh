@@ -281,7 +281,7 @@ for foldername,subfolder,excels in os.walk(filepath):
 
             if sheet[lb + '1'].value in list14:
                 sheet[lb_1 + '1'] = '标准地址'
-                sheet[lb_m2 + '1'] = 'post'
+                sheet[lb_m2 + '1'] = '标准邮编'
                 sheet[lb_m2 + '1'].font=ft3
                 sheet[lb_1 + '1'].font = ft1
                 if sheet[lb + str(jj)].value!=None:
@@ -299,7 +299,7 @@ for foldername,subfolder,excels in os.walk(filepath):
             if sheet[lb + '1'].value =='标准地址':
                 sheet[lb_m3 + '1'] = 'city'
                 sheet[lb_m3 + '1'].font = ft3
-                sheet[lb_m4 + '1'] = 'post2'
+                sheet[lb_m4 + '1'] = '标准邮编2'
                 sheet[lb_m4 + '1'].font = ft3
                 if sheet[lb + str(jj)].value!=None:
                     if sheet[lb + str(jj)].value[:3] in city.keys():
@@ -308,7 +308,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                         sheet[lb + str(jj)]=sheet[lb + str(jj)].value[3:]
 
             if sheet[lb + '1'].value == 'City':
-                sheet[lb_1 + '1'] = 'post'
+                sheet[lb_1 + '1'] = '标准邮编'
                 sheet[lb_1 + '1'].font = ft3
                 sheet[lb_1 + str(jj)] = city.get(sheet[lb + str(jj)].value)
 
