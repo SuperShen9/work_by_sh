@@ -307,10 +307,10 @@ for foldername,subfolder,excels in os.walk(filepath):
                         sheet[lb_m4 + str(jj)] = city[sheet[lb + str(jj)].value[:3]]
                         sheet[lb + str(jj)]=sheet[lb + str(jj)].value[3:]
 
-            if sheet[lb + '1'].value == 'City':
-                sheet[lb_1 + '1'] = '标准邮编'
-                sheet[lb_1 + '1'].font = ft3
-                sheet[lb_1 + str(jj)] = city.get(sheet[lb + str(jj)].value)
+            # if sheet[lb + '1'].value == 'City':
+            #     sheet[lb_1 + '1'] = '标准邮编'
+            #     sheet[lb_1 + '1'].font = ft3
+            #     sheet[lb_1 + str(jj)] = city.get(sheet[lb + str(jj)].value)
 
 
             if sheet[lb + '1'].value in list15:
@@ -350,7 +350,9 @@ for foldername,subfolder,excels in os.walk(filepath):
             if sheet[lb + '1'].value in list16:
                 sheet[lb_1 + '1'] = '标准金额'
                 sheet[lb_1 + '1'].font = ft3
-                k_b=sheet[lb + str(jj)].value
+                if sheet[lb + str(jj)].value!=None:
+                    k_b=int(str(sheet[lb + str(jj)].value).replace('k', ''))
+                    sheet[lb + str(jj)] = str(k_b) + '000'
                 if k_b>=0 and k_b<1:
                     sheet[lb_1 + str(jj)] ='$0 - $999'
                 elif k_b>=1 and k_b<5:
@@ -371,7 +373,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                     sheet[lb_1 + str(jj)] = '$500,000-$999,999'
                 elif k_b >= 1000:
                     sheet[lb_1 + str(jj)] = '$1,000,000+'
-                sheet[lb + str(jj)]=str(sheet[lb + str(jj)].value)+'000'
+
  # -------------------WH版---------------------------
             if sheet[lb + '1'].value in list16_wh:
                 sheet[lb_1 + '1'] = '标准金额'
