@@ -99,9 +99,9 @@ list3=[u'職稱']
 list4=[u'部門']
 list5=[u'產業別','Industry','Vertical*','Master Industry']
 list6=[u'有興趣投資的IT解決方案?(可複選)']
-list6_wh=['Model','Cisco_Network_Set_TM_V2*']
-list7=[u'專案時程','Action Time']
-list8=[u'專案預算(USD)']
+list6_wh=['Model','Cisco_Network_Set_TM_V2*','Looking for ']
+list7=[u'專案時程','Action Time','Action Time Frame']
+list8=[u'專案預算(USD)','Range of Budget plan (HKD)']
 list9=[u'姓名','last name','Last Name','Last Name*','Surname']
 list10=[u'完整公司名稱','company / account','company name','Company Name','Company_Name*','Company','Company name']
 list11=[u'公司電話/分機','Phone','TEL','Business Phone']
@@ -122,7 +122,7 @@ list22=['Remark','IRM_Enquiry_FF_V1*']
 a = range(1,22)
 b = list(reversed(a))
 num_Regex=re.compile(r'\d+')
-sub_Regex=re.compile(r'^886-|^86-|^\+886-')
+sub_Regex=re.compile(r'^886-|^86-|^0086-')
 gz02_Regex=re.compile(r'^02')
 
 #copy
@@ -244,10 +244,12 @@ for foldername,subfolder,excels in os.walk(filepath):
             if sheet[lb + '1'].value in list11:
                 sheet[lb_1 + '1'] = '标准電話'
                 sheet[lb_1 + '1'].font = ft1
-                mo_sub = sub_Regex.sub('0',str(sheet[lb + str(jj)].value))
-                mo_gz02 = gz02_Regex.sub('02-',mo_sub)
-                mo = num_Regex.findall(mo_gz02)
-                sheet[lb_1 + str(jj)] = '-'.join(mo)
+                mo = num_Regex.findall(str(sheet[lb + str(jj)].value))
+                mo_hb='-'.join(mo)
+                mo_sub = sub_Regex.sub('0',mo_hb)
+                # mo_gz02 = gz02_Regex.sub('02-',mo_sub)
+
+                sheet[lb_1 + str(jj)] = mo_sub
     # -------------------------老版本邮件思路----------------------------------
             # if sheet[lb + '1'].value in list12:
             #     sheet[lb_1 + '1'] = '邮箱检查'
@@ -346,6 +348,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('交換器', 'SWITCHES')
                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('無線', 'WIRELESS LAN')
                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('超融合基礎架構', 'CONVERGED AND HYPERCONVERGED INFRASTRUCTURE')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('IP電話', 'ENTERPRISE IP TELEPHONY')
 # --------------------------------------------------------------------------------------------------------------------
             if sheet[lb + '1'].value in list16:
                 sheet[lb_1 + '1'] = '标准金额'
@@ -415,8 +418,8 @@ for foldername,subfolder,excels in os.walk(filepath):
             if sheet[lb + '1'].value == 'Address 1' and sheet[lb_2 + '1'].value == 'Address 2' :
                 sheet[lb_1 + '1'] = '标准地址'
                 sheet[lb_1 + '1'].font = ft1
-                sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value+' '+sheet[lb_2 + str(jj)].value\
-                +' '+sheet[lb_4 + str(jj)].value+' '+sheet[lb_6 + str(jj)].value
+                sheet[lb_1 + str(jj)] = str(sheet[lb + str(jj)].value)+' '+str(sheet[lb_2 + str(jj)].value)\
+                +' '+str(sheet[lb_4 + str(jj)].value)+' '+str(sheet[lb_6 + str(jj)].value)
                 if sheet[lb_1 + str(jj)].value!=None:
                     sheet[lb_1 + str(jj)]= str(sheet[lb_1 + str(jj)].value).replace(' ,Hong Kong','') \
                 .replace(',Hong Kong', '').replace(' Hong Kong', '').replace('Hong Kong', '') \

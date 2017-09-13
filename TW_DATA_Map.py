@@ -23,7 +23,8 @@ for row1 in range(2,sheet1.max_row+1):
                 replace('韓商', '').replace('荷蘭商', '').replace('瑞士商', '').replace('百慕達商', ''). \
                 replace('愛爾蘭商', '').replace('英商', '').replace('香港商', '').replace('新加坡商', ''). \
                 replace('美商', '').replace('亞商', '').replace('群島商','').replace('台灣','')\
-                .replace('臺灣','').replace('財團法人','').replace('全球','').replace('國立','')
+                .replace('臺灣','').replace('財團法人','').replace('全球','').replace('國立','')\
+            .replace('菲商','')
             sheet1['F' + str(row1)] = sheet1['D' + str(row1)].value[i:i+2].\
                 replace('企業','').replace('股份','').replace('有限','').replace('公司','')
             break
@@ -32,7 +33,8 @@ for row1 in range(2,sheet1.max_row+1):
                 replace('韓商', '').replace('荷蘭商', '').replace('瑞士商', '').replace('百慕達商', ''). \
                 replace('愛爾蘭商', '').replace('英商', '').replace('香港商', '').replace('新加坡商', ''). \
                 replace('美商', '').replace('亞商', '').replace('群島商','').replace('台灣','')\
-                .replace('臺灣','').replace('財團法人','').replace('全球','').replace('國立','')
+                .replace('臺灣','').replace('財團法人','').replace('全球','').replace('國立','')\
+                .replace('菲商','')
 if 'Find_M' in or_wb.get_sheet_names():
     or_wb.remove_sheet(or_wb.get_sheet_by_name('Find_M'))
     or_wb.create_sheet(index=2, title='Find_M')
