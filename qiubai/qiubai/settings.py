@@ -53,6 +53,7 @@ ROBOTSTXT_OBEY = True
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
+   'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
    'qiubai.middlewares.QiubaiSpiderMiddleware': 400,
    'qiubai.middlewares.printuser_agent': 600,
 }
