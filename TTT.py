@@ -79,12 +79,12 @@
 # f.write(message)
 # f.close()
 
-# a='super beal made'
-# b=a.split(' ')
-# print len(b)
-# a=input('please input:')
-# if a==1:
-#     print 'hehe'
+a='super beal made'
+b=a.split(' ')
+print len(b)
+a=input('please input:')
+if a==1:
+    print 'hehe'
 i=65
 
 for k in range(65,91):
@@ -92,12 +92,4 @@ for k in range(65,91):
     i+=1
 
     spam = 65
-    sheet_dup = wbf.get_sheet_by_name('Sheet')
-    hang_dup = data.max_row + 1
-    lie_dup = sheet.max_column + 1
-    for dup in range(1, lie_dup):
-        ldup = get_column_letter(dup)
-        for dup_h in range(1, hang_dup):
-            if sheet[ldup + '1'].value != None:
-                sheet_dup[chr(spam) + str(dup_h)] = sheet[ldup + 'dup_h'].value
-                spam += 1
+
