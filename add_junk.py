@@ -20,7 +20,7 @@ list1=['~','/','《','!','@','#','$','%','^','&','*','(',')','>']
 #     sheet1['E' + str(i)] = random.choice(list2)+random.choice(list2).join(sheet1['B' + str(i)].value.split())+random.choice(list2)
 #     sheet1['F' + str(i)] = random.choice(list2) + str(sheet1['C' + str(i)].value) + random.choice(list2)
 #     sheet1['G' + str(i)] = random.choice(list2) + str(sheet1['D' + str(i)].value) + random.choice(list2)
-# -------------------------------------------------------------------
+# --------------------------------check-----------------------------------
 for i in range(2,hang+1):
     for ii in list1:
         if sheet1['B' + str(i)].value!=None:
