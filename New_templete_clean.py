@@ -97,27 +97,27 @@ list1=['Segment']
 list2=['AM']
 list3=[u'職稱']
 list4=[u'部門']
-list5=[u'產業別',u'公司產業別','Industry','Vertical*','Master Industry']
+list5=[u'產業別',u'公司產業別',u'服務產業類別','Industry','Vertical*','Master Industry']
 list6=[u'有興趣投資的IT解決方案?(可複選)']
 list6_wh=['Model','Cisco_Network_Set_TM_V2*','Looking for ']
 list7=[u'專案時程',u'貴公司何時會規劃下階段的網路建置？*','Action Time','Action Time Frame']
 list8=[u'專案預算(USD)',u'貴公司的投資預算是？*','Range of Budget plan (HKD)']
 list9=[u'姓名',u'中文姓名','last name','Last Name','Last Name*','Surname']
-list10=[u'完整公司名稱',u'中文公司名稱','company / account','company name','Company Name','Company_Name*','Company','Company name']
-list11=[u'公司電話/分機',u'公司聯絡電話','Phone','TEL','Business Phone']
+list10=[u'完整公司名稱',u'公司名稱',u'中文公司名稱','company / account','company name','Company Name','Company_Name*','Company','Company name']
+list11=[u'公司電話/分機',u'公司電話',u'公司聯絡電話','Phone','TEL','Business Phone']
 list11_hk=['Phone Number*','Main Tel']
-list12=[u'公司電子信箱','Email','email','Email*','Email Address']
-list13=[u'手機','Mobile','mobile','Mobile Phone']
-list14=[u'地址','address']
+list12=[u'公司電子信箱',u'公司 E-mail','Email','email','Email*','Email Address']
+list13=[u'手機',u'手機電話','Mobile','mobile','Mobile Phone']
+list14=[u'地址',u'公司地址','address']
 list15=[u'标准職稱']
 list16=[u'具體預算(USD)']
 list16_wh=[u'Total']
 list17=['# of PCs*']
 list18=['sex','Salutation_T1_V1*','Mr/Ms']
 list19=['First name','first name','First Name*','First Name']
-list20=['Title','jobtitle','Job Title*']
-list20_depa=['DEPARTMENT*']
-list21=['Range of HK Staff']
+list20=[u'職稱','Title','jobtitle','Job Title*']
+list20_depa=[u'服務部門名稱','DEPARTMENT*']
+list21=[u'公司規模','Range of HK Staff']
 list22=['Remark','IRM_Enquiry_FF_V1*','Senda Remark']
 a = range(1,22)
 b = list(reversed(a))
@@ -242,7 +242,7 @@ for foldername,subfolder,excels in os.walk(filepath):
 #长度大于10的代码优化
 
             if sheet[lb + '1'].value in list11:
-                sheet[lb_1 + '1'] = '标准電話'
+                sheet[lb_1 + '1'] = '标准电话'
                 sheet[lb_1 + '1'].font = ft1
                 mo = num_Regex.findall(str(sheet[lb + str(jj)].value))
                 mo_hb='-'.join(mo)
