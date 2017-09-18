@@ -10,7 +10,7 @@ class qiubaispider(scrapy.Spider):
     # def parse(self, response):
     #     print response.xpath('//div[@class="content"]').extract()
     def parse(self,response):
-        for ele in response.xpath('//div[@class="article block untagged mb15"]'):
+        for ele in response.xpath('//div[starts-with(@class,"article block untagged mb15")]'):
             authors = ele.xpath('./div[@class="author clearfix"]/a[2]/h2/text()').extract()
             contents = ele.xpath('.//div[@class="content"]/span/text()').extract()
             yield QiubaiItem(author=authors, content=contents)

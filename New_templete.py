@@ -158,6 +158,14 @@ elif choose=='2':
             sheet['G' + str(i)] = 'cc000163'
             sheet['J' + str(i)] = str(time2)
 
+        if sheet['K' + str(i)].value == 'Senda_Collaboration':
+            sheet['K' + str(i)] ='Senda'
+            sheet['U' + str(i)] = 'Hong Kong'
+            sheet['C' + str(i)] = 'HK_Q1_MSO_WH_Senda_Collaboration_SDR'
+            sheet['F' + str(i)] = '4868'
+            sheet['G' + str(i)] = 'cc000163'
+            sheet['J' + str(i)] = str(time2)
+
         if sheet['U' + str(i)].value == 'Hong Kong':
             sheet['S' + str(i)]='HONG KONG'
             sheet['T' + str(i)]='Hong Kong'
