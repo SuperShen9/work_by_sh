@@ -221,13 +221,13 @@ for foldername,subfolder,excels in os.walk(filepath):
                 if sheet[lb + str(jj)].value!=None:
                     sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value.strip()
             if sheet[lb + '1'].value in list10:
-                sheet[lb_1 + '1'] = '标准公司名稱'
+                sheet[lb_1 + '1'] = '标准公司名称'
                 sheet[lb_1 + '1'].font = ft1
                 if sheet[lb + str(jj)].value != None:
                     sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value.strip()
             if sheet[lb + '1'].value in list11_hk:
-                sheet[lb_1 + '1'] = '标准電話'
-                sheet[lb_m5 + '1'] = '备用電話'
+                sheet[lb_1 + '1'] = '标准电话'
+                sheet[lb_m5 + '1'] = '备用电话'
                 sheet[lb_1 + '1'].font = ft1
                 if len(sheet[lb + str(jj)].value)<=9:
                     mo = num_Regex.findall(sheet[lb + str(jj)].value)

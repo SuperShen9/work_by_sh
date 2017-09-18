@@ -172,6 +172,7 @@ elif choose=='3':
         if sheet['J' + str(i)] ==None:
             sheet['J' + str(i)] = str(time2)
         sheet['AL' + str(i)] = 'BANT'
+        sheet['AM' + str(i)] = 'NA'
         sheet['AN' + str(i)] = 'YES'
         sheet['AO' + str(i)] = 'YES'
         sheet['AP' + str(i)] = 'YES'
