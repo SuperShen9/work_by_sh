@@ -11,8 +11,14 @@ class qiubaispider(scrapy.Spider):
     ]
     # def parse(self, response):
     #     print response.xpath('//div[@class="content"]').extract()
+    def parse(self, response):
+        for i in range(1, 14):
+            detail_url = "https://www.qiushibaike.com/8hr/page/" + str(i) + '/'
+            req = Request(detail_url, self.parse_url)
+            yield req
 
-    def parse(self,response):
+
+    def parse_url(self,response):
         for href in response.xpath('//span[@class="stats-comments"]/a/@href').extract():
             comm_urls=response.urljoin(href)
             req=Request(comm_urls,self.parse_detail)
