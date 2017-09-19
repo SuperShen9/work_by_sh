@@ -12,7 +12,7 @@ class qiubaispider(scrapy.Spider):
     # def parse(self, response):
     #     print response.xpath('//div[@class="content"]').extract()
     def parse(self, response):
-        for i in range(1, 14):
+        for i in range(2, 3):
             detail_url = "https://www.qiushibaike.com/8hr/page/" + str(i) + '/'
             req = Request(detail_url, self.parse_url)
             yield req
@@ -48,8 +48,8 @@ class qiubaispider(scrapy.Spider):
             else:
                 comment_content = comment.xpath('./div[2]/span/text()').extract()[0]
             comments.append({"comment_author":comment_author,"comment_content":comment_content})
-            item["comments"]=comments
-            yield item
+        item["comments"]=comments
+        yield item
 
 
 
