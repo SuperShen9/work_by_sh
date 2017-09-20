@@ -79,17 +79,21 @@
 # f.write(message)
 # f.close()
 
-a='super beal made'
-b=a.split(' ')
-print len(b)
-a=input('please input:')
-if a==1:
-    print 'hehe'
-i=65
-
-for k in range(65,91):
-    print chr(i)
-    i+=1
-
-    spam = 65
-
+# a='super beal made'
+# b=a.split(' ')
+# print len(b)
+# a=input('please input:')
+# if a==1:
+#     print 'hehe'
+# i=65
+#
+# for k in range(65,91):
+#     print chr(i)
+#     i+=1
+#
+#     spam = 65
+detail_url=["https://www.qiushibaike.com/",]
+for i in range(2, 14):
+    url = "https://www.qiushibaike.com/8hr/page/" + str(i) + '/'
+    detail_url.append(url)
+print detail_url

@@ -14,4 +14,5 @@ class QiubaiItem(scrapy.Item):
     comments = scrapy.Field()
     author = scrapy.Field()
     content = scrapy.Field()
+    url = scrapy.Field()
     pass

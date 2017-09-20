@@ -4,21 +4,16 @@ import scrapy
 from qiubai.items import QiubaiItem
 from scrapy.http import Request
 from scrapy.linkextractors import LinkExtractor
+
+
+
 class qiubaispider(scrapy.Spider):
     name = "qiubai"
-    start_urls = [
+    start_urls =[
         "https://www.qiushibaike.com/",
     ]
-    # def parse(self, response):
-    #     print response.xpath('//div[@class="content"]').extract()
-    def parse(self, response):
-        for i in range(2, 3):
-            detail_url = "https://www.qiushibaike.com/8hr/page/" + str(i) + '/'
-            req = Request(detail_url, self.parse_url)
-            yield req
 
-
-    def parse_url(self,response):
+    def parse(self,response):
         for href in response.xpath('//span[@class="stats-comments"]/a/@href').extract():
             comm_urls=response.urljoin(href)
             req=Request(comm_urls,self.parse_detail)
