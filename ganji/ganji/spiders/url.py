@@ -10,7 +10,7 @@ class ganjispider(scrapy.Spider):
     ]
 
     def parse(self, response):
-        for i in range(0, 60, 20):
+        for i in range(0, 2000, 20):
             if i == 0:
                 detail_url = "http://jinhua.ganji.com/xiaoqu/"
             else:
@@ -24,16 +24,16 @@ class ganjispider(scrapy.Spider):
             yield req
 
     def parse_detail(self, response):
-        names = response.xpath('//div[@class="xiaoqu-top"]/h1/text()').extract()
-        prices = response.xpath('//div[@class="basic-info"]/ul/li[1]/b/text()').extract()
-        sales = response.xpath('//div[@class="basic-info"]/ul/li[3]/span[4]/a/text()').extract()
-        rents = response.xpath('//div[@class="basic-info"]/ul/li[3]/span[2]/a/text()').extract()
-        areas=response.xpath('//div[@class="basic-info"]/ul/li[4]/./a/text()').extract()
-        address=response.xpath('//div[@class="basic-info"]/ul/li[5]/span[2]/i/text()').extract()
-        finishtimes=response.xpath('//div[@class="basic-info"]/ul/li[6]/text()').extract()
-        liverooms=response.xpath('//div[@class="basic-info"]/ul/li[7]/text()').extract()
-        buildings=response.xpath('//div[@class="basic-info"]/ul/li[8]/text()').extract()
-        serves=response.xpath('//div[@class="basic-info"]/ul/li[9]/text()').extract()
+        names = response.xpath('//div[@class="xiaoqu-top"]/h1/text()').extract()[0]
+        prices = response.xpath('//div[@class="basic-info"]/ul/li[1]/b/text()').extract()[0]
+        sales = response.xpath('//div[@class="basic-info"]/ul/li[3]/span[4]/a/text()').extract()[0]
+        rents = response.xpath('//div[@class="basic-info"]/ul/li[3]/span[2]/a/text()').extract()[0]
+        areas=response.xpath('//div[@class="basic-info"]/ul/li[4]/./a/text()').extract()[0]
+        address=response.xpath('//div[@class="basic-info"]/ul/li[5]/span[2]/i/text()').extract()[0]
+        finishtimes=response.xpath('//div[@class="basic-info"]/ul/li[6]/text()').extract()[0]
+        liverooms=response.xpath('//div[@class="basic-info"]/ul/li[7]/text()').extract()[0]
+        buildings=response.xpath('//div[@class="basic-info"]/ul/li[8]/text()').extract()[0]
+        serves=response.xpath('//div[@class="basic-info"]/ul/li[9]/text()').extract()[0]
 
         yield GanjiItem(name=names, price=prices, rent=rents, sale=sales,area=areas,
                         add=address,finishtime=finishtimes,liveroom=liverooms,
