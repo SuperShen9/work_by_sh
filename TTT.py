@@ -92,8 +92,12 @@
 #     i+=1
 #
 #     spam = 65
-detail_url=["https://www.qiushibaike.com/",]
-for i in range(2, 14):
-    url = "https://www.qiushibaike.com/8hr/page/" + str(i) + '/'
-    detail_url.append(url)
-print detail_url
+# detail_url=["https://www.qiushibaike.com/",]
+# for i in range(2, 14):
+#     url = "https://www.qiushibaike.com/8hr/page/" + str(i) + '/'
+#     detail_url.append(url)
+# print detail_url
+
+list1=[u'\u5357\u56fd\u540d\u57ce', u'\u9526\u6625\u82b1\u56ed', u'\u91d1\u8272\u6e2f\u6e7e', u'\u5357\u82d1\u5c0f\u533a', u'\u7389\u9f99\u534e\u5e9c', u'\u534e\u9f0e\u516c\u9986', u'\u4e1c\u65b9\u524d\u57ce', u'\u5bb6\u548c\u56ed', u'\u4fdd\u96c6\u84dd\u90e1', u'\u90fd\u5e02\u7eff\u90b8', u'\u67f3\u6e56\u82b1\u56ed', u'\u4fdd\u96c6\u84dd\u90e1', u'\u7d2b\u8346\u5e84\u56ed', u'\u4e1c\u9633\u6b27\u666f\u540d\u57ce', u'\u6c5f\u5357\u6625\u57ce', u'\u91d1\u534e\u5965\u6797\u5339\u514b\u82b1\u56ed', u'\u897f\u4eac\u82b1\u56ed', u'\u6c38\u76db\u65b0\u9633\u5149', u'\u6c5f\u4e1c\u5ead\u9662', u'\u8fce\u5bbe\u82b1\u56ed']
+for i in list1:
+    print i
