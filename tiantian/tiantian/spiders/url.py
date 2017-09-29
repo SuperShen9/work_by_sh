@@ -10,5 +10,11 @@ class tiantianspider(scrapy.Spider):
     ]
     def parse(self, response):
         for i in response.xpath('//div[@class="sencond-block"]/a/@href').extract():
-            detail_urls=response.urljoin(i)
-            yield TiantianItem(detail_url=detail_urls)
+            detail_url=response.urljoin(i)
+            req=Request(detail_url, self.parse_url)
+            yield req
+
+    def parse_url(self,response):
+        names=response.xpath('//div[@class="ttjj-panel-title"]/p[1]/text()').extract()
+        en_names=response.xpath('//div[@class="ttjj-panel-title"]/p[2]/text()').extract()
+        yield TiantianItem(name=names,en_name=en_names)

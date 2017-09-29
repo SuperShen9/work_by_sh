@@ -10,5 +10,6 @@ import scrapy
 
 class TiantianItem(scrapy.Item):
     # define the fields for your item here like:
-    detail_url = scrapy.Field()
+    name = scrapy.Field()
+    en_name=scrapy.Field()
     pass
