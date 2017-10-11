@@ -96,8 +96,8 @@ if choose=='1':
     for i in range(2,hang2):
         sheet['D' + str(i)] = 'Others'
         sheet['E' + str(i)] = 'Data Cleansing'
-
-        sheet['J' + str(i)] = str(time2)
+        if sheet['J' + str(i)] ==None:
+            sheet['J' + str(i)] = str(time2)
         if sheet['K' + str(i)].value == 'Smart-I':
             sheet['U' + str(i)]= 'Hong Kong'
             sheet['C' + str(i)] = 'HK_Q1_MSO_Wateringhole_Smart-i_SDR'
