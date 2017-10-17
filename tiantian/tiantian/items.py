@@ -11,5 +11,9 @@ import scrapy
 class TiantianItem(scrapy.Item):
     # define the fields for your item here like:
     name = scrapy.Field()
-    en_name=scrapy.Field()
+    time = scrapy.Field()
+    company = scrapy.Field()
+    num = scrapy.Field()
+    per = scrapy.Field()
+    introduce = scrapy.Field()
     pass

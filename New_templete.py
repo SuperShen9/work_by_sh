@@ -131,6 +131,7 @@ elif choose=='2':
     for i in range(2,hang2):
         sheet['D' + str(i)] = 'Call Center'
         sheet['E' + str(i)] = 'Called'
+        sheet['AM' + str(i)] = 'YES'
         if sheet['J' + str(i)] ==None:
             sheet['J' + str(i)] = str(time2)
         if sheet['AL' + str(i)].value==None:
@@ -179,7 +180,7 @@ elif choose=='3':
         sheet['E' + str(i)] = 'Feedback Survey'
         if sheet['J' + str(i)] ==None:
             sheet['J' + str(i)] = str(time2)
-        sheet['AL' + str(i)] = 'BANT'
+        sheet['AL' + str(i)] = '3rd Party Hand Raiser Lead'
         sheet['AM' + str(i)] = 'NA'
         sheet['AN' + str(i)] = 'YES'
         sheet['AO' + str(i)] = 'YES'

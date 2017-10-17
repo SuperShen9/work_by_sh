@@ -10,7 +10,7 @@ class ganjispider(scrapy.Spider):
     ]
 
     def parse(self, response):
-        for i in range(0, 2000, 20):
+        for i in range(0, 200, 20):
             if i == 0:
                 detail_url = "http://jinhua.ganji.com/xiaoqu/"
             else:
