@@ -428,7 +428,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                 +' '+str(sheet[lb_4 + str(jj)].value)+' '+str(sheet[lb_6 + str(jj)].value)
                 if sheet[lb_1 + str(jj)].value!=None:
                     sheet[lb_1 + str(jj)]= str(sheet[lb_1 + str(jj)].value).replace(' ,Hong Kong','') \
-                .replace(',Hong Kong', '').replace(' Hong Kong', '').replace('Hong Kong', '') \
+                .replace(',Hong Kong', '').replace(' Hong Kong', '').replace('Hong Kong', '').replace(' HongKong', '') \
                 .replace(' None None None', '').replace(' None None', '').replace(' None', '').replace(' HONG KONG', '')\
                 .replace('  ', ' ').replace('  ', ' ').strip()
 
