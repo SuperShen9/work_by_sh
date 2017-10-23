@@ -6,8 +6,8 @@ from email.parser import Parser
 from email.header import decode_header
 from email.utils import parseaddr
 # 输入邮件地址, 口令和POP3服务器地址:
-email = 'a2060633712@163.com'
-password = 'pythoner9339'
+email = 'XXXXXX@163.com'
+password = 'XXXXX'
 pop3_server = 'pop3.163.com'
 
 # 连接到POP3服务器:
