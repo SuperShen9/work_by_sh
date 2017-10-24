@@ -180,7 +180,7 @@ elif choose=='3':
         sheet['E' + str(i)] = 'Feedback Survey'
         if sheet['J' + str(i)] ==None:
             sheet['J' + str(i)] = str(time2)
-        sheet['AL' + str(i)] = '3rd Party Hand Raiser Lead'
+        sheet['AL' + str(i)] = '3RD PARTY HAND RAISER'
         sheet['AM' + str(i)] = 'NA'
         sheet['AN' + str(i)] = 'YES'
         sheet['AO' + str(i)] = 'YES'
