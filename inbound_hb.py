@@ -24,7 +24,7 @@ for row in range(2, hangd + 1):
 
 
 os.chdir('D:\\zlianxi\Inbound_hb')
-file = 'baocun.xlsx'
+file = 'Clean_data.xlsx'
 if os.path.exists(file):
     os.remove(file)
 k1=0
