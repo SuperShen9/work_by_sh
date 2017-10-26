@@ -60,10 +60,12 @@ sheet['D1'] = 'ECID'
 sheet['N1'] = 'List name'
 sheet['O1'] = 'CCID'
 sheet['P1'] = 'DTID'
+sheet['Q1'] = '备注'
 sheet['A1'].font = ft1
 sheet['C1'].font = ft
 hang2 = sheet.max_row + 1
 for i in range(2,hang2):
+    sheet['Q' + str(i)] = '數據來源：' + str(sheet['A' + str(i)].value)
     if sheet['A' + str(i)].value == None:
         sheet['C' + str(i)] = '空列删除'
     else:
