@@ -13,6 +13,10 @@ for row in range(2, hang1):
     number = sheetcity['B' + str(row)].value
     spam.setdefault(flag, number)
 os.chdir('D:\zlianxi\Fankui_hb')
+file = 'baocun.xlsx'
+if os.path.exists(file):
+    os.remove(file)
+
 k1=0
 filepath=unicode('D:\zlianxi\Fankui_hb','utf-8')
 for foldername,subfolder,excels in os.walk(filepath):

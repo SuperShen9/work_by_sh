@@ -105,8 +105,8 @@ list8=[u'專案預算(USD)',u'貴公司的投資預算是？*','Range of Budget 
 list9=[u'姓名',u'中文姓名','last name','Last Name','Last Name*','Surname','LASTNAME','* Customer name ','Last Name ']
 list10=[u'完整公司名稱',u'公司名稱',u'中文公司名稱','Company Name ',
         'COMPANY','company / account','company name','Company Name','Company_Name*','Company','Company name','* Company Name']
-list11=[u'公司電話/分機',u'公司電話',u'公司聯絡電話','Phone','TEL','Business Phone','PHONE']
-list11_hk=['Phone Number*','Main Tel','* Telephone ','Telephone number']
+list11=[u'公司電話/分機',u'公司電話',u'公司聯絡電話','Phone','TEL','PHONE']
+list11_hk=['Phone Number*','Main Tel','* Telephone ','Business Phone','Telephone number']
 list12=[u'公司電子信箱',u'公司 E-mail','Email','email','Email*','Email Address','EMAIL','* Email address','Email address']
 list13=[u'手機',u'手機電話',u'行動電話','Mobile','mobile','Mobile Phone','MOBILEPHONE','* Mobile ']
 list14=[u'地址',u'公司地址','address','ADDRESS_LINE_1__C']
