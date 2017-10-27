@@ -24,7 +24,7 @@ for row in range(2, hangd + 1):
 
 
 os.chdir('D:\\zlianxi\Inbound_hb')
-file = 'Clean_data.xlsx'
+file = 'A_data.xlsx'
 if os.path.exists(file):
     os.remove(file)
 k1=0
@@ -130,4 +130,4 @@ for i in range(2,hang2):
 
 
 baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
-baocun.save('Clean_data.xlsx')
+baocun.save('A_data.xlsx')

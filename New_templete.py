@@ -96,7 +96,7 @@ if choose=='1':
     for i in range(2,hang2):
         sheet['D' + str(i)] = 'Others'
         sheet['E' + str(i)] = 'Data Cleansing'
-        if sheet['J' + str(i)] ==None:
+        if sheet['J' + str(i)].value ==None:
             sheet['J' + str(i)] = str(time2)
         if sheet['K' + str(i)].value == 'Smart-I':
             sheet['U' + str(i)]= 'Hong Kong'
@@ -132,7 +132,7 @@ elif choose=='2':
         sheet['D' + str(i)] = 'Call Center'
         sheet['E' + str(i)] = 'Called'
         sheet['AM' + str(i)] = 'YES'
-        if sheet['J' + str(i)] ==None:
+        if sheet['J' + str(i)].value ==None:
             sheet['J' + str(i)] = str(time2)
         if sheet['AL' + str(i)].value==None:
             sheet['AL' + str(i)] = 'Partner_Led_Customer:'
@@ -178,7 +178,7 @@ elif choose=='3':
     for i in range(2,hang2):
         sheet['D' + str(i)] = 'Live Event'
         sheet['E' + str(i)] = 'Feedback Survey'
-        if sheet['J' + str(i)] ==None:
+        if sheet['J' + str(i)].value ==None:
             sheet['J' + str(i)] = str(time2)
         sheet['AL' + str(i)] = '3RD PARTY HAND RAISER'
         sheet['AM' + str(i)] = 'NA'
