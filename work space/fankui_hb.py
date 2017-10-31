@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 import os,openpyxl,xlrd
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font
@@ -28,7 +31,7 @@ for foldername,subfolder,excels in os.walk(filepath):
         hang = sheet1.nrows
         lie = sheet1.ncols
         for k in range(lie):
-            if sheet1.cell(0, k).value.lower() in spam.keys():
+            if str(sheet1.cell(0, k).value).lower() in spam.keys():
                 kk = get_column_letter(spam[sheet1.cell(0, k).value.lower()])
                 sheet[kk + '1'] = sheet1.cell(0, k).value
                 sheet['A1'] = '来源'
@@ -66,6 +69,20 @@ for i in range(2,hang2):
     if sheet['R' + str(i)].value =='Hong Kong':
         sheet['R' + str(i)] ='香港'
         sheet['S' + str(i)]= '香港'
+
+    if 'Inbound' in sheet['A' + str(i)].value:
+        sheet['C' + str(i)] = 'Cisco_Inbound'
+    elif '_MSO_'in sheet['A' + str(i)].value:
+        sheet['C' + str(i)] = 'Cisco_MSO'
+    elif 'Partner_Joint_DG'in sheet['A' + str(i)].value:
+        sheet['C' + str(i)] = 'Cisco_Partner'
+    else:
+        sheet['C' + str(i)] = 'Cisco_Event'
+
+    if sheet['S' + str(i)].value =='香港':
+        sheet['M' + str(i)] ='HK'
+    elif sheet['S' + str(i)].value =='台湾':
+        sheet['M' + str(i)]= 'TW'
 
 baocun.save('baocun.xlsx')
 
