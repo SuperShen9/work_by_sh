@@ -64,10 +64,13 @@ sheet['Q1'] = '备注'
 sheet['A1'].font = ft1
 sheet['C1'].font = ft
 hang2 = sheet.max_row + 1
+count = 0
+countall=0
 for i in range(2,hang2):
     sheet['Q' + str(i)] = '數據來源：' + str(sheet['A' + str(i)].value)
     if sheet['A' + str(i)].value == None:
         sheet['C' + str(i)] = '空列删除'
+        countall+=1
     else:
         if 'TW DNA Media' in sheet['A' + str(i)].value:
             sheet['B' + str(i)] = 'DATA CENTER NETWORKING'
@@ -128,6 +131,9 @@ for i in range(2,hang2):
         if sheet['F' + str(i)].value in spam2.keys():
             sheet['C' + str(i)] = spam2.get(sheet['F' + str(i)].value)
 
-
+        if sheet['C' + str(i)].value == None:
+            count+=1
+print '数据总数：'+str(hang2-countall-2)
+print '数据更新：'+str(count)
 baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
 baocun.save('A_data.xlsx')

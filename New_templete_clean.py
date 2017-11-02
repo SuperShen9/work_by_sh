@@ -93,7 +93,7 @@ file = 'Clean_data.xlsx'
 if os.path.exists(file):
     os.remove(file)
 filepath = unicode('D:\zlianxi\New_templete_clean\clean', 'utf-8')
-list1=['Segment']
+list1=['Segment','EU']
 list2=['AM','*AM Email Alias']
 list3=[u'職稱',u'職務級別','Job Level']
 list4=[u'部門']
