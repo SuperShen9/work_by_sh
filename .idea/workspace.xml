@@ -4,6 +4,7 @@
     <list default="true" id="a513f9a3-7fb3-47a1-93f4-1f10a2c43067" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/New_templete_clean.py" afterPath="$PROJECT_DIR$/New_templete_clean.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/work space/EN_fuzzy_yh.py" afterPath="$PROJECT_DIR$/work space/EN_fuzzy_yh.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,40 +14,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="useful">
+      <favorite_root url="file://$PROJECT_DIR$/New_templete_clean.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="New_templete_clean.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="New_templete_clean.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="102" column="41" lean-forward="false" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
-              <folding>
-                <element signature="e#40#68#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="2771">
+              <caret line="164" column="38" lean-forward="false" selection-start-line="164" selection-start-column="38" selection-end-line="164" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inbound_hb.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inbound_hb.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1768">
-              <caret line="104" column="41" lean-forward="true" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
-              <folding>
-                <element signature="e#24#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="New_templete.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="New_templete.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/New_templete.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2873">
-              <caret line="172" column="25" lean-forward="false" selection-start-line="172" selection-start-column="25" selection-end-line="172" selection-end-column="25" />
-              <folding>
-                <element signature="e#55#73#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="181">
+              <caret line="179" column="31" lean-forward="false" selection-start-line="179" selection-start-column="31" selection-end-line="179" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,8 +44,18 @@
       <file leaf-file-name="TW_DATA_Map.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TW_DATA_Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="66" column="23" lean-forward="false" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+            <state relative-caret-position="782">
+              <caret line="46" column="20" lean-forward="false" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inbound_hb.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inbound_hb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="107" column="55" lean-forward="false" selection-start-line="107" selection-start-column="55" selection-end-line="107" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -72,7 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lb_m4</find>
       <find>lb_m3</find>
       <find>lb_m2</find>
       <find>lb_m5</find>
@@ -102,6 +101,7 @@
       <find>姓名</find>
       <find>list3</find>
       <find>list20</find>
+      <find>标准行</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,7 +124,6 @@
         <option value="$PROJECT_DIR$/text.py" />
         <option value="$PROJECT_DIR$/work space/HLJ_project.py" />
         <option value="$PROJECT_DIR$/work space/TW_DATA_Map.py" />
-        <option value="$PROJECT_DIR$/work space/EN_fuzzy_yh.py" />
         <option value="$PROJECT_DIR$/add_junk.py" />
         <option value="$PROJECT_DIR$/qiubai/qiubai/settings.py" />
         <option value="$PROJECT_DIR$/qiubai/qiubai/pipelines.py" />
@@ -150,6 +149,8 @@
         <option value="$PROJECT_DIR$/TW_DATA_Map.py" />
         <option value="$PROJECT_DIR$/inbound_hb.py" />
         <option value="$PROJECT_DIR$/work space/fankui_hb.py" />
+        <option value="$PROJECT_DIR$/work space/EN_fuzzy_yh.py" />
+        <option value="$PROJECT_DIR$/forum/manage.py" />
         <option value="$PROJECT_DIR$/New_templete_clean.py" />
       </list>
     </option>
@@ -189,8 +190,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -209,7 +210,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.New_templete_clean">
+  <component name="RunManager" selected="Python.New_templete">
     <configuration default="false" name="New_templete" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -264,7 +265,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="fankui_hb" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="EN_fuzzy_yh" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -276,7 +277,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="untitled" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/work space/fankui_hb.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/work space/EN_fuzzy_yh.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -369,16 +370,16 @@
       <item index="0" class="java.lang.String" itemvalue="Python.New_templete" />
       <item index="1" class="java.lang.String" itemvalue="Python.New_templete_clean" />
       <item index="2" class="java.lang.String" itemvalue="Python.inbound_hb" />
-      <item index="3" class="java.lang.String" itemvalue="Python.fankui_hb" />
+      <item index="3" class="java.lang.String" itemvalue="Python.EN_fuzzy_yh" />
       <item index="4" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.New_templete_clean" />
+        <item index="0" class="java.lang.String" itemvalue="Python.New_templete" />
         <item index="1" class="java.lang.String" itemvalue="Python.inbound_hb" />
-        <item index="2" class="java.lang.String" itemvalue="Python.New_templete" />
-        <item index="3" class="java.lang.String" itemvalue="Python.fankui_hb" />
-        <item index="4" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
+        <item index="2" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
+        <item index="3" class="java.lang.String" itemvalue="Python.New_templete_clean" />
+        <item index="4" class="java.lang.String" itemvalue="Python.EN_fuzzy_yh" />
       </list>
     </recent_temporary>
   </component>
@@ -403,7 +404,7 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -414,18 +415,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4290831" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.49196786" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29475102" sideWeight="0.51002866" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26379544" sideWeight="0.48997134" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52893674" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26379544" sideWeight="0.48997134" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20861372" sideWeight="0.49713466" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41318977" sideWeight="0.49713466" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4290831" sideWeight="0.50803214" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -451,22 +451,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/work space/CIN_hb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/abc.py" />
-    <entry file="file://$PROJECT_DIR$/charles_text.py" />
-    <entry file="file://$PROJECT_DIR$/work space/HLJ_hb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/work space/HLJ_htc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -493,13 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/work space/EN_fuzzy_yh.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -744,41 +721,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/New_templete.py">
+    <entry file="file://$PROJECT_DIR$/forum/forum/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2873">
-          <caret line="172" column="25" lean-forward="false" selection-start-line="172" selection-start-column="25" selection-end-line="172" selection-end-column="25" />
-          <folding>
-            <element signature="e#55#73#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/work space/EN_fuzzy_yh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="44" column="33" lean-forward="false" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum1/manage.py" />
+    <entry file="file://$PROJECT_DIR$/forum/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2771">
+          <caret line="164" column="38" lean-forward="false" selection-start-line="164" selection-start-column="38" selection-end-line="164" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TW_DATA_Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="23" lean-forward="false" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+        <state relative-caret-position="782">
+          <caret line="46" column="20" lean-forward="false" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inbound_hb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="104" column="41" lean-forward="true" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="46">
+          <caret line="107" column="55" lean-forward="false" selection-start-line="107" selection-start-column="55" selection-end-line="107" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
+    <entry file="file://$PROJECT_DIR$/New_templete.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="102" column="41" lean-forward="false" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="181">
+          <caret line="179" column="31" lean-forward="false" selection-start-line="179" selection-start-column="31" selection-end-line="179" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

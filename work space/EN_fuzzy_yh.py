@@ -43,9 +43,10 @@ for i in range(2,hang):
 for i in range(2,hang):
     ee=sheet1['E' + str(i)].value
     ff=sheet1['F' + str(i)].value
-    if ee != None and ff != None:
+    if ee != '' and ff != '':
         ee1=ee.split()
         ff1=ff.split()
+
         if ee1[0]==ff1[0] :
             sheet1['G'+str(i)]='关键字相等'
         else:

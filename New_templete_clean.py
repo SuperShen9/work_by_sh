@@ -159,7 +159,7 @@ for foldername,subfolder,excels in os.walk(filepath):
         lb_m5 = get_column_letter(lie1 + 5)
         for jj in range(2,hang1):
             if sheet[lb + '1'].value in list1:
-                sheet[lb_1 + '1'] = '标准segment'
+                sheet[lb_1 + '1'] = '备注'
                 sheet[lb_1 + '1'].font=ft1
                 sheet[lb_1 + str(jj)] = segment.get(sheet[lb + str(jj)].value)
             if sheet[lb + '1'].value in list2:
