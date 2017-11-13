@@ -114,13 +114,30 @@ for i in range(2,hang2):
                 sheet['D' + str(i)] = '6196'
                 sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Hyperflex_Organic'
                 sheet['O' + str(i)] = 'cc000290'
-        if 'TW Security' in sheet['A' + str(i)].value:
+        if 'TW Security' in sheet['A' + str(i)].value or 'Media Security' in sheet['A' + str(i)].value:
             sheet['B' + str(i)] = 'SECURITY - NETWORK SECURITY'
             if sheet['E' + str(i)].value=='Google':
                 sheet['D' + str(i)] = '6195'
                 sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Security_Search_google'
                 sheet['O' + str(i)] = 'cc000291'
                 sheet['P' + str(i)] = 'pseggl000732'
+
+            elif sheet['E' + str(i)].value == 'Facebook':
+                sheet['D' + str(i)] = '6712'
+                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Security_Social_facebook'
+                sheet['O' + str(i)] = 'cc000291'
+                sheet['P' + str(i)] = 'psofbk000730'
+            elif sheet['E' + str(i)].value == 'Adbert':
+                sheet['D' + str(i)] = '6713'
+                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Security_Display_Adbert'
+                sheet['O' + str(i)] = 'cc000291'
+                sheet['P' + str(i)] = 'pdidgd000725'
+            elif sheet['E' + str(i)].value == 'digitime':
+                sheet['D' + str(i)] = '6714'
+                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Security_Display_digitimes'
+                sheet['O' + str(i)] = 'cc000291'
+                sheet['P' + str(i)] = 'pdidgd000724'
+
             else:
                 sheet['D' + str(i)] = '6194'
                 sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Security_Organic'
