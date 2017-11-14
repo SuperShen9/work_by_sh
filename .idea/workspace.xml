@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="a513f9a3-7fb3-47a1-93f4-1f10a2c43067" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/untitled.iml" afterPath="$PROJECT_DIR$/.idea/untitled.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/work space/fankui_hb.py" afterPath="$PROJECT_DIR$/work space/fankui_hb.py" />
     </list>
+=======
+    <list default="true" id="a513f9a3-7fb3-47a1-93f4-1f10a2c43067" name="Default" comment="" />
+>>>>>>> Stashed changes
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -212,6 +216,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="last_opened_file_path" value="D:/pandas" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
