@@ -54,13 +54,6 @@ for k in range(2,hang):
                 sheet['D' + str(k)].value = '地域错误'
         else:
             sheet['D' + str(k)].value = '不匹配'
-        #     if sheet['B' + str(k)].value[-4:-2] == sheet['C' + str(k)].value[-4:-2]:
-        #         if sheet['B'+str(k)].value[:2]==sheet['C'+str(k)].value[:2]:
-        #             sheet['D' + str(k)].value = '基本匹配'
-        #     else:
-        #         sheet['D' + str(k)].value = '行业错误'
-        # elif sheet['B' + str(k)].value[:2] == sheet['C' + str(k)].value[:2]:
-        #     sheet['D' + str(k)].value = '地域甄别'
 
     elif sheet['B'+str(k)].value[:2]<>sheet['C'+str(k)].value[:2]:
         sheet['D'+str(k)].value='不匹配'
