@@ -24,9 +24,12 @@ for row in range(2, hangd + 1):
 
 
 os.chdir('D:\\zlianxi\Inbound_hb')
-file = 'A_data.xlsx'
-if os.path.exists(file):
-    os.remove(file)
+
+# hebing = '20171120A_data.xlsx'
+# if os.path.exists(hebing):
+#     os.remove(hebing)
+# exit() 2017/11/20号，取消删除合并文件的操作
+
 k1=0
 for foldername,subfolder,excels in os.walk('D:\\zlianxi\Inbound_hb'):
     baocun = openpyxl.Workbook()
@@ -153,4 +156,6 @@ for i in range(2,hang2):
 print '数据总数：'+str(hang2-countall-2)
 print '数据更新：'+str(count)
 baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
-baocun.save('A_data.xlsx')
+import time
+time2=time.strftime('%Y%m%d',time.localtime())
+baocun.save(str(time2)+'A_data.xlsx')

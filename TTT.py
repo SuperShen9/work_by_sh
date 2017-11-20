@@ -97,10 +97,16 @@
 #     url = "https://www.qiushibaike.com/8hr/page/" + str(i) + '/'
 #     detail_url.append(url)
 # print detail_url
-c=0
-list1=[]
-for i in range(2,80,4):
-    list1.append(i)
-print 'num:'+str(c)
-print list1
+# c=0
+# list1=[]
+# for i in range(2,80,4):
+#     list1.append(i)
+# print 'num:'+str(c)
+# print list1
 
+
+from datetime import *
+import time
+time2=time.strftime('%Y%m%d',time.localtime())
+
+print time2

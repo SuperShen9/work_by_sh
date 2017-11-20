@@ -9,8 +9,9 @@ with urlopen(url) as fp:
     content = fp.read().decode()
 pattern = 'data-type="png" data-src="(.+?)"'
 result = findall(pattern, content)
-os.chdir('D:\pandas')
+os.chdir('D:\pandas\weixin')
 for index, item in enumerate(result):
+    print(item)
     with urlopen(str(item)) as fp:
         with open(str(index)+'.png', 'wb') as fp1:
             fp1.write(fp.read())
