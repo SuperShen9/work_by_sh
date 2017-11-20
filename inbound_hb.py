@@ -103,7 +103,7 @@ for i in range(2,hang2):
                 sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Hyperflex_Search_google'
                 sheet['O' + str(i)] = 'cc000290'
                 sheet['P' + str(i)] = 'pseggl000732'
-            elif sheet['E' + str(i)].value=='Facebook':
+            elif sheet['E' + str(i)].value=='Facebook' or sheet['E' + str(i)].value=='FBPAGE':
                 sheet['D' + str(i)] = '6193'
                 sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Hyperflex_Social_facebook'
                 sheet['O' + str(i)] = 'cc000290'

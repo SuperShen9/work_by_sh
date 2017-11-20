@@ -143,21 +143,21 @@ elif choose=='2':
             sheet['U' + str(i)]= 'Hong Kong'
             sheet['C' + str(i)] = 'HK_Q2_MSO_Wateringhole_Smart-i_SDR'
             sheet['F' + str(i)] ='6536'
-            sheet['G' + str(i)] ='cc000163'
+            sheet['G' + str(i)] ='cc000291'
             sheet['J' + str(i)] = str(time2)
 
         if sheet['K' + str(i)].value == 'Winner':
             sheet['U' + str(i)] = 'Hong Kong'
             sheet['C' + str(i)] = 'HK_Q2_MSO_Wateringhole_Winner_SDR'
             sheet['F' + str(i)] = '6522'
-            sheet['G' + str(i)] = 'cc000163'
+            sheet['G' + str(i)] = 'cc000291'
             sheet['J' + str(i)] = str(time2)
 
         if sheet['K' + str(i)].value == 'Senda':
             sheet['U' + str(i)] = 'Hong Kong'
             sheet['C' + str(i)] = 'HK_Q2_MSO_Wateringhole_Senda_SDR'
             sheet['F' + str(i)] = '6526'
-            sheet['G' + str(i)] = 'cc000163'
+            sheet['G' + str(i)] = 'cc000291'
             sheet['J' + str(i)] = str(time2)
 
         if sheet['K' + str(i)].value == 'Senda_Collaboration':
@@ -165,7 +165,7 @@ elif choose=='2':
             sheet['U' + str(i)] = 'Hong Kong'
             sheet['C' + str(i)] = 'HK_Q1_MSO_WH_Senda_Collaboration_SDR'
             sheet['F' + str(i)] = '4868'
-            sheet['G' + str(i)] = 'cc000163'
+            sheet['G' + str(i)] = 'cc000291'
             sheet['J' + str(i)] = str(time2)
 
         if sheet['U' + str(i)].value == 'Hong Kong':
