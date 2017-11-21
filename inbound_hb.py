@@ -113,6 +113,13 @@ for i in range(2,hang2):
                 sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Hyperflex_Native_Ads_tenmax'
                 sheet['O' + str(i)] = 'cc000290'
                 sheet['P' + str(i)] = 'psodgd000731'
+                # 2017/11/21新增来源
+            elif sheet['E' + str(i)].value == 'digitmes':
+                sheet['D' + str(i)] = '6966'
+                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Hyperflex_Display_digitimes'
+                sheet['O' + str(i)] = 'cc000290'
+                sheet['P' + str(i)] = 'pdidgd000724'
+
             else:
                 sheet['D' + str(i)] = '6196'
                 sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Hyperflex_Organic'
