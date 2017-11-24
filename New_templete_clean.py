@@ -103,7 +103,7 @@ list6_wh=['Model','Cisco_Network_Set_TM_V2*','Looking for ']
 list7=[u'專案時程',u'貴公司何時會規劃下階段的網路建置？*','Action Time','Action Time Frame','* Project time ']
 list8=[u'專案預算(USD)',u'貴公司的投資預算是？*','Range of Budget plan (HKD)','* Budget ']
 list9=[u'姓名',u'中文姓名','last name','Last Name','Last Name*','Surname','LASTNAME','* Customer name ','Last Name ']
-list10=[u'服務單位',u'完整公司名稱',u'公司名稱',u'中文公司名稱','Company Name ',
+list10=[u'服務單位',u'完整公司名稱',u'公司名稱',u'中文公司名稱','Company Name ','Company / Account',
         'COMPANY','company / account','company name','Company Name','Company_Name*','Company','Company name','* Company Name']
 list11=[u'公司電話及分機',u'公司電話/分機',u'公司電話',u'公司聯絡電話','Phone','TEL','PHONE']
 list11_hk=['Phone Number*','Main Tel','* Telephone ','Business Phone','Telephone number']
@@ -429,11 +429,11 @@ for foldername,subfolder,excels in os.walk(filepath):
                 +' '+str(sheet[lb_4 + str(jj)].value)+' '+str(sheet[lb_6 + str(jj)].value)
                 if sheet[lb_1 + str(jj)].value!=None:
                     sheet[lb_1 + str(jj)]= str(sheet[lb_1 + str(jj)].value).replace(' ,Hong Kong','') \
-                .replace(',Hong Kong', '').replace(' Hong Kong', '').replace('Hong Kong', '').replace(' HongKong', '') \
+                .replace(',Hong Kong', '').replace(' Hong Kong', '').replace(',HongKong', '').replace('Hong Kong', '').replace(' HongKong', '') \
                 .replace(' None None None', '').replace(' None None', '').replace(' None', '').replace(' HONG KONG', '')\
                 .replace('  ', ' ').replace('  ', ' ').strip()
 
-            if sheet[lb + '1'].value =='Address*' :
+            if sheet[lb + '1'].value =='Address*' or sheet[lb + '1'].value =='Address Line 1':
                 sheet[lb_1 + '1'] = '标准地址'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = str(sheet[lb + str(jj)].value).replace(', Hong Kong.','') \
