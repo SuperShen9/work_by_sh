@@ -9,8 +9,12 @@ from openpyxl.styles.colors import RED
 os.chdir('D:\superflag')
 wbf = openpyxl.load_workbook('hehe.xlsx')
 # sheetcity = wbf.get_sheet_by_name('Sheet1')
+
+# inbound media数据合并
+sheetcity = wbf.get_sheet_by_name('Sheet3')
+
 # wh数据合并
-sheetcity = wbf.get_sheet_by_name('wh_response')
+# sheetcity = wbf.get_sheet_by_name('wh_response')
 hang1 = sheetcity.max_row + 1
 spam = {}
 for row in range(2, hang1):

@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 import os,openpyxl
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font
 from openpyxl.styles.colors import RED

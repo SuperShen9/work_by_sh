@@ -4,10 +4,16 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 os.chdir('D:\zlianxi\Spacial_industry')
+file = 'Mapping.xlsx'
+if os.path.exists(file):
+    os.remove(file)
+
 or_wb=openpyxl.load_workbook('data.xlsx')
+Mapping = openpyxl.Workbook()
+sheet = Mapping.create_sheet(index=2,title='Mapping_result')
+sheet1=or_wb.get_sheet_by_name('data')
+
 wb=openpyxl.load_workbook('city.xlsx')
-sheet=or_wb.create_sheet(index=0,title='data')
-sheet1=or_wb.get_sheet_by_name('Sheet1')
 sheetcity=wb.get_sheet_by_name('data')
 sheethy=wb.get_sheet_by_name('data1')
 hang=sheet1.max_row+1
@@ -62,7 +68,9 @@ for k in range(2,hang):
 sheet['A1'] = 'ID'
 sheet['B1'] = 'Company_Name'
 sheet['C1'] = 'Dup_Name'
-or_wb.save('data.xlsx')
+sheet['D1'] = '标记Flag'
+Mapping.remove_sheet(Mapping.get_sheet_by_name('Sheet'))
+Mapping.save('Mapping.xlsx')
 
 
 
