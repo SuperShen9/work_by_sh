@@ -99,7 +99,7 @@ for i in range(2,hang2):
                 sheet['D' + str(i)] = '6190'
                 sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_DNA_Organic'
                 sheet['O' + str(i)] = 'cc000289'
-        if 'TW Hyperflex Media' in sheet['A' + str(i)].value:
+        if 'Hyperflex' in sheet['A' + str(i)].value:
             sheet['B' + str(i)] = 'DATA CENTER NETWORKING'
             if sheet['E' + str(i)].value=='Google':
                 sheet['D' + str(i)] = '6189'
