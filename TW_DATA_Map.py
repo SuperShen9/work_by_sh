@@ -20,7 +20,7 @@ for row1 in range(2,sheet1.max_row+1):
     for i in range(1,len(sheet1['D' + str(row1)].value)):
         if sheet1['D' + str(row1)].value[i:i+2] in list1:
             sheet1['E' + str(row1)] = sheet1['D' + str(row1)].value[:i].replace('國際',''). \
-                replace('韓商', '').replace('荷蘭商', '').replace('瑞士商', '').replace('百慕達商', ''). \
+                replace('韓商', '').replace('荷蘭商', '').replace('荷商', '').replace('瑞士商', '').replace('百慕達商', ''). \
                 replace('愛爾蘭商', '').replace('英商', '').replace('香港商', '').replace('新加坡商', ''). \
                 replace('美商', '').replace('亞商', '').replace('群島商','').replace('台灣','')\
                 .replace('臺灣','').replace('財團法人','').replace('全球','').replace('國立','')\
@@ -30,7 +30,7 @@ for row1 in range(2,sheet1.max_row+1):
             break
         else:
             sheet1['E' + str(row1)] = sheet1['D' + str(row1)].value.replace('國際',''). \
-                replace('韓商', '').replace('荷蘭商', '').replace('瑞士商', '').replace('百慕達商', ''). \
+                replace('韓商', '').replace('荷蘭商', '').replace('荷商', '').replace('瑞士商', '').replace('百慕達商', ''). \
                 replace('愛爾蘭商', '').replace('英商', '').replace('香港商', '').replace('新加坡商', ''). \
                 replace('美商', '').replace('亞商', '').replace('群島商','').replace('台灣','')\
                 .replace('臺灣','').replace('財團法人','').replace('全球','').replace('國立','')\
