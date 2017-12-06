@@ -93,8 +93,8 @@ file = 'Clean_data.xlsx'
 if os.path.exists(file):
     os.remove(file)
 filepath = unicode('D:\zlianxi\New_templete_clean\clean', 'utf-8')
-list1=['Segment','EU']
-list2=['AM','*AM Email Alias']
+list1=['Segment','EU','Segment_Super']
+list2=['AM','*AM Email Alias','AM_Super']
 list3=[u'職稱',u'職務級別','Job Level']
 list4=[u'部門']
 list5=[u'10. 請問 貴單位主要類別？（可複選）',u'產業別',u'公司產業別',u'服務產業類別','Industry','Vertical*','Master Industry','INDUSTRY']
@@ -326,37 +326,37 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = wh_pro.get(sheet[lb + str(jj)].value)
 # --------------------------------数字版产品--------------------------------------------------------
-            if sheet[lb + '1'].value in list6:
-                sheet[lb_1 + '1'] = '标准产品'
-                sheet[lb_1 + '1'].font = ft1
-                sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
-                if sheet[lb_1 + str(jj)].value != None :
-                    for cp_id in b:
-                        sheet[lb_1+ str(jj)] = str(sheet[lb_1 + str(jj)].value).replace(str(cp_id),in_pro.get(cp_id))
-                        sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(';', '|')
-                        sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('；', '|')
-                        sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(',', '|')
-                        sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('，', '|')
-                        sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('.', '|')
-# ---------------------------------文字版产品--------------------------------------------------------
 #             if sheet[lb + '1'].value in list6:
 #                 sheet[lb_1 + '1'] = '标准产品'
 #                 sheet[lb_1 + '1'].font = ft1
 #                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
 #                 if sheet[lb_1 + str(jj)].value != None :
-#                     sheet[lb_1 + str(jj)]=sheet[lb_1 + str(jj)].value.replace(';','|')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('；', '|')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(' ', '')
-#                     sheet[lb_1 + str(jj)] = str(sheet[lb_1 + str(jj)].value).replace('雲端基礎架構與管理', 'INFRASTRUCTURE AND CLOUD MANAGEMENT')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心網路', 'DATA CENTER NETWORKING')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心伺服器', 'DATA CENTER VIRTUALIZATION - UNIFIED COMPUTING')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('網路安全', 'SECURITY - NETWORK SECURITY')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('路由器', 'ROUTERS')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('交換器', 'SWITCHES')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('無線', 'WIRELESS LAN')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('超融合基礎架構', 'CONVERGED AND HYPERCONVERGED INFRASTRUCTURE')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('IP電話', 'ENTERPRISE IP TELEPHONY')
-#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('網真', 'TELEPRESENCE')
+#                     for cp_id in b:
+#                         sheet[lb_1+ str(jj)] = str(sheet[lb_1 + str(jj)].value).replace(str(cp_id),in_pro.get(cp_id))
+#                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(';', '|')
+#                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('；', '|')
+#                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(',', '|')
+#                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('，', '|')
+#                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('.', '|')
+# ---------------------------------文字版产品--------------------------------------------------------
+            if sheet[lb + '1'].value in list6:
+                sheet[lb_1 + '1'] = '标准产品'
+                sheet[lb_1 + '1'].font = ft1
+                sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
+                if sheet[lb_1 + str(jj)].value != None :
+                    sheet[lb_1 + str(jj)]=sheet[lb_1 + str(jj)].value.replace(';','|')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('；', '|')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(' ', '')
+                    sheet[lb_1 + str(jj)] = str(sheet[lb_1 + str(jj)].value).replace('雲端基礎架構與管理', 'INFRASTRUCTURE AND CLOUD MANAGEMENT')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心網路', 'DATA CENTER NETWORKING')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心伺服器', 'DATA CENTER VIRTUALIZATION - UNIFIED COMPUTING')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('網路安全', 'SECURITY - NETWORK SECURITY')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('路由器', 'ROUTERS')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('交換器', 'SWITCHES')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('無線', 'WIRELESS LAN')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('超融合基礎架構', 'CONVERGED AND HYPERCONVERGED INFRASTRUCTURE')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('IP電話', 'ENTERPRISE IP TELEPHONY')
+                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('網真', 'TELEPRESENCE')
 # --------------------------------------------------------------------------------------------------------------------
             if sheet[lb + '1'].value in list16:
                 sheet[lb_1 + '1'] = '标准金额'

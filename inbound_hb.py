@@ -164,7 +164,7 @@ for i in range(2,hang2):
         if sheet['C' + str(i)].value == None:
             count+=1
 print '数据总数：'+str(hang2-countall-2)
-print '数据更新：'+str(count)
+print '有效数据更新：'+str(count)
 baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
 import time
 time2=time.strftime('%Y%m%d',time.localtime())
