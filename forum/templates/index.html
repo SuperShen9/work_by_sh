@@ -1,33 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Pythoner成长记录</title>
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-</head>
-<body>
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-md-14">
-            <nav class="navbar navbar-inverse">
-                <div style="color:#FFFFFF">
-                    <center><h1>Pythoner成长记录</h1></center>
-                </div>
-            </nav>
+{% extends "base.html" %}
+    {% block content %}
+        {% for b in blocks %}
+        <div class="panel panel-default">
+           <div class="panel-heading">
+              <span><a href="/article/list/{{b.id}}" style="font-size:20px">{{b.name}}</a></span>
+               <span class="pull-right">{{b.owner}}</span>
+           </div>
+           <div class="panel-body">
+            {{b.desc}}
+           </div>
         </div>
-    </div>
-    <div class="row">
-            <div class="col-xs-12 col-md-8">
-                <div class="alert alert-success" role="alert">Hello world!</div>
-            </div>
-            <div class="col-xs-12 col-md-8">
-                <div class="alert alert-info" role="alert">Hello Super!</div>
-            </div>
-            <div class="col-xs-12 col-md-8">
-                <div class="alert alert-danger" role="alert">Hello Pythoner!</div>
-            </div>
-    </div>
-</div>
-</body>
-</html>
+        {% endfor %}
+    {% endblock %}
+
 

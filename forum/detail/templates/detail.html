@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a ></li>
+      <li><a href="/">{{art.block}}</a ></li>
+      <li class="active">{{art}}</li>
+    </ol>
+
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">作者：XXX</li>
+      <li class="list-group-item">文章名称：{{art.title}}</li>
+      <li class="list-group-item">文章内容：{{art.content}}</li>
+    </ul>
+
+{% endblock %}
