@@ -139,8 +139,8 @@ elif choose=='2':
         elif sheet['AL' + str(i)].value[:8]!='Partner_':
             sheet['AL' + str(i)] = 'Partner_Led_Customer:' + sheet['AL' + str(i)].value
 
-        if 'Inbound_Drive_to' in sheet['A' + str(i)].value:
-            sheet['I' + str(i)] = 'NA'
+        if 'Inbound_Drive_to' in sheet['C' + str(i)].value:
+            sheet['K' + str(i)] = 'NA'
 
 
         if sheet['K' + str(i)].value == 'Smart-i':
