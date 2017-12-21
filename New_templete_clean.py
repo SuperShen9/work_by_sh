@@ -102,14 +102,14 @@ list6=[u'有興趣投資的IT解決方案?(可複選)',u'5.（承上題）請問
 list6_wh=['Model','Cisco_Network_Set_TM_V2*','Looking for ']
 list7=[u'專案時程',u'貴公司何時會規劃下階段的網路建置？*','Action Time','Action Time Frame','* Project time ',u'贵单位在什么时间范围内将有网络扩张、升级或安全等方面的网络项目？']
 list8=[u'專案預算(USD)',u'貴公司的投資預算是？*','Range of Budget plan (HKD)','* Budget ']
-list9=[u'姓名',u'中文姓名','last name','Last Name','Last Name*','Surname','LASTNAME','* Customer name ','Last Name ']
+list9=[u'姓名',u'中文姓名','Contact Name','last name','Last Name','Last Name*','Surname','LASTNAME','* Customer name ','Last Name ']
 list10=['單位名稱',u'公司',u'公司/單位名稱',u'服務單位',u'完整公司名稱',u'公司名稱',u'中文公司名稱','Company Name ','Company / Account',
         'COMPANY','company / account','company name','Company Name','Company_Name*','Company','Company name','* Company Name']
 list11=[u'公司電話及分機',u'電話號碼',u'電話',u'公司電話/分機',u'公司電話',u'公司聯絡電話','Phone','TEL','PHONE']
 list11_hk=['Phone Number*','Main Tel','* Telephone ','Business Phone','Telephone number']
 list12=[u'電子郵箱',u'電子郵件信箱',u'公司電子信箱',u'公司 E-mail','Email','email','Email*','Email Address','EMAIL','* Email address','Email address']
-list13=[u'手機',u'手機電話',u'行動電話','Mobile','mobile','Mobile Phone','MOBILEPHONE','* Mobile ']
-list14=[u'地址',u'公司地址','address','ADDRESS_LINE_1__C']
+list13=[u'手機',u'手機電話',u'行動電話','Cell','Mobile','mobile','Mobile Phone','MOBILEPHONE','* Mobile ']
+list14=[u'地址',u'公司地址','Company Address','address','ADDRESS_LINE_1__C']
 list15=[u'标准職稱','JOB_LEVEL_DETAIL']
 list16=[u'具體預算(USD)']
 list16_wh=[u'Total','* Estimated budget (US$) ']
@@ -118,7 +118,7 @@ list18=['sex','Salutation_T1_V1*','Mr/Ms']
 list19=['First name','first name','First Name*','First Name','FIRSTNAME','First Name ']
 list20=['Title','jobtitle','Job Title*','TITLE',u'原始職稱'] #活动数据专用 --“職稱”
 # list20=[u'職稱','Title','jobtitle','Job Title*']
-list20_depa=[u'服務部門名稱','DEPARTMENT*',u'原始部門']
+list20_depa=[u'服務部門名稱','DEPARTMENT*',u'原始部門','Department']
 list21=[u'公司規模','Range of HK Staff','QAEMPLOYEES__C']
 list22=['Remark','IRM_Enquiry_FF_V1*','Senda Remark']
 a = range(1,22)
@@ -250,8 +250,13 @@ for foldername,subfolder,excels in os.walk(filepath):
                 mo_hb='-'.join(mo)
                 mo_sub = sub_Regex.sub('',mo_hb)
                 # mo_gz02 = gz02_Regex.sub('02-',mo_sub)
-
                 sheet[lb_1 + str(jj)] = mo_sub
+
+                if sheet[lb_2 + '1'].value=='Extension No.':
+                    if sheet[lb_2 + str(jj)].value != None and len(sheet[lb_2 + str(jj)].value) > 2:
+                        sheet[lb_1 + str(jj)]=sheet[lb_1 + str(jj)].value+'X'+sheet[lb_2 + str(jj)].value
+
+
     # -------------------------老版本邮件思路----------------------------------
             # if sheet[lb + '1'].value in list12:
             #     sheet[lb_1 + '1'] = '邮箱检查'
@@ -456,6 +461,8 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_m3 + '1'].font = ft2
                 sheet[lb_m2 + str(jj)] ='Senda_Collaboration'
                 sheet[lb_m3 + str(jj)] = 'Hong Kong'
+
+
 
 sheet.freeze_panes='A2'
 Clean_data.save('Clean_data.xlsx')
