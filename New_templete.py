@@ -98,6 +98,21 @@ if choose=='1':
         sheet['E' + str(i)] = 'Data Cleansing'
         if sheet['J' + str(i)].value ==None:
             sheet['J' + str(i)] = str(time2)
+
+
+        if sheet['K' + str(i)].value == 'new profiling':
+            sheet['K' + str(i)].value = 'DnB'
+            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_MKT_D&B_Profiled_response'
+            sheet['F' + str(i)] ='7592'
+            sheet['G' + str(i)] ='cc000291'
+            sheet['J' + str(i)] = str(time2)
+
+        if sheet['K' + str(i)].value == 'DnB':
+            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_response'
+            sheet['F' + str(i)] ='7616'
+            sheet['G' + str(i)] ='cc000291'
+            sheet['J' + str(i)] = str(time2)
+
         # if sheet['K' + str(i)].value == 'Smart-I':
         #     sheet['U' + str(i)]= 'Hong Kong'
         #     sheet['C' + str(i)] = 'HK_Q1_MSO_Wateringhole_Smart-i_SDR'
@@ -143,6 +158,18 @@ elif choose=='2':
             if 'Inbound_Drive_to' in sheet['C' + str(i)].value:
                 sheet['K' + str(i)] = 'NA'
 
+        if sheet['K' + str(i)].value == 'DnB':
+            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_SDR'
+            sheet['F' + str(i)] ='7615'
+            sheet['G' + str(i)] ='cc000291'
+            sheet['J' + str(i)] = str(time2)
+
+        if sheet['K' + str(i)].value == 'new profiling':
+            sheet['K' + str(i)].value = 'DnB'
+            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_MKT_D&B_Profiled_SDR'
+            sheet['F' + str(i)] ='7591'
+            sheet['G' + str(i)] ='cc000291'
+            sheet['J' + str(i)] = str(time2)
 
         if sheet['K' + str(i)].value == 'Smart-i':
             sheet['U' + str(i)]= 'Hong Kong'
@@ -191,6 +218,8 @@ elif choose=='3':
         sheet['AN' + str(i)] = 'YES'
         sheet['AO' + str(i)] = 'YES'
         sheet['AP' + str(i)] = 'YES'
+
+
         if sheet['U' + str(i)].value == 'Hong Kong':
             sheet['S' + str(i)]='HONG KONG'
             sheet['T' + str(i)]='Hong Kong'
