@@ -16,6 +16,7 @@
         <thead>
         <tr>
         <th class="info">标题</th>
+        <th class="info">作者</th>
         <th class="info">内容</th>
         <th class="info">创作时间</th>
         <th class="info">更新时间</th>
@@ -25,6 +26,7 @@
         {% for art in articles %}
         <tr>
           <td class="warning"><a href="/article/detail/{{art.id}}">{{art.title}}</a></td>
+          <td class="warning">{{art.owner}}</td>
           <td class="warning">{{art.content}}</td>
           <td class="warning">{{art.create_time_stamp|date:"Y-m-d P"}}</td>
           <td class="warning">{{art.last_update_time_stamp|date:"Y-m-d P"}}</td>

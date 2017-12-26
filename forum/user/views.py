@@ -13,13 +13,12 @@ def Users(request):
         password1 = request.POST['password1']
 
         if password1 != password:
-            return render(request,'register.html',{'error':'密码不一致'})
-
+            return render(request, 'register.html', {'error': '密码不一致'})
         else:
             user = User.objects.create_user(username=username,
-                                            email=email, password=password,
-                                            )
+                                            email=email, password=password)
             user.is_active = True
             user.save()
-            return render(request,'user.html')
+            return render(request, 'user.html')
+
 
