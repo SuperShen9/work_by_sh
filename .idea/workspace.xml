@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6684a8c8-57aa-4776-aeeb-1616023df675" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/db.sqlite3" afterPath="$PROJECT_DIR$/forum/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/article/admin.py" afterPath="$PROJECT_DIR$/forum/article/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/article/templates/article_list.html" afterPath="$PROJECT_DIR$/forum/article/templates/article_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/block/admin.py" afterPath="$PROJECT_DIR$/forum/block/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/content/models.py" afterPath="$PROJECT_DIR$/forum/content/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/detail/models.py" afterPath="$PROJECT_DIR$/forum/detail/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/detail/templates/detail.html" afterPath="$PROJECT_DIR$/forum/detail/templates/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/user/templates/register.html" afterPath="$PROJECT_DIR$/forum/user/templates/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/user/views.py" afterPath="$PROJECT_DIR$/forum/user/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/New_templete_clean.py" afterPath="$PROJECT_DIR$/New_templete_clean.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TTT.py" afterPath="$PROJECT_DIR$/TTT.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,15 +16,22 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="New_templete.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/New_templete.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="107" column="24" lean-forward="true" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="New_templete_clean.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="99" column="20" lean-forward="false" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
-              <folding>
-                <element signature="e#40#68#0" expanded="true" />
-                <element signature="e#816#3375#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="223">
+              <caret line="346" column="46" lean-forward="true" selection-start-line="346" selection-start-column="46" selection-end-line="346" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,6 +67,12 @@
       <find>list11</find>
       <find>Senda_Collaboration</find>
       <find>标准产品</find>
+      <find>ab</find>
+      <find>sheet_tem</find>
+      <find>AB</find>
+      <find>EMP</find>
+      <find>lb_m5</find>
+      <find>post</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -80,15 +86,15 @@
         <option value="$PROJECT_DIR$/work space/spacial_industry.py" />
         <option value="$PROJECT_DIR$/work space/Z_Text_Mapping.py" />
         <option value="$PROJECT_DIR$/weixin_png.py" />
-        <option value="$PROJECT_DIR$/TTT.py" />
         <option value="$PROJECT_DIR$/work space/CN_Mapping.py" />
         <option value="$PROJECT_DIR$/work space/fankui_hb.py" />
         <option value="$PROJECT_DIR$/TW_DATA_Map.py" />
         <option value="$PROJECT_DIR$/inbound_hb.py" />
         <option value="$PROJECT_DIR$/forum/user/views.py" />
         <option value="$PROJECT_DIR$/forum/user/templates/register.html" />
-        <option value="$PROJECT_DIR$/New_templete_clean.py" />
         <option value="$PROJECT_DIR$/New_templete.py" />
+        <option value="$PROJECT_DIR$/TTT.py" />
+        <option value="$PROJECT_DIR$/New_templete_clean.py" />
       </list>
     </option>
   </component>
@@ -113,7 +119,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -142,6 +147,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -160,7 +166,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.inbound_hb">
+  <component name="RunManager" selected="Python.New_templete_clean">
     <configuration default="false" name="inbound_hb" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -197,24 +203,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="fankui_hb" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/work space" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="untitled" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/work space/fankui_hb.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="TW_DATA_Map" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -246,6 +234,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="untitled" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/New_templete.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TTT" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="untitled" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TTT.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -319,17 +325,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.inbound_hb" />
       <item index="1" class="java.lang.String" itemvalue="Python.New_templete_clean" />
-      <item index="2" class="java.lang.String" itemvalue="Python.fankui_hb" />
-      <item index="3" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
-      <item index="4" class="java.lang.String" itemvalue="Python.New_templete" />
+      <item index="2" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
+      <item index="3" class="java.lang.String" itemvalue="Python.New_templete" />
+      <item index="4" class="java.lang.String" itemvalue="Python.TTT" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.inbound_hb" />
-        <item index="1" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
-        <item index="2" class="java.lang.String" itemvalue="Python.New_templete" />
-        <item index="3" class="java.lang.String" itemvalue="Python.New_templete_clean" />
-        <item index="4" class="java.lang.String" itemvalue="Python.fankui_hb" />
+        <item index="0" class="java.lang.String" itemvalue="Python.New_templete_clean" />
+        <item index="1" class="java.lang.String" itemvalue="Python.New_templete" />
+        <item index="2" class="java.lang.String" itemvalue="Python.TTT" />
+        <item index="3" class="java.lang.String" itemvalue="Python.inbound_hb" />
+        <item index="4" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
       </list>
     </recent_temporary>
   </component>
@@ -356,17 +362,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="1" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30014327" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30873924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63391656" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5397039" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32166892" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31359354" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -383,33 +389,22 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/TTT.py</url>
+          <line>107</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="113" column="21" lean-forward="false" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TW_DATA_Map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/New_templete.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1054">
           <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -417,10 +412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="113" column="21" lean-forward="false" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -435,7 +426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -443,10 +433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -454,7 +440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -476,10 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4811">
           <caret line="340" column="22" lean-forward="false" selection-start-line="340" selection-start-column="22" selection-end-line="340" selection-end-column="22" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -487,7 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="39" column="35" lean-forward="true" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -495,10 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5644">
           <caret line="332" column="47" lean-forward="false" selection-start-line="332" selection-start-column="47" selection-end-line="332" selection-end-column="47" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -506,7 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -514,10 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -525,10 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -536,10 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -547,7 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2584">
           <caret line="152" column="44" lean-forward="false" selection-start-line="152" selection-start-column="44" selection-end-line="152" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -562,10 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -580,7 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2584">
           <caret line="152" column="44" lean-forward="true" selection-start-line="152" selection-start-column="44" selection-end-line="152" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -588,10 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -599,7 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2720">
           <caret line="160" column="44" lean-forward="true" selection-start-line="160" selection-start-column="44" selection-end-line="160" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -614,10 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -632,7 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -640,10 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -651,10 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -709,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TTT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="109" column="46" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="109" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/work space/wanneng_zz.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -758,18 +690,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forum/user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TW_DATA_Map.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -777,26 +701,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="73" column="10" lean-forward="false" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/article/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="e#25#53#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/article/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TTT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="111" column="11" lean-forward="true" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#2046#2068#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/New_templete.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="102" column="27" lean-forward="false" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
+        <state relative-caret-position="102">
+          <caret line="107" column="24" lean-forward="true" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="99" column="20" lean-forward="false" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
-          <folding>
-            <element signature="e#40#68#0" expanded="true" />
-            <element signature="e#816#3375#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="223">
+          <caret line="346" column="46" lean-forward="true" selection-start-line="346" selection-start-column="46" selection-end-line="346" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

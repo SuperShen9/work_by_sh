@@ -108,5 +108,5 @@
 from datetime import *
 import time
 time2=time.strftime('%Y%m%d',time.localtime())
-
-print time2
+time1=time.time()
+print time1
