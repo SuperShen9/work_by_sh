@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6684a8c8-57aa-4776-aeeb-1616023df675" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/New_templete.py" afterPath="$PROJECT_DIR$/New_templete.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/New_templete_clean.py" afterPath="$PROJECT_DIR$/New_templete_clean.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TTT.py" afterPath="$PROJECT_DIR$/TTT.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,8 +19,8 @@
       <file leaf-file-name="New_templete.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/New_templete.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="107" column="24" lean-forward="true" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
+            <state relative-caret-position="1615">
+              <caret line="98" column="26" lean-forward="false" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -29,8 +29,20 @@
       <file leaf-file-name="New_templete_clean.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="346" column="46" lean-forward="true" selection-start-line="346" selection-start-column="46" selection-end-line="346" selection-end-column="46" />
+            <state relative-caret-position="54">
+              <caret line="390" column="58" lean-forward="true" selection-start-line="390" selection-start-column="58" selection-end-line="390" selection-end-column="58" />
+              <folding>
+                <element signature="e#12647#12715#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inbound_hb.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inbound_hb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1105">
+              <caret line="66" column="19" lean-forward="false" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -73,6 +85,7 @@
       <find>EMP</find>
       <find>lb_m5</find>
       <find>post</find>
+      <find>DNB</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,8 +105,8 @@
         <option value="$PROJECT_DIR$/inbound_hb.py" />
         <option value="$PROJECT_DIR$/forum/user/views.py" />
         <option value="$PROJECT_DIR$/forum/user/templates/register.html" />
-        <option value="$PROJECT_DIR$/New_templete.py" />
         <option value="$PROJECT_DIR$/TTT.py" />
+        <option value="$PROJECT_DIR$/New_templete.py" />
         <option value="$PROJECT_DIR$/New_templete_clean.py" />
       </list>
     </option>
@@ -333,8 +346,8 @@
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.New_templete_clean" />
         <item index="1" class="java.lang.String" itemvalue="Python.New_templete" />
-        <item index="2" class="java.lang.String" itemvalue="Python.TTT" />
-        <item index="3" class="java.lang.String" itemvalue="Python.inbound_hb" />
+        <item index="2" class="java.lang.String" itemvalue="Python.inbound_hb" />
+        <item index="3" class="java.lang.String" itemvalue="Python.TTT" />
         <item index="4" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
       </list>
     </recent_temporary>
@@ -362,10 +375,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30873924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31733525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -697,18 +710,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inbound_hb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="73" column="10" lean-forward="false" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forum/user/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -716,9 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <element signature="e#25#53#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -726,7 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -741,19 +742,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/inbound_hb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="66" column="19" lean-forward="false" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/New_templete.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="107" column="24" lean-forward="true" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
+        <state relative-caret-position="1615">
+          <caret line="98" column="26" lean-forward="false" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="346" column="46" lean-forward="true" selection-start-line="346" selection-start-column="46" selection-end-line="346" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="54">
+          <caret line="390" column="58" lean-forward="true" selection-start-line="390" selection-start-column="58" selection-end-line="390" selection-end-column="58" />
+          <folding>
+            <element signature="e#12647#12715#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -261,22 +261,16 @@ for foldername,subfolder,excels in os.walk(filepath):
                 # mo_gz02 = gz02_Regex.sub('02-',mo_sub)
                 sheet[lb_1 + str(jj)] = mo_sub
 
-                if sheet[lb_2 + '1'].value=='Extension':
-                    sheet[lb_3 + '1']= '来源'
-                    sheet[lb_3 + str(jj)]='DnB'
+                if 'Extension' in sheet[lb_2 + '1'].value:
                     if sheet[lb_2 + str(jj)].value != None and len(sheet[lb_2 + str(jj)].value) > 2:
                         sheet[lb_1 + str(jj)]=sheet[lb_1 + str(jj)].value+'X'+sheet[lb_2 + str(jj)].value
 
-                if sheet[lb_2 + '1'].value=='Extension No.' and sheet[lb_8 + '1'].value=='專案時程':
-                    sheet[lb_3 + '1']= '来源'
-                    sheet[lb_3 + str(jj)]='DnB'
-                    if sheet[lb_2 + str(jj)].value != None and len(sheet[lb_2 + str(jj)].value) > 2:
-                        sheet[lb_1 + str(jj)]=sheet[lb_1 + str(jj)].value+'X'+sheet[lb_2 + str(jj)].value
-                elif sheet[lb_2 + '1'].value=='Extension No.' and sheet[lb_8 + '1'].value == None:
-                    sheet[lb_3 + '1'] = '来源'
-                    sheet[lb_3 + str(jj)] = 'new profiling'
-                    if sheet[lb_2 + str(jj)].value != None and len(sheet[lb_2 + str(jj)].value) > 2:
-                        sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value + 'X' + sheet[lb_2 + str(jj)].value
+            if sheet[lb + '1'].value =='名單狀態':
+                sheet[lb_1 + '1'] = '来源'
+                if sheet[lb + str(jj)].value=='Leads':
+                    sheet[lb_1 + str(jj)] = 'DnB'
+                else:
+                    sheet[lb_1 + str(jj)] = 'new profiling'
 
 
     # -------------------------老版本邮件思路----------------------------------
@@ -370,24 +364,24 @@ for foldername,subfolder,excels in os.walk(filepath):
                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('，', '|')
                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('.', '|')
 # ---------------------------------文字版产品--------------------------------------------------------
-            if sheet[lb + '1'].value in list6:
-                sheet[lb_1 + '1'] = '标准产品'
-                sheet[lb_1 + '1'].font = ft1
-                sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
-                if sheet[lb_1 + str(jj)].value != None :
-                    sheet[lb_1 + str(jj)]=sheet[lb_1 + str(jj)].value.replace(';','|')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('；', '|')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(' ', '')
-                    sheet[lb_1 + str(jj)] = str(sheet[lb_1 + str(jj)].value).replace('雲端基礎架構與管理', 'INFRASTRUCTURE AND CLOUD MANAGEMENT')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心網路', 'DATA CENTER NETWORKING')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心伺服器', 'DATA CENTER VIRTUALIZATION - UNIFIED COMPUTING')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('網路安全', 'SECURITY - NETWORK SECURITY')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('路由器', 'ROUTERS')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('交換器', 'SWITCHES')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('無線', 'WIRELESS LAN')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('超融合基礎架構', 'CONVERGED AND HYPERCONVERGED INFRASTRUCTURE')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('IP電話', 'ENTERPRISE IP TELEPHONY')
-                    sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('網真', 'TELEPRESENCE')
+#             if sheet[lb + '1'].value in list6:
+#                 sheet[lb_1 + '1'] = '标准产品'
+#                 sheet[lb_1 + '1'].font = ft1
+#                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
+#                 if sheet[lb_1 + str(jj)].value != None :
+#                     sheet[lb_1 + str(jj)]=sheet[lb_1 + str(jj)].value.replace(';','|')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('；', '|')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(' ', '')
+#                     sheet[lb_1 + str(jj)] = str(sheet[lb_1 + str(jj)].value).replace('雲端基礎架構與管理', 'INFRASTRUCTURE AND CLOUD MANAGEMENT')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心網路', 'DATA CENTER NETWORKING')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('資料中心伺服器', 'DATA CENTER VIRTUALIZATION - UNIFIED COMPUTING')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('網路安全', 'SECURITY - NETWORK SECURITY')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('路由器', 'ROUTERS')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('交換器', 'SWITCHES')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('無線', 'WIRELESS LAN')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('超融合基礎架構', 'CONVERGED AND HYPERCONVERGED INFRASTRUCTURE')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('IP電話', 'ENTERPRISE IP TELEPHONY')
+#                     sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('網真', 'TELEPRESENCE')
 # --------------------------------------------------------------------------------------------------------------------
             if sheet[lb + '1'].value in list16:
                 sheet[lb_1 + '1'] = '标准金额'

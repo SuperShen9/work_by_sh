@@ -99,6 +99,12 @@ if choose=='1':
         if sheet['J' + str(i)].value ==None:
             sheet['J' + str(i)] = str(time2)
 
+        # dnb应该放在前面
+        if sheet['K' + str(i)].value == 'DnB':
+            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_response'
+            sheet['F' + str(i)] ='7616'
+            sheet['G' + str(i)] ='cc000291'
+            sheet['J' + str(i)] = str(time2)
 
         if sheet['K' + str(i)].value == 'new profiling':
             sheet['K' + str(i)].value = 'DnB'
@@ -107,11 +113,7 @@ if choose=='1':
             sheet['G' + str(i)] ='cc000291'
             sheet['J' + str(i)] = str(time2)
 
-        if sheet['K' + str(i)].value == 'DnB':
-            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_response'
-            sheet['F' + str(i)] ='7616'
-            sheet['G' + str(i)] ='cc000291'
-            sheet['J' + str(i)] = str(time2)
+
 
         # if sheet['K' + str(i)].value == 'Smart-I':
         #     sheet['U' + str(i)]= 'Hong Kong'
