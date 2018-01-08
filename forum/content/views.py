@@ -5,7 +5,7 @@ from block.models import Block
 # from article.models import Article
 from article.forms import Articleform
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.auth.models import User
 @login_required
 def content(request,block_id):
     block_id = int(block_id)
@@ -18,12 +18,13 @@ def content(request,block_id):
         form=Articleform(request.POST)
         if form.is_valid():
             article = form.save(commit=False)
-            article.block=block
-            article.status=0
+            article.block = block
+            article.owner = User.objects.get().username
+            article.status = 0
             article.save()
-            return redirect('/article/list/%s'%block_id)
+            return redirect('/article/list/%s' % block_id)
         else:
-            return render(request,'content.html',{'b':block,'form':form})
+            return render(request, 'content.html', {'b': block, 'form': form})
 
 # 第一次的提交页面
 # art_title =request.POST['art_title'].strip()
