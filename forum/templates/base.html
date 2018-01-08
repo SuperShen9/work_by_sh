@@ -13,7 +13,11 @@
                 <div class="jumbotron">
                   <h1>Hello, Pythoner !</h1>
                     <br />
-                  <a class="btn btn-primary btn-lg" role="button" href="https://www.python.org/">欢迎来到python世界</a>
+                    {% if user.is_authenticated %}
+                        <p>{{ user.username }}.你好 <a href="/accounts/logout/">  登出</a></p>
+                    {% else %}
+                        <p>匿名用户.请<a href="/accounts/login/">登入</a></p>
+                    {% endif %}
                 </div>
             </div>
          </div>

@@ -8,9 +8,10 @@ from openpyxl.styles import Font
 from openpyxl.styles.colors import RED
 os.chdir('D:\superflag')
 wbf = openpyxl.load_workbook('hehe.xlsx')
-# sheetcity = wbf.get_sheet_by_name('Sheet1')
+sheetcity = wbf.get_sheet_by_name('Sheet1')
 
-sheetcity = wbf.get_sheet_by_name('ECID')
+# 统计ECID
+# sheetcity = wbf.get_sheet_by_name('ECID')
 
 # inbound media数据合并
 # sheetcity = wbf.get_sheet_by_name('Sheet3')

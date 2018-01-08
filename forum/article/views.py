@@ -7,7 +7,7 @@ def article_list(request,block_id):
     block_id = int(block_id)
     block=Block.objects.get(id=block_id)
 
-    cut_page=2
+    cut_page=5
     page_no = int(request.GET.get("page_no", "1"))
     all_article=Article.objects.filter(block=block,status=0).order_by("id")
     p=Paginator(all_article,cut_page)

@@ -2,9 +2,11 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
 from block.models import Block
-from article.models import Article
+# from article.models import Article
 from article.forms import Articleform
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def content(request,block_id):
     block_id = int(block_id)
     block = Block.objects.get(id=block_id)
