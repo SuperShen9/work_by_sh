@@ -19,7 +19,7 @@ def content(request,block_id):
         if form.is_valid():
             article = form.save(commit=False)
             article.block = block
-            article.owner = User.objects.get().username
+            article.owner = request.user
             article.status = 0
             article.save()
             return redirect('/article/list/%s' % block_id)
