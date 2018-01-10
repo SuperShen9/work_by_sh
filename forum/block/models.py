@@ -8,7 +8,6 @@ class Block(models.Model):
     status=models.IntegerField(u'状态',choices=((1,'常用'),(0,'待定'),(-1,'隐藏')))
 
 
-
     def __str__(self):
         return self.name
 
