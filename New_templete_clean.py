@@ -134,7 +134,7 @@ sub_Regex=re.compile(r'^886-|^86-|^0086-')
 gz02_Regex=re.compile(r'^02')
 
 #copy
-email_Regex=re.compile(r'\s|，|,|:|：|;|；|。|\||/|\\|@\.|\.@|\.\.|!|#|$|\*|@.+@')
+email_Regex=re.compile(r'\s|，|,|:|：|;|；|。|\||/|\\|@\.|\.@|\.\.|!|#|$|\*|@*@')
 for foldername,subfolder,excels in os.walk(filepath):
     Clean_data = openpyxl.Workbook()
     sheet = Clean_data.create_sheet(index=0, title='data')
