@@ -134,7 +134,7 @@ sub_Regex=re.compile(r'^886-|^86-|^0086-')
 gz02_Regex=re.compile(r'^02')
 
 #copy
-email_Regex=re.compile(r'\s|，|,|:|：|;|；|。|\||/|\\|@\.|\.@|\.\.|!|#|$|\*|@*@')
+email_Regex=re.compile(r'\s|，|,|:|：|;|；|。|\||/|\\|@\.|\.@|\.\.|!|#|$|\*|@.+@|@@')
 for foldername,subfolder,excels in os.walk(filepath):
     Clean_data = openpyxl.Workbook()
     sheet = Clean_data.create_sheet(index=0, title='data')
@@ -295,9 +295,12 @@ for foldername,subfolder,excels in os.walk(filepath):
                         sheet[lb_1 + str(jj)] = '没有@'
                     else:
                         mo1=email_Regex.findall(str(sheet[lb + str(jj)].value))
-                        sheet[lb_1 + str(jj)] = '出现'+'|'.join(mo1)+'字符'
+                        if mo1 != ['']:
+                            sheet[lb_1 + str(jj)] = '出现'+'|'.join(mo1)+'字符'
+                        else:
+                            sheet[lb_1 + str(jj)] ='Correct'
 
-    # --------------------------------------------------------------
+                            # --------------------------------------------------------------
             if sheet[lb + '1'].value in list13:
                 sheet[lb_1 + '1'] = '标准手机'
                 sheet[lb_1 + '1'].font = ft1
