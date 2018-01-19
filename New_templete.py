@@ -100,9 +100,21 @@ if choose=='1':
             sheet['J' + str(i)] = str(time2)
 
         # dnb应该放在前面
-        if sheet['K' + str(i)].value == 'DnB':
-            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_response'
-            sheet['F' + str(i)] ='7616'
+        if sheet['K' + str(i)].value == 'DnB UCS':
+            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_UCS_response'
+            sheet['F' + str(i)] ='8359'
+            sheet['G' + str(i)] ='cc000291'
+            sheet['J' + str(i)] = str(time2)
+
+        if sheet['K' + str(i)].value == 'DnB Spark':
+            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_Spark_response'
+            sheet['F' + str(i)] ='8355'
+            sheet['G' + str(i)] ='cc000291'
+            sheet['J' + str(i)] = str(time2)
+
+        if sheet['K' + str(i)].value == 'DnB C9K':
+            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_C9K_response'
+            sheet['F' + str(i)] ='8366'
             sheet['G' + str(i)] ='cc000291'
             sheet['J' + str(i)] = str(time2)
 
@@ -112,8 +124,6 @@ if choose=='1':
             sheet['F' + str(i)] ='7592'
             sheet['G' + str(i)] ='cc000291'
             sheet['J' + str(i)] = str(time2)
-
-
 
         # if sheet['K' + str(i)].value == 'Smart-I':
         #     sheet['U' + str(i)]= 'Hong Kong'
@@ -160,9 +170,21 @@ elif choose=='2':
             if 'Inbound_Drive_to' in sheet['C' + str(i)].value:
                 sheet['K' + str(i)] = 'NA'
 
-        if sheet['K' + str(i)].value == 'DnB':
-            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_SDR'
-            sheet['F' + str(i)] ='7615'
+        if sheet['K' + str(i)].value == 'DnB UCS':
+            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_UCS_SDR'
+            sheet['F' + str(i)] ='8358'
+            sheet['G' + str(i)] ='cc000291'
+            sheet['J' + str(i)] = str(time2)
+
+        if sheet['K' + str(i)].value == 'DnB Spark':
+            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_Spark_SDR'
+            sheet['F' + str(i)] ='8354'
+            sheet['G' + str(i)] ='cc000291'
+            sheet['J' + str(i)] = str(time2)
+
+        if sheet['K' + str(i)].value == 'DnB C9K':
+            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_C9K_SDR'
+            sheet['F' + str(i)] ='8365'
             sheet['G' + str(i)] ='cc000291'
             sheet['J' + str(i)] = str(time2)
 

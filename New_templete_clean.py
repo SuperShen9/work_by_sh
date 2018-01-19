@@ -126,7 +126,7 @@ list20=['Title','jobtitle','Job Title*','TITLE',u'原始職稱'] #活动数据�
 # list20=[u'職稱','Title','jobtitle','Job Title*']
 list20_depa=[u'服務部門名稱','DEPARTMENT*',u'原始部門','Department']
 list21=[u'公司規模','Range of HK Staff','QAEMPLOYEES__C']
-list22=['Remark','IRM_Enquiry_FF_V1*','Senda Remark']
+list22=['IRM_Enquiry_FF_V1*','Senda Remark']
 a = range(1,22)
 b = list(reversed(a))
 num_Regex=re.compile(r'\d+')
@@ -160,12 +160,18 @@ for foldername,subfolder,excels in os.walk(filepath):
         lb_4= get_column_letter(kk + 4)
         lb_6 = get_column_letter(kk + 6)
         lb_8 = get_column_letter(kk + 8)
+
+        lb_12 = get_column_letter(kk +12) #TW WH 专用去除电话
+        lb_28 = get_column_letter(kk + 28)  # TW MKT 专用去除来源
+
+
         lb_m = get_column_letter(lie1+1)
         lb_m2 = get_column_letter(lie1 + 2)
         lb_m3 = get_column_letter(lie1 + 3)
         lb_m4 = get_column_letter(lie1 + 4)
         lb_m5 = get_column_letter(lie1 + 5)
         lb_m6 = get_column_letter(lie1 + 6)
+        lb_m7 = get_column_letter(lie1 + 7)  #备用一列
         for jj in range(2,hang1):
             if sheet[lb + '1'].value in list1:
                 sheet[lb_1 + '1'] = '备注'
@@ -266,11 +272,29 @@ for foldername,subfolder,excels in os.walk(filepath):
                         sheet[lb_1 + str(jj)]=sheet[lb_1 + str(jj)].value+'X'+sheet[lb_2 + str(jj)].value
 
             if sheet[lb + '1'].value =='名單狀態':
-                sheet[lb_1 + '1'] = '来源'
-                if sheet[lb + str(jj)].value=='Leads':
-                    sheet[lb_1 + str(jj)] = 'DnB'
-                else:
+                sheet[lb_2 + '1'] = ''
+                sheet[lb_12 + '1'] = ''
+                if sheet[lb + str(jj)].value !='Leads':
+                    sheet[lb_28 + '1'] = ''
+                    sheet[lb_1 + '1'] = '来源'
+                    sheet[lb_3 + '1'] = '备注'
                     sheet[lb_1 + str(jj)] = 'new profiling'
+                    sheet[lb_3 + str(jj)] = 'Partner_Led_Customer:數據來源：TW FY18Q2 MSO Marketing D&B Profiled data'
+
+            if sheet[lb + '1'].value == 'Subject':
+                sheet[lb_2 + '1'] = '备注'
+                sheet[lb_1 + '1'] = '来源'
+                sheet[lb_2 + str(jj)] = 'Partner_Led_Customer:數據來源：TW_FY18Q2_MSO_Wateringhole_DnB data'
+                if sheet[lb + str(jj)].value == 'C9K':
+                    sheet[lb_1 + str(jj)] = 'DnB C9K'
+                elif sheet[lb + str(jj)].value == 'UCS':
+                    sheet[lb_1 + str(jj)] = 'DnB UCS'
+                elif sheet[lb + str(jj)].value == 'Spark':
+                    sheet[lb_1 + str(jj)] = 'DnB Spark'
+                else:
+                    print 'TW WH 来源有问题，请检查'
+
+
 
 
     # -------------------------老版本邮件思路----------------------------------
