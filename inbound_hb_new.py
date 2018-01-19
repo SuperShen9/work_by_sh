@@ -92,79 +92,109 @@ for i in range(2,hang2):
         if 'UCS' in sheet['A' + str(i)].value:
             sheet['B' + str(i)] = 'DATA CENTER NETWORKING'
             if sheet['E' + str(i)].value=='Google':
-                sheet['D' + str(i)]='6033'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_DNA_Search_google'
-                sheet['O' + str(i)] = 'cc000289'
+                sheet['D' + str(i)]='8231'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_UCS_Google_Search'
+                sheet['O' + str(i)] = 'cc000290'
                 sheet['P' + str(i)] = 'pseggl000732'
             elif sheet['E' + str(i)].value=='Facebook':
-                sheet['D' + str(i)] = '6181'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_DNA_Social_facebook'
-                sheet['O' + str(i)] = 'cc000289'
-                sheet['P' + str(i)] = 'psofbk000730'
-            elif sheet['E' + str(i)].value == 'tenmax':
-                sheet['D' + str(i)] = '6185'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_DNA_Native_Ads_tenmax'
-                sheet['O' + str(i)] = 'cc000289'
-                sheet['P' + str(i)] = 'psodgd000731'
-            else:
-                sheet['D' + str(i)] = '6190'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_DNA_Organic'
-                sheet['O' + str(i)] = 'cc000289'
-        if 'Hyperflex' in sheet['A' + str(i)].value:
-            sheet['B' + str(i)] = 'DATA CENTER NETWORKING'
-            if sheet['E' + str(i)].value=='Google':
-                sheet['D' + str(i)] = '6189'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Hyperflex_Search_google'
+                sheet['D' + str(i)] = '8233'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_UCS_Facebook_Social'
                 sheet['O' + str(i)] = 'cc000290'
+                sheet['P' + str(i)] = 'psofbk000730'
+            elif sheet['E' + str(i)].value == 'Native':
+                sheet['D' + str(i)] = '8232'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_UCS_Native_Ad_Social'
+                sheet['O' + str(i)] = 'cc000290'
+                sheet['P' + str(i)] = 'psodgd000731'
+            elif sheet['E' + str(i)].value == 'TAmedia':
+                sheet['D' + str(i)] = '8234'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_UCS_TAmedia_Display'
+                sheet['O' + str(i)] = 'cc000290'
+                sheet['P' + str(i)] = 'pdidgd000827'
+            else:
+                sheet['D' + str(i)] = '8243'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_UCS_Organic'
+                sheet['O' + str(i)] = 'cc000290'
+
+        if 'Spark' in sheet['A' + str(i)].value:
+            sheet['B' + str(i)] = 'ENTERPRISE IP TELEPHONY'
+            if sheet['E' + str(i)].value=='Google':
+                sheet['D' + str(i)] = '8244'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Spark_Google_Search'
+                sheet['O' + str(i)] = 'cc000288'
                 sheet['P' + str(i)] = 'pseggl000732'
             elif sheet['E' + str(i)].value=='Facebook' or sheet['E' + str(i)].value=='FBPAGE':
-                sheet['D' + str(i)] = '6193'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Hyperflex_Social_facebook'
-                sheet['O' + str(i)] = 'cc000290'
+                sheet['D' + str(i)] = '8247'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Spark_Facebook_Social'
+                sheet['O' + str(i)] = 'cc000288'
                 sheet['P' + str(i)] = 'psofbk000730'
-            elif sheet['E' + str(i)].value == 'tenmax':
-                sheet['D' + str(i)] = '6197'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Hyperflex_Native_Ads_tenmax'
-                sheet['O' + str(i)] = 'cc000290'
+            elif sheet['E' + str(i)].value == 'Native':
+                sheet['D' + str(i)] = '8246'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Spark_Native_Ad_Social'
+                sheet['O' + str(i)] = 'cc000288'
                 sheet['P' + str(i)] = 'psodgd000731'
-                # 2017/11/21新增来源
             elif sheet['E' + str(i)].value == 'digitmes':
-                sheet['D' + str(i)] = '6966'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Hyperflex_Display_digitimes'
-                sheet['O' + str(i)] = 'cc000290'
+                sheet['D' + str(i)] = '8253'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Spark_Digitimes_Display'
+                sheet['O' + str(i)] = 'cc000288'
                 sheet['P' + str(i)] = 'pdidgd000724'
-
+            elif sheet['E' + str(i)].value == 'TAmedia':
+                sheet['D' + str(i)] = '8249'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Spark_TAmedia_Display'
+                sheet['O' + str(i)] = 'cc000288'
+                sheet['P' + str(i)] = 'pdidgd000827'
+            elif sheet['E' + str(i)].value == 'techorange':
+                sheet['D' + str(i)] = '8252'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Spark_techorange_Display'
+                sheet['O' + str(i)] = 'cc000288'
+                sheet['P' + str(i)] = 'pdidgd000727'
+            elif sheet['E' + str(i)].value == 'Commonwealth':
+                sheet['D' + str(i)] = '8254'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Spark_Commonwealth_Email'
+                sheet['O' + str(i)] = 'cc000288'
+                sheet['P' + str(i)] = 'pemdgd000829'
             else:
-                sheet['D' + str(i)] = '6196'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Hyperflex_Organic'
-                sheet['O' + str(i)] = 'cc000290'
-        if 'TW Security' in sheet['A' + str(i)].value or 'Media Security' in sheet['A' + str(i)].value:
+                sheet['D' + str(i)] = '8255'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Spark_Organic'
+                sheet['O' + str(i)] = 'cc000288'
+
+        if 'Security' in sheet['A' + str(i)].value:
             sheet['B' + str(i)] = 'SECURITY - NETWORK SECURITY'
             if sheet['E' + str(i)].value=='Google':
-                sheet['D' + str(i)] = '6195'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Security_Search_google'
+                sheet['D' + str(i)] = '8221'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Security_google_Search'
                 sheet['O' + str(i)] = 'cc000291'
                 sheet['P' + str(i)] = 'pseggl000732'
 
             elif sheet['E' + str(i)].value == 'Facebook':
-                sheet['D' + str(i)] = '6712'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Security_Social_facebook'
+                sheet['D' + str(i)] = '8226'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Security_Facebook_Social'
                 sheet['O' + str(i)] = 'cc000291'
                 sheet['P' + str(i)] = 'psofbk000730'
-            elif sheet['E' + str(i)].value == 'Adbert':
-                sheet['D' + str(i)] = '6713'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Security_Display_Adbert'
+            elif sheet['E' + str(i)].value == 'Native':
+                sheet['D' + str(i)] = '8223'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Security_Native_Ad_Social'
                 sheet['O' + str(i)] = 'cc000291'
-                sheet['P' + str(i)] = 'pdidgd000725'
-            elif sheet['E' + str(i)].value == 'digitime':
-                sheet['D' + str(i)] = '6714'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Security_Display_digitimes'
+                sheet['P' + str(i)] = 'psodgd000731'
+            elif sheet['E' + str(i)].value == 'digitimes':
+                sheet['D' + str(i)] = '8227'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Security_Digitimes_Display'
                 sheet['O' + str(i)] = 'cc000291'
                 sheet['P' + str(i)] = 'pdidgd000724'
+            elif sheet['E' + str(i)].value == 'TNL':
+                sheet['D' + str(i)] = '8228'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Security_TNL_Display'
+                sheet['O' + str(i)] = 'cc000291'
+                sheet['P' + str(i)] = 'pdidgd000828'
+            elif sheet['E' + str(i)].value == 'TAmedia':
+                sheet['D' + str(i)] = '8229'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Security_TAmedia_Display'
+                sheet['O' + str(i)] = 'cc000291'
+                sheet['P' + str(i)] = 'pdidgd000827'
 
             else:
-                sheet['D' + str(i)] = '6194'
-                sheet['N' + str(i)] = 'FY18_TW_Inbound_Drive_to_Security_Organic'
+                sheet['D' + str(i)] = '8230'
+                sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Security_Organic'
                 sheet['O' + str(i)] = 'cc000291'
 
         if sheet['H' + str(i)].value in spam1.keys():
