@@ -164,7 +164,6 @@ for foldername,subfolder,excels in os.walk(filepath):
         lb_12 = get_column_letter(kk +12) #TW WH 专用去除电话
         lb_28 = get_column_letter(kk + 28)  # TW MKT 专用去除来源
 
-
         lb_m = get_column_letter(lie1+1)
         lb_m2 = get_column_letter(lie1 + 2)
         lb_m3 = get_column_letter(lie1 + 3)
