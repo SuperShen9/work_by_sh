@@ -101,7 +101,7 @@ if os.path.exists(file):
 filepath = unicode('D:\zlianxi\New_templete_clean\clean', 'utf-8')
 list1=['Segment','EU','Segment_Super']
 list2=['AM','*AM Email Alias','AM_Super']
-list3=[u'職稱',u'職務級別','Job Level',u'您的職務階級為?']
+list3=[u'職務',u'職稱',u'職務級別','Job Level',u'您的職務階級為?']
 list4=[u'部門',u'您的職務類型為?']
 list5=[u'10. 請問 貴單位主要類別？（可複選）',u'產業別',u'公司產業別',u'服務產業類別','Industry','Vertical*','Master Industry','INDUSTRY']
 list6=[u'有興趣投資的IT解決方案?(可複選)',u'5.（承上題）請問 貴單位目前使用的思科產品是？','* Architecture(s) that plan to invest ']
@@ -113,7 +113,7 @@ list10=['Account Name','Cname',u'單位名稱',u'公司',u'公司/單位名稱',
         'COMPANY','company / account','company name','Company Name','Company_Name*','Company','Company name','* Company Name']
 list11=[u'公司電話及分機',u'電話號碼',u'電話',u'公司電話/分機',u'公司電話',u'公司聯絡電話','Phone','TEL','PHONE']
 list11_hk=['Phone Number*','Main Tel','* Telephone ','Business Phone','Telephone number']
-list12=[u'電子郵箱',u'電子郵件信箱',u'公司電子信箱',u'公司 E-mail','Email','email','Email*','Email Address','EMAIL','* Email address','Email address']
+list12=['公司電子郵件',u'電子郵箱',u'電子郵件信箱',u'公司電子信箱',u'公司 E-mail','Email','email','Email*','Email Address','EMAIL','* Email address','Email address']
 list13=[u'手機',u'手機電話',u'行動電話','Cell','Mobile','mobile','Mobile Phone','MOBILEPHONE','* Mobile ']
 list14=[u'地址',u'公司地址','Company Address','address','ADDRESS_LINE_1__C','Address']
 list15=[u'标准職稱','JOB_LEVEL_DETAIL']
