@@ -2,12 +2,12 @@
 import pandas as pd
 pd.set_option('expand_frame_repr',False)
 # pd.set_option('max_colwidth',10)
-df=pd.read_csv('sz000002.csv',
-               nrows=10,
-               skiprows=1,
-               usecols=['交易日期','股票代码','收盘价','成交量','MACD_金叉死叉'],
-               error_bad_lines=False,
-               na_filter='NULL')
+# df=pd.read_csv('sz000002.csv',
+#                nrows=10,
+#                skiprows=1,
+#                usecols=['交易日期','股票代码','收盘价','成交量','MACD_金叉死叉'],
+#                error_bad_lines=False,
+#                na_filter='NULL')
 
 # print df['收盘价']==22.29
 #
@@ -71,7 +71,7 @@ df=pd.read_csv('sz000002.csv',
 
 # print df['新浪概念'].str.split('；',expand=True)
 
-df['交易日期']=pd.to_datetime(df['交易日期'])
+# df['交易日期']=pd.to_datetime(df['交易日期'])
 
 # print df['交易日期']
 # print df['交易日期'].dt.year
@@ -89,8 +89,36 @@ df['交易日期']=pd.to_datetime(df['交易日期'])
 #
 # print df[['收盘价','收盘价_3_mean']]
 
-df['收盘价_now']=df['收盘价'].expanding().mean()
+# df['收盘价_now']=df['收盘价'].expanding().mean()
 
 # print df[['收盘价','收盘价_now']]
 
 # df.to_csv('output.csv', encoding='gbk', index=False)
+
+df = pd.read_csv('sz300001.csv',
+               # nrows=10,
+               error_bad_lines=False,
+               na_filter='NULL')
+
+df = df[['交易日期','股票代码','开盘价','最高价',
+       '最低价','收盘价','涨跌幅']]
+
+df.sort_values(by=['交易日期'], inplace=True)
+
+df['涨跌幅2'] = df['收盘价'].pct_change()
+
+
+
+# print df[abs(df['涨跌幅2']-df['涨跌幅'])>0.0001]
+
+df['复权因子']= (df['涨跌幅']+1).cumprod()
+
+or_prise = df['收盘价'].iloc[0]/(1+df['涨跌幅'].iloc[0])
+df['收盘价_后复权']=or_prise*df['复权因子']
+
+print df[['交易日期','收盘价','收盘价_后复权']]
+# print df.iloc[0]
+# print al_prise
+
+
+
