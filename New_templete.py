@@ -100,6 +100,12 @@ if choose=='1':
             sheet['J' + str(i)] = str(time2)
 
         # dnb应该放在前面
+        if sheet['K' + str(i)].value == 'DnB Security':
+            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_response'
+            sheet['F' + str(i)] ='7616'
+            sheet['G' + str(i)] ='cc000291'
+            sheet['J' + str(i)] = str(time2)
+
         if sheet['K' + str(i)].value == 'DnB UCS':
             sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_UCS_response'
             sheet['F' + str(i)] ='8359'
@@ -124,6 +130,8 @@ if choose=='1':
             sheet['F' + str(i)] ='7592'
             sheet['G' + str(i)] ='cc000291'
             sheet['J' + str(i)] = str(time2)
+
+        # HK WH response一个月做一次
 
         # if sheet['K' + str(i)].value == 'Smart-I':
         #     sheet['U' + str(i)]= 'Hong Kong'
@@ -169,6 +177,12 @@ elif choose=='2':
         if sheet['C' + str(i)].value !=None:
             if 'Inbound_Drive_to' in sheet['C' + str(i)].value:
                 sheet['K' + str(i)] = 'NA'
+
+        if sheet['K' + str(i)].value == 'DnB Security':
+            sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_SDR'
+            sheet['F' + str(i)] ='7615'
+            sheet['G' + str(i)] ='cc000291'
+            sheet['J' + str(i)] = str(time2)
 
         if sheet['K' + str(i)].value == 'DnB UCS':
             sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_UCS_SDR'
