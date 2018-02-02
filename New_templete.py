@@ -225,18 +225,19 @@ elif choose=='2':
 
         if sheet['K' + str(i)].value == 'Senda':
             sheet['U' + str(i)] = 'Hong Kong'
-            sheet['C' + str(i)] = 'HK_Q2_MSO_Wateringhole_Senda_SDR'
-            sheet['F' + str(i)] = '6526'
+            sheet['C' + str(i)] = 'HK_Q3_MSO_Wateringhole_Senda_SDR'
+            sheet['F' + str(i)] = '8432'
             sheet['G' + str(i)] = 'cc000291'
             sheet['J' + str(i)] = str(time2)
 
-        if sheet['K' + str(i)].value == 'Senda_Collaboration':
-            sheet['K' + str(i)] ='Senda'
-            sheet['U' + str(i)] = 'Hong Kong'
-            sheet['C' + str(i)] = 'HK_Q1_MSO_WH_Senda_Collaboration_SDR'
-            sheet['F' + str(i)] = '4868'
-            sheet['G' + str(i)] = 'cc000291'
-            sheet['J' + str(i)] = str(time2)
+# 暂停使用该来源
+        # if sheet['K' + str(i)].value == 'Senda_Collaboration':
+        #     sheet['K' + str(i)] ='Senda'
+        #     sheet['U' + str(i)] = 'Hong Kong'
+        #     sheet['C' + str(i)] = 'HK_Q1_MSO_WH_Senda_Collaboration_SDR'
+        #     sheet['F' + str(i)] = '4868'
+        #     sheet['G' + str(i)] = 'cc000291'
+        #     sheet['J' + str(i)] = str(time2)
 
         if sheet['U' + str(i)].value == 'Hong Kong':
             sheet['S' + str(i)]='HONG KONG'

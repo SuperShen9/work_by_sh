@@ -489,7 +489,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                 if sheet[lb_1 + str(jj)].value!=None:
                     sheet[lb_1 + str(jj)]= str(sheet[lb_1 + str(jj)].value).replace(' ,Hong Kong','') \
                 .replace(',Hong Kong', '').replace(' Hong Kong', '').replace(',HongKong', '').replace('Hong Kong', '').replace(' HongKong', '') \
-                .replace(' None None None', '').replace(' None None', '').replace(' None', '').replace(' HONG KONG', '')\
+                .replace(' None None None', '').replace(' None None', '').replace(' None', '').replace(' HONG KONG', '').replace(', Hongkong', '')\
                 .replace('  ', ' ').replace('  ', ' ').strip()
 
             if sheet[lb + '1'].value =='Address*' or sheet[lb + '1'].value =='Address Line 1':
@@ -498,7 +498,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + str(jj)] = str(sheet[lb + str(jj)].value).replace(', Hong Kong.','') \
                     .replace(', Hong Kong', '').replace(' ，Hong Kong', '')\
                     .replace(' ,Hong Kong', '').replace(',Hong Kong', '').replace(' Hong Kong', '')\
-                    .replace('Hong Kong', '').replace(' HongKong', '').replace(', HongKong', '')
+                    .replace('Hong Kong', '').replace(' HongKong', '').replace(', HongKong', '').replace(', Hongkong', '')
 
             if sheet[lb + '1'].value == 'Country*senda':
                 sheet[lb_m2 + '1'] = '来源'
