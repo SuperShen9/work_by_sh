@@ -133,7 +133,7 @@ for i in range(2,hang2):
                 sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Spark_Native_Ad_Social'
                 sheet['O' + str(i)] = 'cc000288'
                 sheet['P' + str(i)] = 'psodgd000731'
-            elif sheet['E' + str(i)].value == 'digitmes':
+            elif sheet['E' + str(i)].value == 'digitimes':
                 sheet['D' + str(i)] = '8253'
                 sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Spark_Digitimes_Display'
                 sheet['O' + str(i)] = 'cc000288'

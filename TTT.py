@@ -106,7 +106,10 @@
 
 
 from datetime import *
-import time
-time2=time.strftime('%Y%m%d',time.localtime())
-time1=time.time()
-print time1
+# import time
+# time2=time.strftime('%Y%m%d',time.localtime())
+# time1=time.time()
+# print time1
+i=2
+if i==1 or i==2:
+    print 'hao'

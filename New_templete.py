@@ -209,10 +209,10 @@ elif choose=='2':
             sheet['G' + str(i)] ='cc000291'
             sheet['J' + str(i)] = str(time2)
 
-        if sheet['K' + str(i)].value == 'Smart-i':
+        if sheet['K' + str(i)].value == 'Smart-i' or sheet['K' + str(i)].value == 'Smart-I':
             sheet['U' + str(i)]= 'Hong Kong'
-            sheet['C' + str(i)] = 'HK_Q2_MSO_Wateringhole_Smart-i_SDR'
-            sheet['F' + str(i)] ='6536'
+            sheet['C' + str(i)] = 'HK_Q3_MSO_Wateringhole_Smart-i_SDR'
+            sheet['F' + str(i)] ='8426'
             sheet['G' + str(i)] ='cc000291'
             sheet['J' + str(i)] = str(time2)
 
