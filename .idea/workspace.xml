@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6684a8c8-57aa-4776-aeeb-1616023df675" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inbound_hb.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tiantian.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/New_templete.py" afterPath="$PROJECT_DIR$/New_templete.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TTT.py" afterPath="$PROJECT_DIR$/TTT.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/New_templete_clean.py" afterPath="$PROJECT_DIR$/New_templete_clean.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TW_DATA_Map.py" afterPath="$PROJECT_DIR$/TW_DATA_Map.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inbound_hb_new.py" afterPath="$PROJECT_DIR$/inbound_hb_new.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +22,8 @@
       <file leaf-file-name="New_templete_clean.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="414" column="33" lean-forward="true" selection-start-line="414" selection-start-column="33" selection-end-line="414" selection-end-column="33" />
+            <state relative-caret-position="287">
+              <caret line="484" column="52" lean-forward="false" selection-start-line="484" selection-start-column="52" selection-end-line="484" selection-end-column="52" />
               <folding>
                 <element signature="e#40#68#0" expanded="true" />
                 <element signature="e#824#3568#0" expanded="false" />
@@ -33,8 +35,8 @@
       <file leaf-file-name="New_templete.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/New_templete.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="205" column="29" lean-forward="false" selection-start-line="205" selection-start-column="29" selection-end-line="205" selection-end-column="29" />
+            <state relative-caret-position="119">
+              <caret line="222" column="24" lean-forward="true" selection-start-line="222" selection-start-column="24" selection-end-line="222" selection-end-column="24" />
               <folding>
                 <element signature="e#5163#5185#0" expanded="false" />
               </folding>
@@ -42,11 +44,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="TW_DATA_Map.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TW_DATA_Map.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="31" column="106" lean-forward="false" selection-start-line="31" selection-start-column="106" selection-end-line="31" selection-end-column="106" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="inbound_hb_new.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inbound_hb_new.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="134" column="50" lean-forward="true" selection-start-line="134" selection-start-column="50" selection-end-line="134" selection-end-column="50" />
+            <state relative-caret-position="-863">
+              <caret line="95" column="47" lean-forward="false" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="47" />
               <folding>
                 <element signature="e#24#42#0" expanded="true" />
                 <element signature="e#840#872#0" expanded="false" />
@@ -66,7 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>8230</find>
       <find>lb_3</find>
       <find>EU</find>
       <find>list1</find>
@@ -96,6 +107,7 @@
       <find>Hong</find>
       <find>spark</find>
       <find>digitimes</find>
+      <find>备注</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,7 +121,6 @@
         <option value="$PROJECT_DIR$/work space/Z_Text_Mapping.py" />
         <option value="$PROJECT_DIR$/weixin_png.py" />
         <option value="$PROJECT_DIR$/work space/CN_Mapping.py" />
-        <option value="$PROJECT_DIR$/TW_DATA_Map.py" />
         <option value="$PROJECT_DIR$/inbound_hb.py" />
         <option value="$PROJECT_DIR$/forum/user/views.py" />
         <option value="$PROJECT_DIR$/forum/user/templates/register.html" />
@@ -124,10 +135,11 @@
         <option value="D:/pandas/code/sz300001.csv" />
         <option value="D:/pandas/code/class_3.py" />
         <option value="$PROJECT_DIR$/work space/fankui_hb.py" />
-        <option value="$PROJECT_DIR$/New_templete_clean.py" />
         <option value="$PROJECT_DIR$/New_templete.py" />
         <option value="$PROJECT_DIR$/TTT.py" />
+        <option value="$PROJECT_DIR$/New_templete_clean.py" />
         <option value="$PROJECT_DIR$/inbound_hb_new.py" />
+        <option value="$PROJECT_DIR$/TW_DATA_Map.py" />
       </list>
     </option>
   </component>
@@ -152,7 +164,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -182,6 +193,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -236,24 +248,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="TW_DATA_Map" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="untitled" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TW_DATA_Map.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="inbound_hb_new" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -272,7 +266,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="TTT" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="EN_fuzzy_yh" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/work space" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="untitled" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/work space/EN_fuzzy_yh.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TW_DATA_Map" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -284,7 +296,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="untitled" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TTT.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TW_DATA_Map.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -358,17 +370,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.New_templete_clean" />
       <item index="1" class="java.lang.String" itemvalue="Python.New_templete" />
-      <item index="2" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
-      <item index="3" class="java.lang.String" itemvalue="Python.inbound_hb_new" />
-      <item index="4" class="java.lang.String" itemvalue="Python.TTT" />
+      <item index="2" class="java.lang.String" itemvalue="Python.inbound_hb_new" />
+      <item index="3" class="java.lang.String" itemvalue="Python.EN_fuzzy_yh" />
+      <item index="4" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.New_templete" />
         <item index="1" class="java.lang.String" itemvalue="Python.New_templete_clean" />
-        <item index="2" class="java.lang.String" itemvalue="Python.TTT" />
+        <item index="2" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
         <item index="3" class="java.lang.String" itemvalue="Python.inbound_hb_new" />
-        <item index="4" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
+        <item index="4" class="java.lang.String" itemvalue="Python.EN_fuzzy_yh" />
       </list>
     </recent_temporary>
   </component>
@@ -397,14 +409,14 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="1" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29584527" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30873924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5397039" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39300135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37281293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34408602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34320322" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39973083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -456,20 +468,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/qiubai/qiubai/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qiubai/qiubai/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qiubai/qiubai/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -752,20 +750,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inbound_hb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="48" column="33" lean-forward="false" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TW_DATA_Map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/inbound_hb.py" />
     <entry file="file://$PROJECT_DIR$/work space/fankui_hb.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="657">
@@ -783,21 +768,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inbound_hb_new.py">
+    <entry file="file://$PROJECT_DIR$/work space/EN_fuzzy_yh.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="134" column="50" lean-forward="true" selection-start-line="134" selection-start-column="50" selection-end-line="134" selection-end-column="50" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-            <element signature="e#840#872#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TW_DATA_Map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="31" column="106" lean-forward="false" selection-start-line="31" selection-start-column="106" selection-end-line="31" selection-end-column="106" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="414" column="33" lean-forward="true" selection-start-line="414" selection-start-column="33" selection-end-line="414" selection-end-column="33" />
+        <state relative-caret-position="287">
+          <caret line="484" column="52" lean-forward="false" selection-start-line="484" selection-start-column="52" selection-end-line="484" selection-end-column="52" />
           <folding>
             <element signature="e#40#68#0" expanded="true" />
             <element signature="e#824#3568#0" expanded="false" />
@@ -805,10 +794,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/行政区划录入/chadmindivision.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inbound_hb_new.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-863">
+          <caret line="95" column="47" lean-forward="false" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="47" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+            <element signature="e#840#872#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/New_templete.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="205" column="29" lean-forward="false" selection-start-line="205" selection-start-column="29" selection-end-line="205" selection-end-column="29" />
+        <state relative-caret-position="119">
+          <caret line="222" column="24" lean-forward="true" selection-start-line="222" selection-start-column="24" selection-end-line="222" selection-end-column="24" />
           <folding>
             <element signature="e#5163#5185#0" expanded="false" />
           </folding>

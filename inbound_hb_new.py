@@ -106,7 +106,7 @@ for i in range(2,hang2):
                 sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_UCS_Native_Ad_Social'
                 sheet['O' + str(i)] = 'cc000290'
                 sheet['P' + str(i)] = 'psodgd000731'
-            elif sheet['E' + str(i)].value == 'TAmedia':
+            elif sheet['E' + str(i)].value == 'TAmedia' or sheet['E' + str(i)].value == 'TAMedia':
                 sheet['D' + str(i)] = '8234'
                 sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_UCS_TAmedia_Display'
                 sheet['O' + str(i)] = 'cc000290'
