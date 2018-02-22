@@ -138,7 +138,7 @@ for i in range(2,hang2):
                 sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Spark_Digitimes_Display'
                 sheet['O' + str(i)] = 'cc000288'
                 sheet['P' + str(i)] = 'pdidgd000724'
-            elif sheet['E' + str(i)].value == 'TAmedia':
+            elif sheet['E' + str(i)].value == 'TAMedia':
                 sheet['D' + str(i)] = '8249'
                 sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Spark_TAmedia_Display'
                 sheet['O' + str(i)] = 'cc000288'
@@ -186,7 +186,7 @@ for i in range(2,hang2):
                 sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Security_TNL_Display'
                 sheet['O' + str(i)] = 'cc000291'
                 sheet['P' + str(i)] = 'pdidgd000828'
-            elif sheet['E' + str(i)].value == 'TAmedia':
+            elif sheet['E' + str(i)].value == 'TAMedia':
                 sheet['D' + str(i)] = '8229'
                 sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Security_TAmedia_Display'
                 sheet['O' + str(i)] = 'cc000291'

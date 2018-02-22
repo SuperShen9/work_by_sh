@@ -296,8 +296,6 @@ for foldername,subfolder,excels in os.walk(filepath):
                     print 'TW WH 来源有问题，请检查'
 
 
-
-
     # -------------------------老版本邮件思路----------------------------------
             # if sheet[lb + '1'].value in list12:
             #     sheet[lb_1 + '1'] = '邮箱检查'
