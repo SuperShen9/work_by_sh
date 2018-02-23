@@ -294,7 +294,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                     sheet[lb_1 + str(jj)] = 'DnB Security'
                 else:
                     print 'TW WH 来源有问题，请检查'
-
+                    exit()
 
     # -------------------------老版本邮件思路----------------------------------
             # if sheet[lb + '1'].value in list12:
