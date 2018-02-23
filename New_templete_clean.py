@@ -519,4 +519,6 @@ for foldername,subfolder,excels in os.walk(filepath):
 
 
 sheet.freeze_panes='A2'
+
+os.chdir('C:\Users\Administrator\Desktop')
 Clean_data.save('Clean_data.xlsx')
