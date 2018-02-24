@@ -129,4 +129,5 @@ sheet1['G1']='Flag'
 sheet1['H1']='Check'
 sheet1['I1']='LOB'
 sheet1['J1']='Check2'
-or_wb.save('data.xlsx')
+os.chdir('C:\Users\Administrator\Desktop')
+or_wb.save('Mapping.xlsx')
