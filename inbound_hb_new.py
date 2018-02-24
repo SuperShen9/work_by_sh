@@ -37,6 +37,9 @@ k1=0
 for foldername,subfolder,excels in os.walk('D:\\zlianxi\Inbound_hb'):
     baocun = openpyxl.Workbook()
     sheet = baocun.create_sheet(index=0, title='data')
+    if excels == []:
+        print 'NO Files!'
+        exit()
     for excel in excels:
         wb=openpyxl.load_workbook(str(excel))
         sheet1 = wb.active
