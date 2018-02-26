@@ -231,8 +231,8 @@ else:
 
             if sheet['K' + str(i)].value == 'Winner':
                 sheet['U' + str(i)] = 'Hong Kong'
-                sheet['C' + str(i)] = 'HK_Q2_MSO_Wateringhole_Winner_SDR'
-                sheet['F' + str(i)] = '6522'
+                sheet['C' + str(i)] = 'HK_Q3_MSO_Wateringhole_Winner_SDR'
+                sheet['F' + str(i)] = '8469'
                 sheet['G' + str(i)] = 'cc000291'
                 sheet['J' + str(i)] = str(time2)
 

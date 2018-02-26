@@ -245,7 +245,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + '1'] = '标准电话'
                 sheet[lb_m5 + '1'] = '备用电话'
                 sheet[lb_1 + '1'].font = ft1
-                if len(str(sheet[lb + str(jj)].value))<=9:
+                if 7<len(str(sheet[lb + str(jj)].value))<=9:
                     mo = num_Regex.findall(str(sheet[lb + str(jj)].value))
                     sheet[lb_1 + str(jj)]='852-' +str(''.join(mo))
                 elif len(str(sheet[lb + str(jj)].value))>9:
