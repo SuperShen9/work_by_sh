@@ -96,10 +96,12 @@ else:
         print '-' * 50
 
     from datetime import *
-    import time
+    import time,shutil
     time2=time.strftime('%d-%b-%Y',time.localtime())
     time1=datetime.today()
     hang2 = sheet.max_row + 1
+    file_title = 'DATA'
+    time_file = time.strftime('%Y%m%d', time.localtime())
     if choose=='1':
         tp = 'response'
         for i in range(2,hang2):
@@ -196,24 +198,28 @@ else:
                 sheet['F' + str(i)] ='7615'
                 sheet['G' + str(i)] ='cc000291'
                 sheet['J' + str(i)] = str(time2)
+                file_title = 'WH_Leads'
 
             if sheet['K' + str(i)].value == 'DnB UCS':
                 sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_UCS_SDR'
                 sheet['F' + str(i)] ='8358'
                 sheet['G' + str(i)] ='cc000291'
                 sheet['J' + str(i)] = str(time2)
+                file_title = 'WH_Leads'
 
             if sheet['K' + str(i)].value == 'DnB Spark':
                 sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_Spark_SDR'
                 sheet['F' + str(i)] ='8354'
                 sheet['G' + str(i)] ='cc000291'
                 sheet['J' + str(i)] = str(time2)
+                file_title = 'WH_Leads'
 
             if sheet['K' + str(i)].value == 'DnB C9K':
                 sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_C9K_SDR'
                 sheet['F' + str(i)] ='8365'
                 sheet['G' + str(i)] ='cc000291'
                 sheet['J' + str(i)] = str(time2)
+                file_title = 'WH_Leads'
 
             if sheet['K' + str(i)].value == 'new profiling':
                 sheet['K' + str(i)].value = 'DnB'
@@ -221,6 +227,7 @@ else:
                 sheet['F' + str(i)] ='7591'
                 sheet['G' + str(i)] ='cc000291'
                 sheet['J' + str(i)] = str(time2)
+                file_title = 'NNN'
 
             if sheet['K' + str(i)].value == 'Smart-i' or sheet['K' + str(i)].value == 'Smart-I':
                 sheet['U' + str(i)]= 'Hong Kong'
@@ -228,6 +235,7 @@ else:
                 sheet['F' + str(i)] ='8426'
                 sheet['G' + str(i)] ='cc000291'
                 sheet['J' + str(i)] = str(time2)
+                file_title = 'Smart-i'
 
             if sheet['K' + str(i)].value == 'Winner':
                 sheet['U' + str(i)] = 'Hong Kong'
@@ -235,6 +243,7 @@ else:
                 sheet['F' + str(i)] = '8469'
                 sheet['G' + str(i)] = 'cc000291'
                 sheet['J' + str(i)] = str(time2)
+                file_title = 'Winner'
 
             if sheet['K' + str(i)].value == 'Senda':
                 sheet['U' + str(i)] = 'Hong Kong'
@@ -242,6 +251,7 @@ else:
                 sheet['F' + str(i)] = '8432'
                 sheet['G' + str(i)] = 'cc000291'
                 sheet['J' + str(i)] = str(time2)
+                file_title = 'Senda'
 
             # 暂停使用该来源
             # if sheet['K' + str(i)].value == 'Senda_Collaboration':
@@ -289,4 +299,9 @@ else:
     sheet['B1'].font = ft
     baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
     os.chdir('C:\Users\Administrator\Desktop')
-    baocun.save('%s_Transpose.xlsx' % tp)
+    baocun.save('%s %s.xlsx' %(file_title,tp))
+
+    # 日常数据新增创建文件夹功能
+    if os.path.exists(str(time_file) + ' ' + file_title):
+        shutil.rmtree(str(time_file) + ' ' + file_title)
+    os.makedirs('C:\Users\Administrator\Desktop\\%s %s' % (time_file,file_title))
