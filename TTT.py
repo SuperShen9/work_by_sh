@@ -110,6 +110,16 @@ from datetime import *
 # time2=time.strftime('%Y%m%d',time.localtime())
 # time1=time.time()
 # print time1
-i=2
-if i==1 or i==2:
-    print 'hao'
+
+import os
+import shutil
+
+import time
+time_file=time.strftime('%Y%m%d',time.localtime())
+
+# os.chdir('C:\Users\Administrator\Desktop')
+# if os.path.exists(str(time_file)+'_media'):
+#     shutil.rmtree(str(time_file)+'_media')
+
+
+# os.makedirs('C:\Users\Administrator\Desktop\\%s_media\\today'%time_file)

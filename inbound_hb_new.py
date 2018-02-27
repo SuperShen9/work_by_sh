@@ -210,6 +210,14 @@ for i in range(2,hang2):
 print '数据总数：'+str(hang2-countall-2)
 print '有效数据更新：'+str(count)
 baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
-import time
+import time,shutil
 time2=time.strftime('%Y%m%d',time.localtime())
 baocun.save(str(time2)+'A_data.xlsx')
+
+# 假如文件存在，先删除，再创建一次
+time_file=time.strftime('%Y%m%d',time.localtime())
+os.chdir('C:\Users\Administrator\Desktop')
+if os.path.exists(str(time_file)+'_media'):
+    shutil.rmtree(str(time_file)+'_media')
+os.makedirs('C:\Users\Administrator\Desktop\\%s_media\\today'%time_file)
+
