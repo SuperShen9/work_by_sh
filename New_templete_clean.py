@@ -348,10 +348,14 @@ for foldername,subfolder,excels in os.walk(filepath):
                     else:
                         sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
 
+
+
+
                 # TW backup数据新增条件
             if sheet[lb + '1'].value == 'MODS_STANDARD_CITY':
                 sheet[lb + '1'] = 'city'
 
+            # 这一步才开始清理去地级市
             if sheet[lb + '1'].value =='标准地址':
                 sheet[lb_m3 + '1'] = 'city'
                 sheet[lb_m3 + '1'].font = ft3
@@ -359,12 +363,15 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_m4 + '1'].font = ft3
                 sheet[lb_m6 + '1'] = '标准区号'
                 sheet[lb_m6 + '1'].font = ft3
+                # 新增函数功能
+                sheet[lb_m7 + '1'] = '需要替换'
                 if sheet[lb + str(jj)].value!=None:
                     if sheet[lb + str(jj)].value[:3] in city.keys():
                         sheet[lb_m3 + str(jj)] = sheet[lb + str(jj)].value[:3]
                         sheet[lb_m4 + str(jj)] = city[sheet[lb + str(jj)].value[:3]]
                         sheet[lb_m6 + str(jj)] = post.get(sheet[lb + str(jj)].value[:3])
                         sheet[lb + str(jj)] = sheet[lb + str(jj)].value[3:]
+                        sheet[lb_m7 + str(jj)] = '=ASC(TRIM(CLEAN(%s)))' % (lb + str(jj))
 
 
             # if sheet[lb + '1'].value == 'City':

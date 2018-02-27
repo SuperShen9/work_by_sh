@@ -6,6 +6,4 @@
 # time1=datetime.today()
 # print time1.day
 # print time2
-from TTT import *
-print spam.keys()
 
