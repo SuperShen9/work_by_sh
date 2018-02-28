@@ -144,6 +144,7 @@ else:
                 sheet['F' + str(i)] ='7592'
                 sheet['G' + str(i)] ='cc000291'
                 sheet['J' + str(i)] = str(time2)
+                file_title = 'profiling'
 
             # HK WH response一个月做一次
 
@@ -302,8 +303,11 @@ else:
     baocun.save('%s %s.xlsx' %(file_title,tp))
 
     # 日常数据新增创建文件夹功能
-    if os.path.exists(str(time_file) + ' ' + file_title):
-        shutil.rmtree(str(time_file) + ' ' + file_title)
-    os.makedirs('C:\Users\Administrator\Desktop\\%s %s' % (time_file,file_title))
-    move_dir='C:\Users\Administrator\Desktop\\%s %s' % (time_file,file_title)
-    shutil.move("Clean_data.xlsx", move_dir)
+    if file_title == 'profiling':
+        exit()
+    else:
+        if os.path.exists(str(time_file) + ' ' + file_title):
+            shutil.rmtree(str(time_file) + ' ' + file_title)
+        os.makedirs('C:\Users\Administrator\Desktop\\%s %s' % (time_file, file_title))
+        move_dir='C:\Users\Administrator\Desktop\\%s %s' % (time_file,file_title)
+        shutil.move("Clean_data.xlsx", move_dir)
