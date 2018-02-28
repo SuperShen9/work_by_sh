@@ -119,24 +119,28 @@ else:
                 sheet['F' + str(i)] ='7616'
                 sheet['G' + str(i)] ='cc000291'
                 sheet['J' + str(i)] = str(time2)
+                file_title = 'DNB'
 
             if sheet['K' + str(i)].value == 'DnB UCS':
                 sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_UCS_response'
                 sheet['F' + str(i)] ='8359'
                 sheet['G' + str(i)] ='cc000291'
                 sheet['J' + str(i)] = str(time2)
+                file_title = 'DNB'
 
             if sheet['K' + str(i)].value == 'DnB Spark':
                 sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_Spark_response'
                 sheet['F' + str(i)] ='8355'
                 sheet['G' + str(i)] ='cc000291'
                 sheet['J' + str(i)] = str(time2)
+                file_title = 'DNB'
 
             if sheet['K' + str(i)].value == 'DnB C9K':
                 sheet['C' + str(i)] = 'TW_FY18Q2_MSO_Wateringhole_DnB_C9K_response'
                 sheet['F' + str(i)] ='8366'
                 sheet['G' + str(i)] ='cc000291'
                 sheet['J' + str(i)] = str(time2)
+                file_title = 'DNB'
 
             if sheet['K' + str(i)].value == 'new profiling':
                 sheet['K' + str(i)].value = 'DnB'
@@ -303,7 +307,7 @@ else:
     baocun.save('%s %s.xlsx' %(file_title,tp))
 
     # 日常数据新增创建文件夹功能
-    if file_title == 'profiling':
+    if file_title == 'profiling' or file_title == 'DNB':
         exit()
     else:
         if os.path.exists(str(time_file) + ' ' + file_title):
