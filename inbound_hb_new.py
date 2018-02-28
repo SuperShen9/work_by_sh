@@ -221,3 +221,4 @@ if os.path.exists(str(time_file)+'_media'):
     shutil.rmtree(str(time_file)+'_media')
 os.makedirs('C:\Users\Administrator\Desktop\\%s_media\\today'%time_file)
 
+

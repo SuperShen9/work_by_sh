@@ -305,3 +305,5 @@ else:
     if os.path.exists(str(time_file) + ' ' + file_title):
         shutil.rmtree(str(time_file) + ' ' + file_title)
     os.makedirs('C:\Users\Administrator\Desktop\\%s %s' % (time_file,file_title))
+    move_dir='C:\Users\Administrator\Desktop\\%s %s' % (time_file,file_title)
+    shutil.move("Clean_data.xlsx", move_dir)
