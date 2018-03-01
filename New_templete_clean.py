@@ -497,7 +497,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                     sheet[lb_1 + str(jj)]= str(sheet[lb_1 + str(jj)].value).replace(' ,Hong Kong','') \
                 .replace(',Hong Kong', '').replace(' Hong Kong', '').replace(',HongKong', '').replace('Hong Kong', '').replace(' HongKong', '') \
                 .replace(' None None None', '').replace(' None None', '').replace(' None', '').replace(' HONG KONG', '').replace(', Hongkong', '')\
-                .replace('  ', ' ').replace('  ', ' ').strip()
+                .replace('  ', ' ').replace('  ', ' ').replace('- ', '').strip()
 
             if sheet[lb + '1'].value =='Address*' or sheet[lb + '1'].value =='Address Line 1':
                 sheet[lb_1 + '1'] = '标准地址'
@@ -523,8 +523,13 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_m2 + str(jj)] ='Senda_Collaboration'
                 sheet[lb_m3 + str(jj)] = 'Hong Kong'
 
-
-
+# 新增删除多余sheet功能
+if len(wb.get_sheet_names())>5:
+    del wb[wb.get_sheet_names()[4]]
+# 每次运行完程序新增一个sheet
+sh_add = wb.create_sheet(title='Input')
+# sh_add.sheet_properties.tabColor = "1072BA"
+wb.save('Input_data.xlsx')
 sheet.freeze_panes='A2'
 
 os.chdir('C:\Users\Administrator\Desktop')
