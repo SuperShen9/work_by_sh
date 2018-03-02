@@ -123,3 +123,6 @@ time_file=time.strftime('%Y%m%d',time.localtime())
 
 
 # os.makedirs('C:\Users\Administrator\Desktop\\%s_media\\today'%time_file)
+print [chr(i) for i in range(65,91)]
+# for i in [chr(i) for i in range(65,91)]:
+#     print i

@@ -37,6 +37,8 @@ k1=0
 for foldername,subfolder,excels in os.walk('D:\\zlianxi\Inbound_hb'):
     baocun = openpyxl.Workbook()
     sheet = baocun.create_sheet(index=0, title='data')
+    # 新增有效sheet
+    sheet_yx=baocun.get_sheet_by_name('Sheet')
     if excels == []:
         print 'NO Files!'
         exit()
@@ -206,10 +208,15 @@ for i in range(2,hang2):
             sheet['C' + str(i)] = spam2.get(sheet['F' + str(i)].value)
 
         if sheet['C' + str(i)].value == None:
-            count+=1
+            count += 1
+            # 取出有效的数据到Sheet(新建excel时自动生成的)
+            for zm in [chr(y) for y in range(65, 86)]:
+                sheet_yx[zm + '1'] = sheet[zm + '1'].value
+                sheet_yx[zm+str(count+1)]=sheet[zm + str(i)].value
+
 print '数据总数：'+str(hang2-countall-2)
 print '有效数据更新：'+str(count)
-baocun.remove_sheet(baocun.get_sheet_by_name('Sheet'))
+
 import time,shutil
 time2=time.strftime('%Y%m%d',time.localtime())
 baocun.save(str(time2)+'A_data.xlsx')
