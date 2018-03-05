@@ -82,7 +82,7 @@ for row in range(2,hang_tem):
         val_o = sheet_tem['Y' + str(row)].value
         pc_num.setdefault(key_o, val_o)
     if sheet_tem['Z' + str(row)].value != None:
-        key_o = sheet_tem['Z' + str(row)].value
+        key_o = sheet_tem['Z' + str(row)].value.lower()
         val_o = sheet_tem['AA' + str(row)].value
         wh_pro.setdefault(key_o, val_o)
     if sheet_tem['AB' + str(row)].value != None:
@@ -384,10 +384,13 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_m + '1'] = 'JOB LEVEL'
                 sheet[lb_m + '1'].font = ft2
                 sheet[lb_m + str(jj)] = job_level.get(sheet[lb + str(jj)].value)
+
+                # WH产品标准英文字母小写话
             if sheet[lb + '1'].value in list6_wh:
                 sheet[lb_1 + '1'] = '标准产品'
                 sheet[lb_1 + '1'].font = ft1
-                sheet[lb_1 + str(jj)] = wh_pro.get(sheet[lb + str(jj)].value)
+                sheet[lb_1 + str(jj)] = wh_pro.get(sheet[lb + str(jj)].value.lower())
+
 # --------------------------------数字版产品--------------------------------------------------------
             if sheet[lb + '1'].value in list6:
                 sheet[lb_1 + '1'] = '标准产品'
@@ -522,6 +525,10 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_m3 + '1'].font = ft2
                 sheet[lb_m2 + str(jj)] ='Senda_Collaboration'
                 sheet[lb_m3 + str(jj)] = 'Hong Kong'
+
+            if sheet[lb + '1'].value == 'Tracking ID':
+                sheet[lb_1 + '1'] = 'city'
+                sheet[lb_1 + str(jj)] = 'Hong Kong'
 
 # 新增删除多余sheet功能
 if len(wb.get_sheet_names())>5:
