@@ -114,15 +114,24 @@ from datetime import *
 import os
 import shutil
 
-import time
-time_file=time.strftime('%Y%m%d',time.localtime())
+import pandas as pd
+pd.set_option('expand_frame_repr', False)
 
-# os.chdir('C:\Users\Administrator\Desktop')
-# if os.path.exists(str(time_file)+'_media'):
-#     shutil.rmtree(str(time_file)+'_media')
+path = 'C:\Users\Administrator\PycharmProjects\untitled\\babybox\\'
 
+df = pd.read_csv(path+'baby.csv',
+               error_bad_lines=False,
+               na_filter='NULL')
 
-# os.makedirs('C:\Users\Administrator\Desktop\\%s_media\\today'%time_file)
-print [chr(i) for i in range(65,91)]
-# for i in [chr(i) for i in range(65,91)]:
-#     print i
+df['real_price']=df['price'].shift(-1)
+
+del df['price']
+
+df = df[df['name'].notnull()]
+
+df.drop_duplicates(
+    subset=['name','real_price'],
+    keep='first',
+    inplace=True)
+
+df.to_csv('finally_data.csv', index=False)
