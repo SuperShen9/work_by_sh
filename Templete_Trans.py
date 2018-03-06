@@ -292,9 +292,12 @@ else:
                 sheet['S' + str(i)]='HONG KONG'
                 sheet['T' + str(i)]='Hong Kong'
                 sheet['V' + str(i)] = '999077'
+                sheet['H' + str(i)] = 'eprxa000967'
+
             else:
                 sheet['S' + str(i)] = 'TAIWAN'
                 sheet['T' + str(i)] = '台湾'
+                sheet['H' + str(i)] = 'eprxa000966'
 
     ft = Font(name='Arial', size=12, bold=True)
     ft1 = Font(name='Arial', size=12, bold=True, color=RED)
