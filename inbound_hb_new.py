@@ -69,6 +69,8 @@ for foldername,subfolder,excels in os.walk('D:\\zlianxi\Inbound_hb'):
                         sheet['A' + str(j + k1)].value = 'UCS-8670'
                     elif '8983' in excel:
                         sheet['A' + str(j + k1)].value = 'Spark-8983'
+                    elif '9377' in excel:
+                        sheet['A'+str(j+k1)].value = 'Security-9377'
                     sheet[kk+str(j+k1)] =sheet1[liebiao+str(i)].value
                     j+=1
         k1+=hang-2
@@ -202,6 +204,14 @@ for i in range(2,hang2):
                 sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Security_Organic'
                 sheet['O' + str(i)] = 'cc000291'
 
+        if sheet['A' + str(i)].value == 'Security-9377':
+            sheet['B' + str(i)] = 'SECURITY - NETWORK SECURITY'
+            sheet['D' + str(i)] = '8228'
+            sheet['N' + str(i)] = 'FY18Q2_TW_Inbound_Drive_to_Security_TNL_Display'
+            sheet['O' + str(i)] = 'cc000291'
+            sheet['P' + str(i)] = 'pdidgd000828'
+
+
         if sheet['H' + str(i)].value in spam1.keys():
             sheet['C' + str(i)] = spam1.get(sheet['H' + str(i)].value)
         if sheet['F' + str(i)].value in spam2.keys():
@@ -219,6 +229,7 @@ print '有效数据更新：'+str(count)
 
 import time,shutil
 time2=time.strftime('%Y%m%d',time.localtime())
+os.chdir('C:\Users\Administrator\Desktop')
 baocun.save(str(time2)+'A_data.xlsx')
 
 # 假如文件存在，先删除，再创建一次
