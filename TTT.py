@@ -117,21 +117,8 @@ import shutil
 import pandas as pd
 pd.set_option('expand_frame_repr', False)
 
-path = 'C:\Users\Administrator\PycharmProjects\untitled\\babybox\\'
+path = 'C:\Users\Administrator\Desktop\\20180313_media'
 
-df = pd.read_csv(path+'baby.csv',
-               error_bad_lines=False,
-               na_filter='NULL')
-
-df['real_price']=df['price'].shift(-1)
-
-del df['price']
-
-df = df[df['name'].notnull()]
-
-df.drop_duplicates(
-    subset=['name','real_price'],
-    keep='first',
-    inplace=True)
-
-df.to_csv('finally_data.csv', index=False)
+df = pd.read_excel(path+'\\20180313A_data.xlsx')
+df['Media Referring Site'].fillna(value='NA',inplace=True)
+print df.groupby([u'来源','List name','Media Referring Site']).size()

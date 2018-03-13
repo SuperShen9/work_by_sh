@@ -232,11 +232,19 @@ time2=time.strftime('%Y%m%d',time.localtime())
 os.chdir('C:\Users\Administrator\Desktop')
 baocun.save(str(time2)+'A_data.xlsx')
 
+import pandas as pd
+df = pd.read_excel(str(time2)+'A_data.xlsx')
+df['Media Referring Site'].fillna(value='NA',inplace=True)
+print '-'*75
+print df.groupby(['List name','Media Referring Site']).size()
+
 # 假如文件存在，先删除，再创建一次
 time_file=time.strftime('%Y%m%d',time.localtime())
 os.chdir('C:\Users\Administrator\Desktop')
 if os.path.exists(str(time_file)+'_media'):
     shutil.rmtree(str(time_file)+'_media')
 os.makedirs('C:\Users\Administrator\Desktop\\%s_media\\today'%time_file)
+
+
 
 
