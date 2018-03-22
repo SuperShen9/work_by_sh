@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6684a8c8-57aa-4776-aeeb-1616023df675" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TTT.py" afterPath="$PROJECT_DIR$/TTT.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/New_templete_clean.py" afterPath="$PROJECT_DIR$/New_templete_clean.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +14,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="New_templete_clean.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="New_templete_clean.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="432" column="16" lean-forward="true" selection-start-line="432" selection-start-column="16" selection-end-line="432" selection-end-column="16" />
+            <state relative-caret-position="90">
+              <caret line="104" column="17" lean-forward="true" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
               <folding>
                 <element signature="e#824#3576#0" expanded="false" />
               </folding>
@@ -27,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Templete_Trans.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Templete_Trans.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Templete_Trans.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="109" column="28" lean-forward="false" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
+            <state relative-caret-position="102">
+              <caret line="291" column="24" lean-forward="false" selection-start-line="291" selection-start-column="24" selection-end-line="291" selection-end-column="24" />
               <folding>
                 <element signature="e#5869#5891#0" expanded="false" />
                 <element signature="e#10696#10705#0" expanded="false" />
@@ -43,7 +42,7 @@
       <file leaf-file-name="inbound_hb_new.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inbound_hb_new.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3485">
+            <state relative-caret-position="-85">
               <caret line="206" column="27" lean-forward="false" selection-start-line="206" selection-start-column="27" selection-end-line="206" selection-end-column="27" />
               <folding />
             </state>
@@ -53,7 +52,7 @@
       <file leaf-file-name="TW_DATA_Map.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TW_DATA_Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
+            <state relative-caret-position="436">
               <caret line="49" column="10" lean-forward="false" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
               <folding />
             </state>
@@ -71,8 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print</find>
-      <find>list11_hk</find>
       <find>地址</find>
       <find>k_b</find>
       <find>Hong</find>
@@ -101,6 +98,8 @@
       <find>DnB Security</find>
       <find>file_title</find>
       <find>list16</find>
+      <find>* Architecture(s) that plan to invest</find>
+      <find>list6</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -134,13 +133,13 @@
         <option value="$PROJECT_DIR$/babybox/babybox/items.py" />
         <option value="$PROJECT_DIR$/babybox/Clean_code.py" />
         <option value="$PROJECT_DIR$/babybox/babybox/spiders/url.py" />
-        <option value="$PROJECT_DIR$/New_templete_clean.py" />
         <option value="$PROJECT_DIR$/work space/fankui_hb.py" />
         <option value="$PROJECT_DIR$/feixiaohao/feixiaohao/spiders/url.py" />
         <option value="$PROJECT_DIR$/inbound_hb_new.py" />
         <option value="D:/Program Files (x86)/Anaconda_3/Lib/site-packages/pytesseract/pytesseract.py" />
         <option value="$PROJECT_DIR$/TTT.py" />
         <option value="$PROJECT_DIR$/Templete_Trans.py" />
+        <option value="$PROJECT_DIR$/New_templete_clean.py" />
       </list>
     </option>
   </component>
@@ -212,7 +211,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Templete_Trans">
+  <component name="RunManager" selected="Python.New_templete_clean">
     <configuration default="false" name="New_templete_clean" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -377,8 +376,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Templete_Trans" />
-        <item index="1" class="java.lang.String" itemvalue="Python.New_templete_clean" />
+        <item index="0" class="java.lang.String" itemvalue="Python.New_templete_clean" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Templete_Trans" />
         <item index="2" class="java.lang.String" itemvalue="Python.inbound_hb_new" />
         <item index="3" class="java.lang.String" itemvalue="Python.TW_DATA_Map" />
         <item index="4" class="java.lang.String" itemvalue="Python.TTT" />
@@ -409,6 +408,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2944126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -751,39 +751,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TW_DATA_Map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="10" lean-forward="false" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inbound_hb_new.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3485">
+        <state relative-caret-position="-85">
           <caret line="206" column="27" lean-forward="false" selection-start-line="206" selection-start-column="27" selection-end-line="206" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
+    <entry file="file://$PROJECT_DIR$/TW_DATA_Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="432" column="16" lean-forward="true" selection-start-line="432" selection-start-column="16" selection-end-line="432" selection-end-column="16" />
-          <folding>
-            <element signature="e#824#3576#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="436">
+          <caret line="49" column="10" lean-forward="false" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Templete_Trans.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="109" column="28" lean-forward="false" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
+        <state relative-caret-position="102">
+          <caret line="291" column="24" lean-forward="false" selection-start-line="291" selection-start-column="24" selection-end-line="291" selection-end-column="24" />
           <folding>
             <element signature="e#5869#5891#0" expanded="false" />
             <element signature="e#10696#10705#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New_templete_clean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="104" column="17" lean-forward="true" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
+          <folding>
+            <element signature="e#824#3576#0" expanded="false" />
           </folding>
         </state>
       </provider>
