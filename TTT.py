@@ -111,14 +111,16 @@ from datetime import *
 # time1=time.time()
 # print time1
 
-import os
-import shutil
+# import os
+# import shutil
+#
+# import pandas as pd
+# pd.set_option('expand_frame_repr', False)
+#
+# path = 'C:\Users\Administrator\Desktop\\20180313_media'
+#
+# df = pd.read_excel(path+'\\20180313A_data.xlsx')
+# df['Media Referring Site'].fillna(value='NA',inplace=True)
+# print df.groupby([u'来源','List name','Media Referring Site']).size()
 
-import pandas as pd
-pd.set_option('expand_frame_repr', False)
-
-path = 'C:\Users\Administrator\Desktop\\20180313_media'
-
-df = pd.read_excel(path+'\\20180313A_data.xlsx')
-df['Media Referring Site'].fillna(value='NA',inplace=True)
-print df.groupby([u'来源','List name','Media Referring Site']).size()
+print range(1,11)

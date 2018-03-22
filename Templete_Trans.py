@@ -286,7 +286,7 @@ else:
             sheet['AN' + str(i)] = 'YES'
             sheet['AO' + str(i)] = 'YES'
             sheet['AP' + str(i)] = 'YES'
-
+            sheet['AQ' + str(i)] = 'YES'
 
             if sheet['U' + str(i)].value == 'Hong Kong':
                 sheet['S' + str(i)]='HONG KONG'
