@@ -310,7 +310,7 @@ else:
     baocun.save('%s %s.xlsx' %(file_title,tp))
 
     # 日常数据新增创建文件夹功能
-    if file_title == 'profiling' or file_title == 'DNB':
+    if file_title == 'profiling' or file_title == 'DNB' or choose=='1':
         exit()
     else:
         if os.path.exists(str(time_file) + ' ' + file_title):
