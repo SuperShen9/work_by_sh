@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 # author:Super
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 import os,openpyxl
 from openpyxl.utils import get_column_letter
@@ -10,10 +13,12 @@ wbf = openpyxl.load_workbook('Templete.xlsx')
 sheetcity = wbf.get_sheet_by_name('response')
 sheetcity1 = wbf.get_sheet_by_name('NGCC')
 sheetcity2 = wbf.get_sheet_by_name('leads')
+sheetcity3 = wbf.get_sheet_by_name('jenny')
 
 hang1 = sheetcity.max_row + 1
 hang3 = sheetcity1.max_row + 1
 hang4 = sheetcity2.max_row + 1
+hang_j = sheetcity3.max_row + 1
 
 spam = {}
 for row in range(2, hang1):
@@ -32,6 +37,12 @@ for row in range(2, hang4):
     flag = sheetcity2['A' + str(row)].value.lower()
     number = sheetcity2['B' + str(row)].value
     spam2.setdefault(flag, number)
+
+spam_j = {}
+for row in range(2, hang_j):
+    flag = sheetcity3['A' + str(row)].value.lower()
+    number = sheetcity3['B' + str(row)].value
+    spam_j.setdefault(flag, number)
 
 # os.chdir('D:\zlianxi\New_templete\Collect_data')
 # file = 'baocun.xlsx'
@@ -55,7 +66,7 @@ else:
     hang = sheet1.max_row+1
     lie = sheet1.max_column+1
     print '数据量统计：%s'%(hang-2)
-    choose=raw_input('请输入你的模板：1-response；2-NGCC；3-leads \n')
+    choose=raw_input('请输入你的模板：1-response；2-NGCC；3-leads; 4-特殊模板 \n')
     if choose=='1':
         for k in range(1, lie):
             liebiao = get_column_letter(k)
@@ -87,6 +98,18 @@ else:
                     sheet[kk + '1'] = sheet1[liebiao + '1'].value
                     for j in range(2, hang):
                         sheet['A' + str(j)] = 'Clean_data.xlsx'
+                        sheet[kk + str(j)] = sheet1[liebiao + str(j)].value
+                        j += 1
+
+    elif choose=='4':
+        for k in range(1, lie):
+            liebiao = get_column_letter(k)
+            if sheet1[liebiao + '1'].value != None:
+                if sheet1[liebiao + '1'].value.lower() in spam_j.keys():
+                    kk = get_column_letter(spam_j[sheet1[liebiao + '1'].value.lower()])
+                    sheet[kk + '1'] = sheet1[liebiao + '1'].value
+                    for j in range(2, hang):
+                        sheet['A' + str(j)] = 'eLeads'
                         sheet[kk + str(j)] = sheet1[liebiao + str(j)].value
                         j += 1
     else:
@@ -299,6 +322,28 @@ else:
                 sheet['T' + str(i)] = '台湾'
                 sheet['H' + str(i)] = 'eprxa000966'
 
+    elif choose=='4':
+        pass
+        tp = 'janny'
+        for i in range(2, hang2):
+            sheet['E' + str(i)] = str(sheet['D' + str(i)].value)+'@cisco.com'
+            sheet['I' + str(i)] = 'CISCO-FUNDED'
+            sheet['K' + str(i)] = '1 Waiting'
+            sheet['O' + str(i)] = '0123000000004aR'
+            sheet['P' + str(i)] = 'eLeads'
+            sheet['BL' + str(i)] = 'End Customer'
+            sheet['AO' + str(i)] = 'Greater China'
+            if sheet['AI' + str(i)].value =='台湾':
+                sheet['AM' + str(i)] = 'TAIWAN, REPUBLIC OF CHINA'
+                sheet['AN' + str(i)] = 'TAIWAN, REPUBLIC OF CHINA'
+            else:
+                sheet['AM' + str(i)] = 'HONG KONG'
+                sheet['AN' + str(i)] = 'HONG KONG'
+            if sheet['V' + str(i)].value !=None:
+                sheet['U' + str(i)]='Event'
+
+
+
     ft = Font(name='Arial', size=12, bold=True)
     ft1 = Font(name='Arial', size=12, bold=True, color=RED)
     sheet['A1'] = '文件名称'
@@ -310,7 +355,7 @@ else:
     baocun.save('%s %s.xlsx' %(file_title,tp))
 
     # 日常数据新增创建文件夹功能
-    if file_title == 'profiling' or file_title == 'DNB' or choose=='1':
+    if file_title == 'profiling' or file_title == 'DNB' or choose=='1'or choose=='4':
         exit()
     else:
         if os.path.exists(str(time_file) + ' ' + file_title):

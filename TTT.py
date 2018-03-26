@@ -123,4 +123,9 @@ from datetime import *
 # df['Media Referring Site'].fillna(value='NA',inplace=True)
 # print df.groupby([u'来源','List name','Media Referring Site']).size()
 
-print range(1,11)
+# print range(1,11)
+
+
+a= '[oracle11g 1521 orcl,192.168.10.11 1521 orcl]'
+
+print [a.replace('[','').replace(']','')]
