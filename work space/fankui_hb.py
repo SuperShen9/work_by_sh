@@ -10,7 +10,10 @@ os.chdir('D:\superflag')
 wbf = openpyxl.load_workbook('hehe.xlsx')
 
 # tw eloqua
-sheetcity = wbf.get_sheet_by_name('tw_eloqua')
+sheetcity = wbf.get_sheet_by_name('TW_inbound')
+
+# tw eloqua
+# sheetcity = wbf.get_sheet_by_name('tw_eloqua')
 
 # sheetcity = wbf.get_sheet_by_name('Sheet1')
 
