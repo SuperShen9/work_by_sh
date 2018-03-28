@@ -529,6 +529,9 @@ for foldername,subfolder,excels in os.walk(filepath):
             if sheet[lb + '1'].value == 'Tracking ID':
                 sheet[lb_1 + '1'] = 'city'
                 sheet[lb_1 + str(jj)] = 'Hong Kong'
+                sheet[lb_m2 + '1'] = 'CCID'
+                sheet[lb_m3 + '1'] = 'OID'
+                sheet[lb_m3 + '1'] = 'AGENCY'
 
 # 新增删除多余sheet功能
 if len(wb.get_sheet_names())>5:

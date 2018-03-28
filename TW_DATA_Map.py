@@ -22,7 +22,7 @@ for row1 in range(2,sheet1.max_row+1):
             sheet1['E' + str(row1)] = sheet1['D' + str(row1)].value[:i].replace('國際','').replace('英屬開曼群島商','').\
                 replace('韓商', '').replace('荷蘭商', '').replace('荷商', '').replace('瑞士商', '').replace('百慕達商', ''). \
                 replace('愛爾蘭商', '').replace('英商', '').replace('香港商', '').replace('新加坡商', ''). \
-                replace('美商', '').replace('亞商', '').replace('群島商','').replace('台灣','')\
+                replace('美商', '').replace('馬來西亞商', '').replace('群島商','').replace('台灣','')\
                 .replace('臺灣','').replace('財團法人','').replace('全球','').replace('國立','')\
             .replace('菲商','').replace('印度商','').replace('私立','').replace('英屬蓋曼群島','')
             sheet1['F' + str(row1)] = sheet1['D' + str(row1)].value[i:i+2].\
@@ -32,7 +32,7 @@ for row1 in range(2,sheet1.max_row+1):
             sheet1['E' + str(row1)] = sheet1['D' + str(row1)].value.replace('國際','').replace('英屬開曼群島商',''). \
                 replace('韓商', '').replace('荷蘭商', '').replace('荷商', '').replace('瑞士商', '').replace('百慕達商', ''). \
                 replace('愛爾蘭商', '').replace('英商', '').replace('香港商', '').replace('新加坡商', ''). \
-                replace('美商', '').replace('亞商', '').replace('群島商','').replace('台灣','')\
+                replace('美商', '').replace('馬來西亞商亞商', '').replace('群島商','').replace('台灣','')\
                 .replace('臺灣','').replace('財團法人','').replace('全球','').replace('國立','')\
                 .replace('菲商','').replace('印度商','').replace('私立','').replace('英屬蓋曼群島','')
 if 'Find_M' in or_wb.get_sheet_names():

@@ -305,7 +305,7 @@ else:
             if sheet['J' + str(i)].value ==None:
                 sheet['J' + str(i)] = str(time2)
             sheet['AL' + str(i)] = '3RD PARTY HAND RAISER'
-            sheet['AM' + str(i)] = 'NA'
+            # sheet['AM' + str(i)] = 'NA' 2018/3/28 HK leads新增供应商代码
             sheet['AN' + str(i)] = 'YES'
             sheet['AO' + str(i)] = 'YES'
             sheet['AP' + str(i)] = 'YES'
