@@ -391,8 +391,10 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = wh_pro.get(sheet[lb + str(jj)].value.lower())
 
-# --------------------------------数字版产品--------------------------------------------------------
+# --------------------------------数字版产品---------新增一句代码用来区别文字版-----------------------
+            run_type='NO'
             if sheet[lb + '1'].value in list6:
+                run_type='have'
                 sheet[lb_1 + '1'] = '标准产品'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
@@ -404,8 +406,8 @@ for foldername,subfolder,excels in os.walk(filepath):
                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(',', '|')
                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('，', '|')
                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('.', '|')
-# ---------------------------------文字版产品--------------------------------------------------------
-            if sheet[lb + '1'].value in list6:
+# ---------------------------------文字版产品-------文字版结果会覆盖数字版----------------------------------------
+            if sheet[lb + '1'].value in list6 and run_type=='NO':
                 sheet[lb_1 + '1'] = '标准产品'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
