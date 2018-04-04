@@ -391,21 +391,35 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = wh_pro.get(sheet[lb + str(jj)].value.lower())
 
-# --------------------------------数字版产品---------新增一句代码用来区别文字版-----------------------
-            run_type='NO'
+# --------------------------------产品数字版 新思路------------------------------------
+            run_type = 'NO'
             if sheet[lb + '1'].value in list6:
                 run_type='have'
                 sheet[lb_1 + '1'] = '标准产品'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
-                if sheet[lb_1 + str(jj)].value != None :
+                if sheet[lb_1 + str(jj)].value != None:
+                    # 一个单元格替换N次，而不是一个对象替换N次剩下最后一次
+                    mo = num_Regex.findall(str(sheet[lb + str(jj)].value))
+                    sheet[lb_1 + str(jj)] = '|'.join(mo)
                     for cp_id in b:
-                        sheet[lb_1+ str(jj)] = str(sheet[lb_1 + str(jj)].value).replace(str(cp_id),in_pro.get(cp_id))
-                        sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(';', '|')
-                        sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('；', '|')
-                        sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(',', '|')
-                        sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('，', '|')
-                        sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('.', '|')
+                        sheet[lb_1 + str(jj)] = str(sheet[lb_1 + str(jj)].value).replace(str(cp_id),in_pro.get(cp_id))
+
+# --------------------------------数字版产品---------新增一句代码用来区别文字版-----------------------
+#             run_type='NO'
+#             if sheet[lb + '1'].value in list6:
+#                 run_type='have'
+#                 sheet[lb_1 + '1'] = '标准产品'
+#                 sheet[lb_1 + '1'].font = ft1
+#                 sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value
+#                 if sheet[lb_1 + str(jj)].value != None :
+#                     for cp_id in b:
+#                         sheet[lb_1+ str(jj)] = str(sheet[lb_1 + str(jj)].value).replace(str(cp_id),in_pro.get(cp_id))
+#                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(';', '|')
+#                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('；', '|')
+#                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace(',', '|')
+#                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('，', '|')
+#                         sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('.', '|')
 # ---------------------------------文字版产品-------文字版结果会覆盖数字版----------------------------------------
             if sheet[lb + '1'].value in list6 and run_type=='NO':
                 sheet[lb_1 + '1'] = '标准产品'
