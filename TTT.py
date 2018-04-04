@@ -126,6 +126,11 @@ from datetime import *
 # print range(1,11)
 
 
-a= '[oracle11g 1521 orcl,192.168.10.11 1521 orcl]'
 
-print [a.replace('[','').replace(']','')]
+def fx(x):
+    if x.split(' '):
+        print x.split(' ')[0]
+        print x.split(' ')[1]
+
+
+fx('111')

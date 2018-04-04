@@ -10,12 +10,12 @@ os.chdir('D:\superflag')
 wbf = openpyxl.load_workbook('hehe.xlsx')
 
 # tw eloqua
-sheetcity = wbf.get_sheet_by_name('TW_inbound')
+# sheetcity = wbf.get_sheet_by_name('TW_inbound')
 
 # tw eloqua
 # sheetcity = wbf.get_sheet_by_name('tw_eloqua')
 
-# sheetcity = wbf.get_sheet_by_name('Sheet1')
+sheetcity = wbf.get_sheet_by_name('Sheet1')
 
 # 统计ECID
 # sheetcity = wbf.get_sheet_by_name('ECID')
@@ -69,40 +69,53 @@ time1=datetime.today()
 hang2 = sheet.max_row + 1
 
 # 周反馈的时候启用补充列
-# for i in range(2,hang2):
-#     sheet['Y'+str(i)]=str(time1.year)+'-'+str(time1.month)+'-'+str(time1.day)
-#     sheet['AW' + str(i)] = str(time1.year) + '-' + str(time1.month) + '-' + str(time1.day)
-#     sheet['B' + str(i)] ='KDB00CI'
-#     if sheet['AI'+str(i)].value=='':
-#         sheet['AS' + str(i)]='N'
-#     else:
-#         sheet['AS' + str(i)] = 'Y'
-#     if sheet['AO'+str(i)].value=='':
-#         sheet['AU' + str(i)]='N'
-#     else:
-#         sheet['AU' + str(i)] = 'Y'
-#     if sheet['AV' + str(i)].value =='':
-#         sheet['AT' + str(i)] = 'N'
-#     else:
-#         sheet['AT' + str(i)] = 'Y'
-#     if sheet['R' + str(i)].value =='Hong Kong':
-#         sheet['R' + str(i)] ='香港'
-#         sheet['S' + str(i)]= '香港'
-#
-#     if 'Inbound' in sheet['A' + str(i)].value:
-#         sheet['C' + str(i)] = 'Cisco_Inbound'
-#     elif '_MSO_'in sheet['A' + str(i)].value:
-#         sheet['C' + str(i)] = 'Cisco_MSO'
-#     elif 'Partner_Joint_DG'in sheet['A' + str(i)].value:
-#         sheet['C' + str(i)] = 'Cisco_Partner'
-#     else:
-#         sheet['C' + str(i)] = 'Cisco_Event'
-#
-#     if sheet['S' + str(i)].value =='香港':
-#         sheet['M' + str(i)] ='HK'
-#     elif sheet['S' + str(i)].value =='台湾':
-#         sheet['M' + str(i)]= 'TW'
+for i in range(2,hang2):
+    sheet['Y'+str(i)]=str(time1.year)+'-'+str(time1.month)+'-'+str(time1.day)
+    sheet['AW' + str(i)] = str(time1.year) + '-' + str(time1.month) + '-' + str(time1.day)
+    sheet['B' + str(i)] ='KDB00CI'
+    if sheet['AI'+str(i)].value=='':
+        sheet['AS' + str(i)]='N'
+    else:
+        sheet['AS' + str(i)] = 'Y'
+    if sheet['AO'+str(i)].value=='':
+        sheet['AU' + str(i)]='N'
+    else:
+        sheet['AU' + str(i)] = 'Y'
+    if sheet['AV' + str(i)].value =='':
+        sheet['AT' + str(i)] = 'N'
+    else:
+        sheet['AT' + str(i)] = 'Y'
+    if sheet['R' + str(i)].value =='Hong Kong':
+        sheet['R' + str(i)] ='香港'
+        sheet['S' + str(i)]= '香港'
 
+    if 'Inbound' in sheet['A' + str(i)].value:
+        sheet['C' + str(i)] = 'Cisco_Inbound'
+    elif '_MSO_'in sheet['A' + str(i)].value:
+        sheet['C' + str(i)] = 'Cisco_MSO'
+    elif 'Partner_Joint_DG'in sheet['A' + str(i)].value:
+        sheet['C' + str(i)] = 'Cisco_Partner'
+    else:
+        sheet['C' + str(i)] = 'Cisco_Event'
+
+    if sheet['S' + str(i)].value =='香港':
+        sheet['M' + str(i)] ='HK'
+    elif sheet['S' + str(i)].value =='台湾':
+        sheet['M' + str(i)]= 'TW'
+
+    if sheet['AA' + str(i)].value =='':
+        sheet['AC' + str(i)] = sheet['AB' + str(i)].value
+        sheet['AB' + str(i)] = None
+    else:
+        sheet['AC' + str(i)] = sheet['AA' + str(i)].value+' '+sheet['AB' + str(i)].value
+        sheet['AB' + str(i)] = None
+        sheet['AA' + str(i)] = None
+
+    if sheet['M' + str(i)].value == 'HK':
+        sheet['F' + str(i)] = sheet['E' + str(i)].value
+        sheet['E' + str(i)] =''
+        sheet['I' + str(i)] = sheet['G' + str(i)].value
+        sheet['G' + str(i)] = ''
 
 os.chdir('C:\Users\Administrator\Desktop')
 baocun.save('Feedback_Data.xlsx')
