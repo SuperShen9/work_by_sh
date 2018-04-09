@@ -1,136 +1,46 @@
 # -*- coding: utf-8 -*-
 # author:Super
-# import re
-# num_Regex=re.compile(r'\d+')
-# a={1:'aaaa',2:'rrr'}
-# for i in range(1,3):
-#     print 'b1b2'.replace(str(i),a[i])
 
-# print  '路由器1'.replace('路由器', 'ROUTERS')
-# a='as22dfgghhhgd'
-#
-# print a[2:4].isdigit()
-# print a[2:3].isalpha()
+import pandas as pd
+import os
+pd.set_option('expand_frame_repr',False)
 
+os.chdir('C:\\Users\\Administrator\\Desktop\\text')
+df=pd.read_excel('FY17-FY18Q3 SFDC Leads Data_20180404 - TW & HK.xlsx')
 
-# a = range(1,21)
-# b = list(reversed(a))
-# print b
+df=df[df['Program Event Code'].notnull()]
 
-# mo=num_Regex.findall('03 - 3283001 # 370')
-# mo1=num_Regex.findall('033283001370')
-# print mo
-# print '-'.join(mo)
-# print '-'.join(mo1)
+df_event=pd.read_excel('sss_event.xlsx')
+# df_event.loc[df_event['Program Event Code']>90000,'add']='111'
+# print df_event
+# exit()
+df_seg = pd.read_excel('sss_seg.xlsx')
+df_st =  pd.read_excel('sss_st.xlsx')
 
-# f = open("form.html",'w')
-# message = """
-# <html>
-# <head>
-# <meta charset="utf-8">
-# <title>form</title>
-# </head>
-# <body>
-#     <form>
-#         <label>姓名</label>
-#         <input type="text"/>
-#         <br/>
-#         <label>密码</label>
-#         <input type="password"/>
-#         <br/>
-#         <label>性别</label>
-#         <select>
-#             <option>男</option>
-#             <option>女</option>
-#             <option>妖</option>
-#         </select>
-#         <br/>
-#         <label>备注</label>
-#         <br/>
-#         <textarea rows="10" cols="30"></textarea>
-#         <br/>
-#         <button>提交</button>
-#         <input type="submit" value="提交2"/>
-#     </form>
-# </body>
-# </html>
-# """
-# f.write(message)
-# f.close()
+df=pd.merge(left=df, right=df_event,on='Program Event Code', how='left')
+df=pd.merge(left=df, right=df_seg,on='Lead Owner', how='left')
+df=pd.merge(left=df, right=df_st,on='Lead Status', how='left')
 
-# f = open("div.html",'w')
-# message = """
-# <html>
-# <head>
-# <meta charset="utf-8">
-# <title>div</title>
-# </head>
-# <body>
-#     <div id="outer">
-#         <div id="inner1">
-#             <input type="text"/>
-#     </div>
-#     <div id="inner2">
-#         <button>赞</button>
-#     </div>
-# </body>
-# </html>
-# """
-# f.write(message)
-# f.close()
+cdn=(df['Lead Status2'].isnull())
+cdn1=(df['Lead Status']=='2 Accepted-Mine/Channel')
+cdn2=(df['Lost/Cancelled Reason']=='Cancelled - Opportunity created in error')
+cdn3=(df['Opportunity Status']=='Active')
+cdn31=(df['Opportunity Status']=='Booked')
+cdn32=(df['Opportunity Status']=='Lost')
+cdn33=(df['Opportunity Status']=='Cancelled')
 
-# a='super beal made'
-# b=a.split(' ')
-# print len(b)
-# a=input('please input:')
-# if a==1:
-#     print 'hehe'
-# i=65
-#
-# for k in range(65,91):
-#     print chr(i)
-#     i+=1
-#
-#     spam = 65
-# detail_url=["https://www.qiushibaike.com/",]
-# for i in range(2, 14):
-#     url = "https://www.qiushibaike.com/8hr/page/" + str(i) + '/'
-#     detail_url.append(url)
-# print detail_url
-# c=0
-# list1=[]
-# for i in range(2,80,4):
-#     list1.append(i)
-# print 'num:'+str(c)
-# print list1
+cdn4=(df['Converted']==1)
+cdn5=(df['Converted']==0)
 
+df.loc[cdn & cdn2,'Lead Status2']='Cancelled Oppt'
+df.loc[cdn & cdn3 ,'Lead Status2']='Converted SQL'
+df.loc[cdn & cdn31,'Lead Status2']='Converted SQL'
+df.loc[cdn & cdn32,'Lead Status2']='Converted SQL'
+df.loc[cdn & cdn33,'Lead Status2']='Converted SQL'
+df.loc[cdn1 & cdn4,'Lead Status2']='Accepted But Converted Issue'
+df.loc[cdn1 & cdn5,'Lead Status2']='Accepted But Not Converted'
 
-from datetime import *
-# import time
-# time2=time.strftime('%Y%m%d',time.localtime())
-# time1=time.time()
-# print time1
+cdn_mql=(df['Originating Marketing Pipeline'].notnull())
+df.loc[cdn_mql,'Originating Marketing Pipeline2']=df['Originating Marketing Pipeline']/1000
 
-# import os
-# import shutil
-#
-# import pandas as pd
-# pd.set_option('expand_frame_repr', False)
-#
-# path = 'C:\Users\Administrator\Desktop\\20180313_media'
-#
-# df = pd.read_excel(path+'\\20180313A_data.xlsx')
-# df['Media Referring Site'].fillna(value='NA',inplace=True)
-# print df.groupby([u'来源','List name','Media Referring Site']).size()
-
-# print range(1,11)
-
-
-
-def fx(x):
-    if x.split(' '):
-        print x.split(' ')[0]
-        print x.split(' ')[1]
-
-
-fx('111')
+df.to_excel('123.xlsx')
