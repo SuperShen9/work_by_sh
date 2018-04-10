@@ -4,43 +4,22 @@
 import pandas as pd
 import os
 pd.set_option('expand_frame_repr',False)
-
 os.chdir('C:\\Users\\Administrator\\Desktop\\text')
 df=pd.read_excel('FY17-FY18Q3 SFDC Leads Data_20180404 - TW & HK.xlsx')
-
 df=df[df['Program Event Code'].notnull()]
-
 df_event=pd.read_excel('sss_event.xlsx')
-# df_event.loc[df_event['Program Event Code']>90000,'add']='111'
-# print df_event
-# exit()
-df_seg = pd.read_excel('sss_seg.xlsx')
-df_st =  pd.read_excel('sss_st.xlsx')
-
+df_add=pd.read_excel('sss_zdd.xlsx')
 df=pd.merge(left=df, right=df_event,on='Program Event Code', how='left')
-df=pd.merge(left=df, right=df_seg,on='Lead Owner', how='left')
-df=pd.merge(left=df, right=df_st,on='Lead Status', how='left')
-
-cdn=(df['Lead Status2'].isnull())
-cdn1=(df['Lead Status']=='2 Accepted-Mine/Channel')
-cdn2=(df['Lost/Cancelled Reason']=='Cancelled - Opportunity created in error')
-cdn3=(df['Opportunity Status']=='Active')
-cdn31=(df['Opportunity Status']=='Booked')
-cdn32=(df['Opportunity Status']=='Lost')
-cdn33=(df['Opportunity Status']=='Cancelled')
-
-cdn4=(df['Converted']==1)
-cdn5=(df['Converted']==0)
-
-df.loc[cdn & cdn2,'Lead Status2']='Cancelled Oppt'
-df.loc[cdn & cdn3 ,'Lead Status2']='Converted SQL'
-df.loc[cdn & cdn31,'Lead Status2']='Converted SQL'
-df.loc[cdn & cdn32,'Lead Status2']='Converted SQL'
-df.loc[cdn & cdn33,'Lead Status2']='Converted SQL'
-df.loc[cdn1 & cdn4,'Lead Status2']='Accepted But Converted Issue'
-df.loc[cdn1 & cdn5,'Lead Status2']='Accepted But Not Converted'
-
+df=pd.merge(left=df, right=df_add,on='Lead ID', how='left')
 cdn_mql=(df['Originating Marketing Pipeline'].notnull())
 df.loc[cdn_mql,'Originating Marketing Pipeline2']=df['Originating Marketing Pipeline']/1000
-
-df.to_excel('123.xlsx')
+df.loc[df['add'].notnull(),'Program View']=df['add']
+df_s=pd.DataFrame()
+df_s=df.groupby('Program View')
+df_fin=pd.DataFrame()
+df_fin['mql']=df_s['Last Name'].count()
+df_fin['mql_s']=df_s['Originating Marketing Pipeline2'].sum()
+df_fin['sql']=df_s['Opportunity Name'].count()
+df_fin['sql_s']=df_s['Expected Total Value(000s) (converted)'].sum()
+os.chdir('C:\\Users\\Administrator\\Desktop')
+df_fin.to_excel('111.xlsx')
