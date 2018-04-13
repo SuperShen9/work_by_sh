@@ -17,8 +17,8 @@ from datetime import *
 #
 # fx(1,2,3)
 
-a=raw_input('请输入a,b,c:\n')
-c=a.split(',')
-d=(int(c[0])+int(c[1]))*int(c[2])
-
-print '答案是：',d
+# a=raw_input('请输入a,b,c:\n')
+# c=a.split(',')
+# d=(int(c[0])+int(c[1]))*int(c[2])
+#
+# print '答案是：',d
