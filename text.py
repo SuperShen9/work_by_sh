@@ -22,3 +22,4 @@ from datetime import *
 # d=(int(c[0])+int(c[1]))*int(c[2])
 #
 # print '答案是：',d
+
