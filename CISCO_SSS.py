@@ -16,6 +16,8 @@ df = df[df['Program Event Code'].notnull()]
 df = df[df['Lead ID'] != '00Q340000220oWL']
 df = df[df['Lead ID'] != '00Q34000021NrfJ']
 df = df[df['Lead ID'] != '00Q34000021zgeF']
+df = df[df['Lead ID'] != '00Q34000022TK55']
+df = df[df['Lead ID'] != '00Q34000022TK4v']
 
 # 导入 “活动名称” 和 “修改名称” 的2个表
 df_event = pd.read_excel('sss_event.xlsx')
