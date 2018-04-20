@@ -108,12 +108,12 @@ list6=[u'有興趣投資的IT解決方案?(可複選)',u'5.（承上題）請問
 list6_wh=[u'設備更新_會更新哪些設備？','Model','Cisco_Network_Set_TM_V2*','Looking for ','* Architecture(s) that plan to invest ']
 list7=[u'Q7、預估執行時間？',u'專案時程',u'貴公司何時會規劃下階段的網路建置？*','Action Time','Action Time Frame','* Project time ',u'贵单位在什么时间范围内将有网络扩张、升级或安全等方面的网络项目？']
 list8=[u'Q8、預估執行預算？',u'專案預算(USD)',u'貴公司的投資預算是？*','Range of Budget plan (HKD)','* Budget ']
-list9=['LAST_NAME','FullName',u'姓名',u'中文姓名','Contact Name','last name','Last Name','Last Name*','Surname','LASTNAME','* Customer name ','Last Name ']
+list9=['last_name','LAST_NAME','FullName',u'姓名',u'中文姓名','Contact Name','last name','Last Name','Last Name*','Surname','LASTNAME','* Customer name ','Last Name ']
 list10=[u'公司名称','Account Name','Cname',u'單位名稱',u'公司',u'公司/單位名稱',u'服務單位',u'完整公司名稱',u'公司名稱',u'中文公司名稱','Company Name ','Company / Account',
-        'COMPANY','company / account','company name','Company Name','Company_Name*','Company','Company name','* Company Name']
+        'COMPANY','company / account','company name','Company Name','Company_Name*','Company','Company name','* Company Name','company_name']
 list11=[u'公司電話及分機',u'電話號碼',u'電話',u'公司電話/分機',u'公司電話',u'公司聯絡電話','Phone','TEL','PHONE']
 list11_hk=['Phone Number*','Main Tel','* Telephone ','Business Phone','Telephone number']
-list12=['公司電子郵件',u'電子郵箱',u'電子郵件信箱',u'公司電子信箱',u'公司 E-mail','Email','email','Email*','Email Address','EMAIL','* Email address','Email address','EM_ELTRC_ADDR']
+list12=['公司電子郵件',u'電子郵箱',u'電子郵件信箱',u'公司電子信箱',u'公司 E-mail','Email','email','Email*','Email Address','EMAIL','* Email address','Email address','EM_ELTRC_ADDR','work_email']
 list13=[u'手機',u'手機電話',u'行動電話','Cell','Mobile','mobile','Mobile Phone','MOBILEPHONE','* Mobile ','MO_ELTRC_ADDR']
 list14=[u'地址',u'公司地址','Company Address','address','ADDRESS_LINE_1__C','Address']
 list15=[u'标准職稱']
@@ -121,7 +121,7 @@ list16=[u'具體預算(USD)']
 list16_wh=[u'Total','* Estimated budget (US$) ']
 list17=['# of PCs*','QAPCS__C']
 list18=['sex','Salutation_T1_V1*','Mr/Ms','Salutation','GENDER']
-list19=['First name','first name','First Name*','First Name','FIRSTNAME','First Name ','FIRST_NAME']
+list19=['First name','first name','First Name*','First Name','FIRSTNAME','First Name ','FIRST_NAME','first_name']
 list20=['Title','jobtitle','Job Title*','TITLE',u'原始職稱','JOB_TITLE'] #活动数据专用 --“職稱”
 # list20=[u'職稱','Title','jobtitle','Job Title*']
 list20_depa=[u'服務部門名稱','DEPARTMENT*',u'原始部門','Department','DEPARTMENT']
@@ -180,6 +180,7 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + '1'] = '检验AM'
                 sheet[lb_1 + '1'].font = ft1
                 if sheet[lb + str(jj)].value!=None :
+                    sheet[lb + str(jj)]=sheet[lb + str(jj)].value.strip()
                     if sheet[lb + str(jj)].value in AM:
                         sheet[lb_1 + str(jj)] = AM.get(sheet[lb + str(jj)].value)
                     else:
@@ -548,6 +549,29 @@ for foldername,subfolder,excels in os.walk(filepath):
                 # sheet[lb_m2 + '1'] = 'CCID'
                 # sheet[lb_m3 + '1'] = 'OID'
                 # sheet[lb_m3 + '1'] = 'AGENCY'
+
+            if sheet[lb + '1'].value == 'Event name ':
+                sheet[lb_1 + '1'] = '备注'
+                sheet[lb_1 + str(jj)] = '此項目機會是在"'+str(sheet[lb + str(jj)].value)+'"活動中產生'
+
+            if sheet[lb + '1'].value == 'phone_number':
+                sheet[lb_1 + '1'] = '标准电话'
+                sheet[lb_m + '1'] = 'list name'
+                sheet[lb_m2 + '1'] = 'ECID'
+                sheet[lb_m3 + '1'] = 'CCID'
+                sheet[lb_m4 + '1'] = 'OID'
+                sheet[lb_m5 + '1'] = 'VENDOR'
+                sheet[lb_m6 + '1'] = 'city'
+
+                sheet[lb_1 + str(jj)] = sheet[lb + str(jj)].value.replace('+852','852-')
+                sheet[lb_1 + str(jj)] = sheet[lb_1 + str(jj)].value.replace('p:', '')
+                sheet[lb_m + str(jj)] = 'HK_FY18Q3_HK_Inbound_Drive_To_Social_SDR'
+                sheet[lb_m2 + str(jj)] = '10566'
+                sheet[lb_m3 + str(jj)] = 'cc000291'
+                sheet[lb_m4 + str(jj)] = 'eprxa007968'
+                sheet[lb_m5 + str(jj)] = 'OMD'
+                sheet[lb_m6 + str(jj)] = 'Hong Kong'
+
 
 # 新增删除多余sheet功能
 if len(wb.get_sheet_names())>5:
