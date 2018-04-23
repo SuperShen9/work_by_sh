@@ -27,6 +27,13 @@ df_add = pd.read_excel('sss_zdd.xlsx')
 df = pd.merge(left=df, right=df_event,on='Program Event Code', how='left')
 df = pd.merge(left=df, right=df_add,on='Lead ID', how='left')
 
+
+# 同样的列合并2次，会复制原始数据2次
+# print len(df[df['Program Event Code']==9661])
+# os.chdir('C:\\Users\\Administrator\\Desktop')
+# df.to_excel('CISCO Tracking.xlsx')
+# exit()
+
 # 去重没法使用（时间戳里的不同活动会有重复）
 # df= df[df['Created Date']>pd.to_datetime('20171013')]
 # df['dup']=df.duplicated(subset=['Company / Account','Last Name','Originating Marketing Pipeline'])
