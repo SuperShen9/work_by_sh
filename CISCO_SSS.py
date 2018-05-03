@@ -56,3 +56,5 @@ df_fin['sql_s'] = df_s['Expected Total Value(000s) (converted)'].sum()
 # 路径切换到桌面，导出数据
 os.chdir('C:\\Users\\Administrator\\Desktop')
 df_fin.to_excel('CISCO Tracking.xlsx')
+
+

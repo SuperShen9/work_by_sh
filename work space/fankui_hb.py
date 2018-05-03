@@ -89,33 +89,34 @@ for i in range(2,hang2):
         sheet['R' + str(i)] ='香港'
         sheet['S' + str(i)]= '香港'
 
-    if 'Inbound' in sheet['A' + str(i)].value:
-        sheet['C' + str(i)] = 'Cisco_Inbound'
-    elif '_MSO_'in sheet['A' + str(i)].value:
-        sheet['C' + str(i)] = 'Cisco_MSO'
-    elif 'Partner_Joint_DG'in sheet['A' + str(i)].value:
-        sheet['C' + str(i)] = 'Cisco_Partner'
-    else:
-        sheet['C' + str(i)] = 'Cisco_Event'
+    if sheet['A' + str(i)].value !=None:
+        if 'Inbound' in sheet['A' + str(i)].value:
+            sheet['C' + str(i)] = 'Cisco_Inbound'
+        elif '_MSO_'in sheet['A' + str(i)].value:
+            sheet['C' + str(i)] = 'Cisco_MSO'
+        elif 'Partner_Joint_DG'in sheet['A' + str(i)].value:
+            sheet['C' + str(i)] = 'Cisco_Partner'
+        else:
+            sheet['C' + str(i)] = 'Cisco_Event'
 
-    if sheet['S' + str(i)].value =='香港':
-        sheet['M' + str(i)] ='HK'
-    elif sheet['S' + str(i)].value =='台湾':
-        sheet['M' + str(i)]= 'TW'
+        if sheet['S' + str(i)].value =='香港':
+            sheet['M' + str(i)] ='HK'
+        elif sheet['S' + str(i)].value =='台湾':
+            sheet['M' + str(i)]= 'TW'
 
-    if sheet['AA' + str(i)].value =='':
-        sheet['AC' + str(i)] = sheet['AB' + str(i)].value
-        sheet['AB' + str(i)] = None
-    else:
-        sheet['AC' + str(i)] = sheet['AA' + str(i)].value+' '+sheet['AB' + str(i)].value
-        sheet['AB' + str(i)] = None
-        sheet['AA' + str(i)] = None
+        if sheet['AA' + str(i)].value =='':
+            sheet['AC' + str(i)] = sheet['AB' + str(i)].value
+            sheet['AB' + str(i)] = None
+        else:
+            sheet['AC' + str(i)] = sheet['AA' + str(i)].value+' '+sheet['AB' + str(i)].value
+            sheet['AB' + str(i)] = None
+            sheet['AA' + str(i)] = None
 
-    if sheet['M' + str(i)].value == 'HK':
-        sheet['F' + str(i)] = sheet['E' + str(i)].value
-        sheet['E' + str(i)] =''
-        sheet['I' + str(i)] = sheet['G' + str(i)].value
-        sheet['G' + str(i)] = ''
+        if sheet['M' + str(i)].value == 'HK':
+            sheet['F' + str(i)] = sheet['E' + str(i)].value
+            sheet['E' + str(i)] =''
+            sheet['I' + str(i)] = sheet['G' + str(i)].value
+            sheet['G' + str(i)] = ''
 
 os.chdir('C:\Users\Administrator\Desktop')
 baocun.save('Feedback_Data.xlsx')
