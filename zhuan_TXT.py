@@ -31,7 +31,7 @@ os.chdir('C:\\Users\Administrator\Desktop\\RUN')
 # print df.columns[-4:]
 # exit()
 
-for i in range(3):
+for i in range(df.shape[0]):
     count=0
     for x in df.columns:
         count+=1
@@ -66,6 +66,7 @@ for i in range(3):
 
         elif count == len(df.columns) :
             fl.write('\t\t\r"{}\r"'.format(x) + ':' + '\r"' + str(val) + '\r"' + ',\n')
+            fl.write('\t}\n')
             fl.write('}')
         else:
             fl.write('\t\t\r"{}\r"'.format(x) + ':' + '\r"' + str(val) + '\r"' + ',')
