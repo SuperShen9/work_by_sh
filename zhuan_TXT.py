@@ -31,15 +31,15 @@ os.chdir('C:\\Users\Administrator\Desktop\\RUN')
 # print df.columns[-4:]
 # exit()
 
-for i in range(17):
+for i in range(3):
     count=0
     for x in df.columns:
         count+=1
         val = df[x].loc[i]
-        if x == 'docUrl' or x == 'remark':
-            val = val
-        elif isinstance(val, float):
-            val = '\r""'
+        # if x == 'docUrl' or x == 'remark':
+        #     val = val
+        if isinstance(val, float):
+            val = ''
         else:
             val = val.encode('gbk')
         fl = open('%s-%s-%s.txt' % (df['name'].loc[i],df['organization'].loc[i],df['webName'].loc[i]), 'a')
