@@ -1,27 +1,34 @@
 # -*- coding: utf-8 -*-
 # author:Super
 import pandas as pd
-import time
-from datetime import *
-# df = pd.DataFrame({'col1': ['one', 'one', 'two', 'two', 'two', 'three', 'four'], 'col2': [1, 2, 1, 2, 1, 1, 1],
-#                    'col3':['AA','BB','CC','DD','EE','FF','GG']},index=['a', 'a', 'b', 'c', 'b', 'a','c'])
-# df['dup']=df.duplicated(subset=['col1','col2'])
-# # print df
-# print df[df['dup']==False]
+import time,os,openpyxl
+pd.set_option('expand_frame_repr',False)
+os.chdir('C:\\Users\Administrator\Desktop')
+# #openpyxl模块
+# wb = openpyxl.load_workbook('sheet1.xlsx')
+# sheet = wb.get_sheet_by_name('Sheet1')
+# print sheet['A2'].value
+# print type(sheet['A2'].value.encode("gbk"))
+# exit()
 
-# print pd.to_datetime('20171013')-datetime.today()
+# # 查看text文件
+file=open('text.txt')
+lines=file.readlines()
+print lines
+# for i in lines:
+#     print i
+# exit()
 
-# def fx(a,b,c):
-#     d = (a+b)*c
-#     return a
-#
-# fx(1,2,3)
-
-# a=raw_input('请输入a,b,c:\n')
-# c=a.split(',')
-# d=(int(c[0])+int(c[1]))*int(c[2])
-#
-# print '答案是：',d
+df=pd.read_excel('sheet1.xlsx')
 
 
-print 111
+for i in range(1,df.shape[0]):
+    key = 'name'
+    val = df['NAME'].loc[i].encode('gbk')
+    # print val
+    fl = open('RUN.txt', 'a')
+    fl.write('\t\r"name\r"' + ':' +'\r"' + val+'\r"'+',')
+    fl.write("\n")
+
+
+

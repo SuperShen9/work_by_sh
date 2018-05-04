@@ -3,7 +3,7 @@ import os,openpyxl
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
-os.chdir('D:\zlianxi\Spacial_industry')
+os.chdir('D:\zlianxi\CN_fuzzy_yh')
 file = 'Mapping.xlsx'
 if os.path.exists(file):
     os.remove(file)
@@ -70,7 +70,9 @@ sheet['B1'] = 'Company_Name'
 sheet['C1'] = 'Dup_Name'
 sheet['D1'] = '标记Flag'
 Mapping.remove_sheet(Mapping.get_sheet_by_name('Sheet'))
-Mapping.save('Mapping.xlsx')
+
+os.chdir('C:\Users\Administrator\Desktop')
+Mapping.save('CN Mapping.xlsx')
 
 
 

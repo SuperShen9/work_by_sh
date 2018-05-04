@@ -72,4 +72,6 @@ sheet1['I1']='or_城市'
 sheet1['I1'].font=ft2
 sheet1['J1']='MAP_城市'
 sheet1['J1'].font=ft2
-or_wb.save('data_fuzzy.xlsx')
+
+os.chdir('C:\Users\Administrator\Desktop')
+or_wb.save('EN Mapping.xlsx')
