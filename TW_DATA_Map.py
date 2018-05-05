@@ -26,7 +26,7 @@ for row1 in range(2,sheet1.max_row+1):
                 .replace('臺灣','').replace('財團法人','').replace('全球','').replace('國立','')\
             .replace('菲商','').replace('印度商','').replace('私立','').replace('英屬蓋曼群島','')
             sheet1['F' + str(row1)] = sheet1['D' + str(row1)].value[i:i+2].\
-                replace('企業','').replace('股份','').replace('有限','').replace('公司','')
+                replace('企業','').replace('股份','').replace('有限','').replace('公司','').replace('大學','').replace('國家','')
             break
         else:
             sheet1['E' + str(row1)] = sheet1['D' + str(row1)].value.replace('國際','').replace('英屬開曼群島商',''). \
@@ -34,7 +34,7 @@ for row1 in range(2,sheet1.max_row+1):
                 replace('愛爾蘭商', '').replace('英商', '').replace('香港商', '').replace('新加坡商', ''). \
                 replace('美商', '').replace('馬來西亞商亞商', '').replace('群島商','').replace('台灣','')\
                 .replace('臺灣','').replace('財團法人','').replace('全球','').replace('國立','')\
-                .replace('菲商','').replace('印度商','').replace('私立','').replace('英屬蓋曼群島','')
+                .replace('菲商','').replace('印度商','').replace('私立','').replace('英屬蓋曼群島','').replace('大學','').replace('國家','')
 if 'Find_M' in or_wb.get_sheet_names():
     or_wb.remove_sheet(or_wb.get_sheet_by_name('Find_M'))
     or_wb.create_sheet(index=2, title='Find_M')

@@ -65,7 +65,7 @@ for i in range(df.shape[0]):
                 fl.write('\t\t\r"{}\r"'.format(x) + ':' + '\r"' + str(val)[4:] + '\r"' + ',\n')
 
         elif count == len(df.columns) :
-            fl.write('\t\t\r"{}\r"'.format(x) + ':' + '\r"' + str(val) + '\r"' + ',\n')
+            fl.write('\t\t\r"{}\r"'.format(x) + ':' + '\r"' + str(val) + '\r"' + '\n')
             fl.write('\t}\n')
             fl.write('}')
         else:

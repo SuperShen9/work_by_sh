@@ -111,7 +111,7 @@ list8=[u'Q8、預估執行預算？',u'專案預算(USD)',u'貴公司的投資�
 list9=['last_name','LAST_NAME','FullName',u'姓名',u'中文姓名','Contact Name','last name','Last Name','Last Name*','Surname','LASTNAME','* Customer name ','Last Name ']
 list10=[u'公司名称','Account Name','Cname',u'單位名稱',u'公司',u'公司/單位名稱',u'服務單位',u'完整公司名稱',u'公司名稱',u'中文公司名稱','Company Name ','Company / Account',
         'COMPANY','company / account','company name','Company Name','Company_Name*','Company','Company name','* Company Name','company_name']
-list11=[u'公司電話及分機',u'電話號碼',u'電話',u'公司電話/分機',u'公司電話',u'公司聯絡電話','Phone','TEL','PHONE']
+list11=[u'聯絡電話',u'公司電話及分機',u'電話號碼',u'電話',u'公司電話/分機',u'公司電話',u'公司聯絡電話','Phone','TEL','PHONE']
 list11_hk=['Phone Number*','Main Tel','* Telephone ','Business Phone','Telephone number']
 list12=['公司電子郵件',u'電子郵箱',u'電子郵件信箱',u'公司電子信箱',u'公司 E-mail','Email','email','Email*','Email Address','EMAIL','* Email address','Email address','EM_ELTRC_ADDR','work_email']
 list13=[u'手機',u'手機電話',u'行動電話','Cell','Mobile','mobile','Mobile Phone','MOBILEPHONE','* Mobile ','MO_ELTRC_ADDR']
