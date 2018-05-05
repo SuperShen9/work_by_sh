@@ -27,7 +27,6 @@ df_add = pd.read_excel('sss_zdd.xlsx')
 df = pd.merge(left=df, right=df_event,on='Program Event Code', how='left')
 df = pd.merge(left=df, right=df_add,on='Lead ID', how='left')
 
-
 # 同样的列合并2次，会复制原始数据2次
 # print len(df[df['Program Event Code']==9661])
 # os.chdir('C:\\Users\\Administrator\\Desktop')
@@ -44,6 +43,11 @@ cdn_mql = (df['Originating Marketing Pipeline'].notnull())
 df.loc[cdn_mql, 'Originating Marketing Pipeline2'] = df['Originating Marketing Pipeline']/1000
 df.loc[df['add'].notnull(), 'Program View'] = df['add']
 
+# 新增book参数
+cdn_book=(df['Opportunity Status']=='Booked')
+df.loc[cdn_book, 'book'] = df['Opportunity Status']
+df.loc[cdn_book, 'book_s'] = df['Expected Product ($000s) (converted)']
+
 # 数据进行透视，并存入新的dataframe
 df_s = pd.DataFrame()
 df_s = df.groupby('Program View')
@@ -52,6 +56,8 @@ df_fin['mql'] = df_s['Last Name'].count()
 df_fin['mql_s'] = df_s['Originating Marketing Pipeline2'].sum()
 df_fin['sql'] = df_s['Opportunity Name'].count()
 df_fin['sql_s'] = df_s['Expected Total Value(000s) (converted)'].sum()
+df_fin['book'] = df_s['book'].count()
+df_fin['book_s'] = df_s['book_s'].sum()
 
 # 路径切换到桌面，导出数据
 os.chdir('C:\\Users\\Administrator\\Desktop')
