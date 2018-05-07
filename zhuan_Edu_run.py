@@ -29,11 +29,10 @@ for i in range(df.shape[0]):
         if x == 'webName':
             fl.write('{\n')
             fl.write('\t\r"webUrl": "http://xhgb.cma.org.cn/xuehui_project/listProjectGongbu.jsp?projectLevel=2&orgId=200100"\n')
-            fl.write('\t\r"{}\r"'.format(x) + ':' + '\r"' + str(val) + '\r"' + ',')
-            fl.write("\n")
+            fl.write('\t\r"{}": "{}",\n'.format(x, str(val)))
+
         else:
-            fl.write('\t\r"{}\r"'.format(x) + ':' + '\r"' + str(val) + '\r"' + ',')
-            fl.write("\n")
+            fl.write('\t\r"{}": "{}",\n'.format(x, str(val)))
 
     uuid=df['uuid'].loc[i]
     fl.write('\t\r"years": [{\n')
@@ -46,7 +45,6 @@ for i in range(df.shape[0]):
     # exit()
 
     for y in df_ren.groupby('year').first().reset_index()['year']:
-
         df_year=df_ren[df_ren['year']==y]
         fl.write('\t\t\t\r"year": "{}",'.format(y) + '\n')
         fl.write('\t\t\t\r"info": [{' + '\n')
@@ -71,16 +69,17 @@ for i in range(df.shape[0]):
                         if xx=='uuid' or xx=='year'or xx=='unitName' :
                             pass
                         elif xx=='creditHour':
-                            fl.write('\t\t\t\t\t\t\r"{}\r"'.format(xx) + ':' + '\r"' + str(val_edu) + '\r"' + '\n')
+                            fl.write('\t\t\t\t\t\t\r"{}": "{}"\n'.format(xx, str(val_edu)))
                             fl.write('\t\t\t\t\t\r},\n\t\t\t\t\t\r{\n')
                         else:
-                            fl.write('\t\t\t\t\t\t\r"{}\r"'.format(xx) + ':' + '\r"' + str(val_edu) + '\r"' + ',\n')
+                            fl.write('\t\t\t\t\t\t\r"{}": "{}",\n'.format(xx, str(val_edu)))
                     else:
                         if xx=='uuid' or xx=='year'or xx=='unitName' :
                             pass
-
+                        elif xx == 'creditHour':
+                            fl.write('\t\t\t\t\t\t\r"{}": "{}"\n'.format(xx, str(val_edu)))
                         else:
-                            fl.write('\t\t\t\t\t\t\r"{}\r"'.format(xx) + ':' + '\r"' + str(val_edu) + '\r"' + '\n')
+                            fl.write('\t\t\t\t\t\t\r"{}": "{}",\n'.format(xx, str(val_edu)))
 
             if count!=all:
                 fl.write("\t\t\t\t\t}\n\t\t\t\t]\n\n\t\t\t}, {\n")
