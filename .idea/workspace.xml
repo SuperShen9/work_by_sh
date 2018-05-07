@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6684a8c8-57aa-4776-aeeb-1616023df675" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/text.py" afterPath="$PROJECT_DIR$/text.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zhuan_weiyi.py" afterPath="$PROJECT_DIR$/zhuan_weiyi.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhuan_haodaifu.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhuan_weiyi.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,14 +16,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="zhuan_weiyi_run.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zhuan_weiyi_run.py">
+      <file leaf-file-name="CISCO_SSS.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CISCO_SSS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+            <state relative-caret-position="154">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
-                <element signature="e#39#58#0" expanded="true" />
+                <element signature="e#40#59#0" expanded="true" />
+                <element signature="e#802#822#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zhuan_haodaifu_run.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhuan_haodaifu_run.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,6 +133,7 @@
         <option value="$PROJECT_DIR$/zhuan_weiyi.py" />
         <option value="$PROJECT_DIR$/text.py" />
         <option value="$PROJECT_DIR$/zhuan_weiyi_run.py" />
+        <option value="$PROJECT_DIR$/zhuan_haodaifu_run.py" />
       </list>
     </option>
   </component>
@@ -192,25 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.zhuan_weiyi_run">
-    <configuration default="false" name="zhuan_Duo" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="untitled" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zhuan_Duo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.CISCO_SSS">
     <configuration default="false" name="CISCO_SSS" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -283,6 +278,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="zhuan_haodaifu_run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="untitled" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zhuan_haodaifu_run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -349,19 +362,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.zhuan_Duo" />
-      <item index="1" class="java.lang.String" itemvalue="Python.CISCO_SSS" />
-      <item index="2" class="java.lang.String" itemvalue="Python.zhuan_weiyi" />
-      <item index="3" class="java.lang.String" itemvalue="Python.text" />
-      <item index="4" class="java.lang.String" itemvalue="Python.zhuan_weiyi_run" />
+      <item index="0" class="java.lang.String" itemvalue="Python.CISCO_SSS" />
+      <item index="1" class="java.lang.String" itemvalue="Python.zhuan_weiyi" />
+      <item index="2" class="java.lang.String" itemvalue="Python.text" />
+      <item index="3" class="java.lang.String" itemvalue="Python.zhuan_weiyi_run" />
+      <item index="4" class="java.lang.String" itemvalue="Python.zhuan_haodaifu_run" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.zhuan_weiyi_run" />
-        <item index="1" class="java.lang.String" itemvalue="Python.text" />
-        <item index="2" class="java.lang.String" itemvalue="Python.zhuan_weiyi" />
-        <item index="3" class="java.lang.String" itemvalue="Python.CISCO_SSS" />
-        <item index="4" class="java.lang.String" itemvalue="Python.zhuan_Duo" />
+        <item index="0" class="java.lang.String" itemvalue="Python.CISCO_SSS" />
+        <item index="1" class="java.lang.String" itemvalue="Python.zhuan_haodaifu_run" />
+        <item index="2" class="java.lang.String" itemvalue="Python.zhuan_weiyi_run" />
+        <item index="3" class="java.lang.String" itemvalue="Python.text" />
+        <item index="4" class="java.lang.String" itemvalue="Python.zhuan_weiyi" />
       </list>
     </recent_temporary>
   </component>
@@ -453,7 +466,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/work space/Templete_Trans.py" />
     <entry file="file://$PROJECT_DIR$/New_templete.py" />
     <entry file="file://D:/Program Files (x86)/Anaconda_double/Lib/os.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -701,17 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CISCO_SSS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="51" column="21" lean-forward="false" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-            <element signature="e#802#822#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/text.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -734,6 +735,25 @@
           <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
           <folding>
             <element signature="e#39#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhuan_haodaifu_run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CISCO_SSS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+            <element signature="e#802#822#0" expanded="false" />
           </folding>
         </state>
       </provider>
