@@ -28,7 +28,7 @@ for i in range(df.shape[0]):
 
         if x == 'webName':
             fl.write('{\n')
-            fl.write('\t\r"webUrl": "http://xhgb.cma.org.cn/xuehui_project/listProjectGongbu.jsp?projectLevel=2&orgId=200100"\n')
+            fl.write('\t\r"webUrl": "http://xhgb.cma.org.cn/xuehui_project/listProjectGongbu.jsp?projectLevel=2&orgId=200100",\n')
             fl.write('\t\r"{}": "{}",\n'.format(x, str(val)))
 
         else:
@@ -60,7 +60,7 @@ for i in range(df.shape[0]):
             df_name = df_year[df_ren['unitName'] == n]
             df_name = df_name.reset_index(drop=True)
 
-            fl.write('\t\t\t\t\r"unitName": "{}",'.format(n.encode('gbk')) + ',\n')
+            fl.write('\t\t\t\t\r"unitName": "{}",'.format(n.encode('gbk')) + '\n')
             fl.write('\t\t\t\t\r"unitInfo": [{\n')
             for ii in range(df_name.shape[0]):
                 #原来底层循环在这
@@ -68,12 +68,12 @@ for i in range(df.shape[0]):
 
                 for xx in df_name.columns:
                     val_edu = df_name[xx].loc[ii]
-                    if xx == 'holdingPeriod' or xx == 'creditHour' or xx == 'year' :
+                    if xx == 'holdingPeriod' or xx == 'creditHour' or xx == 'year':
                         val_edu = val_edu
                     else:
                         val_edu = val_edu.encode('gbk')
                     if ii!=df_name.shape[0]-1:
-                        if xx=='uuid' or xx=='year'or xx=='unitName' :
+                        if xx=='uuid' or xx=='year'or xx=='unitName':
                             pass
                         elif xx=='creditHour':
                             fl.write('\t\t\t\t\t\t\r"{}": "{}"\n'.format(xx, str(val_edu)))
