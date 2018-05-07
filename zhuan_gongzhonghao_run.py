@@ -26,13 +26,11 @@ for i in range(df.shape[0]):
 
         if x == 'webName':
             fl.write('{\n')
-            fl.write('\t\r"webUrl": ""\n')
+            fl.write('\t\r"webUrl": "",\n')
+            fl.write('\t\r"{}": "{}",\n'.format(x, str(val)))
 
-            fl.write('\t\r"{}\r"'.format(x) + ':' + '\r"' + str(val) + '\r"' + ',')
-            fl.write("\n")
         else:
-            fl.write('\t\r"{}\r"'.format(x) + ':' + '\r"' + str(val) + '\r"' + ',')
-            fl.write("\n")
+            fl.write('\t\r"{}": "{}",\n'.format(x, str(val)))
 # 合并PC表
     uuid=df['uuid'].loc[i]
     fl.write('\t\r"PCinfo": [{')
@@ -47,9 +45,10 @@ for i in range(df.shape[0]):
             if xx=='uuid':
                 pass
             elif xx=='WeChatSubName':
-                fl.write('\t\t\r"{}\r"'.format(xx) + ':' + '\r"' + str(val_pc) + '\r"' + '\n')
+                fl.write('\t\t\r"{}": "{}"\n'.format(xx, str(val_pc)))
+
             else:
-                fl.write('\t\t\r"{}\r"'.format(xx) + ':' + '\r"' + str(val_pc) + '\r"' + ',\n')
+                fl.write('\t\t\r"{}": "{}",\n'.format(xx, str(val_pc)))
         if ii<df_PC[df_PC['uuid']==uuid].shape[0]-1:
             fl.write("\t}, {")
         else:
@@ -69,9 +68,10 @@ for i in range(df.shape[0]):
             if xxx == 'uuid':
                 pass
             elif xxx=='WeChatSubName':
-                fl.write('\t\t\r"{}\r"'.format(xx) + ':' + '\r"' + str(val_mv) + '\r"' + '\n')
+                fl.write('\t\t\r"{}": "{}"\n'.format(xxx, str(val_mv)))
             else:
-                fl.write('\t\t\r"{}\r"'.format(xxx) + ':' + '\r"' + str(val_mv) + '\r"' + ',\n')
+                fl.write('\t\t\r"{}": "{}",\n'.format(xxx, str(val_mv)))
+
         if iii < df_MV[df_MV['uuid'] == uuid].shape[0] - 1:
             fl.write("\t}, {")
         else:
@@ -80,15 +80,18 @@ for i in range(df.shape[0]):
 
 # 补充最后2个字段
     fl.write('\n\t\r"MDinfo": {')
+    fl.write('\n')
     for x in df.columns[-2:]:
         val = df[x].loc[i]
         if isinstance(val, float):
             val = ''
         else:
             val = val.encode('gbk')
-        fl.write('\n')
-        fl.write('\t\t\r"{}\r"'.format(x) + ':' + '\r"' + str(val) + '\r"' + ',')
-    fl.write("\n\t}")
+        if x=='WeChatSubName':
+            fl.write('\t\t\r"{}": "{}"\n'.format(x, str(val)))
+        else:
+            fl.write('\t\t\r"{}": "{}",\n'.format(x, str(val)))
+    fl.write("\t}")
     fl.write("\n}")
 
 
