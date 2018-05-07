@@ -27,6 +27,7 @@ for i in range(df.shape[0]):
         if x == 'webName':
             fl.write('{\n')
             fl.write('\t\r"webUrl": ""\n')
+
             fl.write('\t\r"{}\r"'.format(x) + ':' + '\r"' + str(val) + '\r"' + ',')
             fl.write("\n")
         else:

@@ -11,6 +11,7 @@ if os.path.exists('RUN'):
     shutil.rmtree('RUN')
 os.makedirs('C:\\Users\Administrator\Desktop\\RUN')
 os.chdir('C:\\Users\Administrator\Desktop\\RUN')
+
 # df.shape[0]
 
 for i in range(df.shape[0]):
