@@ -109,7 +109,7 @@ list6_wh=[u'設備更新_會更新哪些設備？','Model','Cisco_Network_Set_TM
 list7=[u'Q7、預估執行時間？',u'專案時程',u'貴公司何時會規劃下階段的網路建置？*','Action Time','Action Time Frame','* Project time ',u'贵单位在什么时间范围内将有网络扩张、升级或安全等方面的网络项目？']
 list8=[u'Q8、預估執行預算？',u'專案預算(USD)',u'貴公司的投資預算是？*','Range of Budget plan (HKD)','* Budget ']
 list9=['last_name','LAST_NAME','FullName',u'姓名',u'中文姓名','Contact Name','last name','Last Name','Last Name*','Surname','LASTNAME','* Customer name ','Last Name ']
-list10=[u'公司名称','Account Name','Cname',u'單位名稱',u'公司',u'公司/單位名稱',u'服務單位',u'完整公司名稱',u'公司名稱',u'中文公司名稱','Company Name ','Company / Account',
+list10=[U'公司中文名稱',u'公司名称','Account Name','Cname',u'單位名稱',u'公司',u'公司/單位名稱',u'服務單位',u'完整公司名稱',u'公司名稱',u'中文公司名稱','Company Name ','Company / Account',
         'COMPANY','company / account','company name','Company Name','Company_Name*','Company','Company name','* Company Name','company_name']
 list11=[u'聯絡電話',u'公司電話及分機',u'電話號碼',u'電話',u'公司電話/分機',u'公司電話',u'公司聯絡電話','Phone','TEL','PHONE']
 list11_hk=['Phone Number*','Main Tel','* Telephone ','Business Phone','Telephone number']
