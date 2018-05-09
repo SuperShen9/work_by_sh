@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 # author:Super
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+import codecs
 import pandas as pd
 import os,shutil
 pd.set_option('expand_frame_repr',False)
@@ -16,21 +20,20 @@ os.makedirs('C:\\Users\Administrator\Desktop\\RUN')
 os.chdir('C:\\Users\Administrator\Desktop\\RUN')
 
 for i in range(df.shape[0]):
-    fl = open('%s-%s-%s.txt' % (df['name'].loc[i], df['organization'].loc[i], df['webName'].loc[i]), 'a')
+    fl = codecs.open('%s-%s-%s.txt' % (df['name'].loc[i], df['organization'].loc[i], df['webName'].loc[i]), 'a',"utf-8")
     for x in df.columns[:-2]:
         val = df[x].loc[i]
         if isinstance(val, float):
             val = ''
         else:
-            val = val.encode('gbk')
+            val = val
 
         if x == 'webName':
-            fl.write('{')
-            fl.write('\r"webUrl": "",')
-            fl.write('\r"{}": "{}",'.format(x, str(val)))
+            fl.write('\r{"webUrl": "",')
+            fl.write('\r"{}": "{}",'.format(x, str(val).decode('utf-8')))
 
         else:
-            fl.write('\r"{}": "{}",'.format(x, str(val)))
+            fl.write('\r"{}": "{}",'.format(x, str(val).decode('utf-8')))
 # 合并PC表
     uuid=df['uuid'].loc[i]
     fl.write('\r"PCinfo": [{')
@@ -40,14 +43,14 @@ for i in range(df.shape[0]):
             if  xx == 'time' :
                 val_pc = val_pc
             else:
-                val_pc = val_pc.encode('gbk')
+                val_pc = val_pc
             if xx=='uuid':
                 pass
             elif xx=='WeChatSubName':
-                fl.write('\r"{}": "{}"'.format(xx, str(val_pc)))
+                fl.write('\r"{}": "{}"'.format(xx, str(val_pc).decode('utf-8')))
 
             else:
-                fl.write('\r"{}": "{}",'.format(xx, str(val_pc)))
+                fl.write('\r"{}": "{}",'.format(xx, str(val_pc).decode('utf-8')))
         if ii<df_PC[df_PC['uuid']==uuid].shape[0]-1:
             fl.write("}, {")
         else:
@@ -62,13 +65,13 @@ for i in range(df.shape[0]):
             if xxx == 'time' or xxx=='isIndependentPub':
                 val_mv = val_mv
             else:
-                val_mv = val_mv.encode('gbk')
+                val_mv = val_mv
             if xxx == 'uuid':
                 pass
-            elif xxx=='WeChatSubName':
-                fl.write('\r"{}": "{}"'.format(xxx, str(val_mv)))
+            elif xxx=='isIndependentPub':
+                fl.write('\r"{}": "{}"'.format(xxx, str(val_mv).decode('utf-8')))
             else:
-                fl.write('\r"{}": "{}",'.format(xxx, str(val_mv)))
+                fl.write('\r"{}": "{}",'.format(xxx, str(val_mv).decode('utf-8')))
 
         if iii < df_MV[df_MV['uuid'] == uuid].shape[0] - 1:
             fl.write("}, {")
@@ -83,11 +86,11 @@ for i in range(df.shape[0]):
         if isinstance(val, float):
             val = ''
         else:
-            val = val.encode('gbk')
+            val = val
         if x=='WeChatSubName':
-            fl.write('\r"{}": "{}"'.format(x, str(val)))
+            fl.write('\r"{}": "{}"'.format(x, str(val).decode('utf-8')))
         else:
-            fl.write('\r"{}": "{}",'.format(x, str(val)))
+            fl.write('\r"{}": "{}",'.format(x, str(val).decode('utf-8')))
     fl.write("}}")
 
 

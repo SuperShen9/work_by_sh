@@ -3,9 +3,10 @@
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
+import codecs
 import pandas as pd
 import time,os,shutil
-import codecs
+
 pd.set_option('expand_frame_repr',False)
 os.chdir('C:\\Users\Administrator\Desktop')
 # #openpyxl模块
