@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 # author:Super
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 import pandas as pd
 import time,os,openpyxl
+import codecs
 pd.set_option('expand_frame_repr',False)
 os.chdir('C:\\Users\Administrator\Desktop')
 # #openpyxl模块
@@ -12,12 +16,23 @@ os.chdir('C:\\Users\Administrator\Desktop')
 # exit()
 
 # # 查看text文件
-file=open('1.txt')
-lines=file.readlines()
-print lines
+# file=open('3.txt')
+# lines=file.readlines()
+# print lines
+# f1=open('zhuan.txt', 'a')
 # for i in lines:
-#     print i
+#     f1.write(i)
 # exit()
+
+file=open('2.txt')
+lines=file.readlines()
+# print lines
+for i in lines:
+    print i
+
+
+
+
 
 # df=pd.read_excel('sheet1.xlsx')
 #
@@ -31,4 +46,7 @@ print lines
 #     fl.write("\n")
 
 
+# df = pd.read_excel('11.xlsx')
+# # print df[df['Flag'].isnull()]
+# df[df['Flag'].isnull()].to_excel('22.xlsx')
 

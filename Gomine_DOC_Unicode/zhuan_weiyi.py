@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 # author:Super
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 import pandas as pd
 import time,os,shutil
+import codecs
 pd.set_option('expand_frame_repr',False)
 os.chdir('C:\\Users\Administrator\Desktop')
 # #openpyxl模块
@@ -36,35 +40,34 @@ for i in range(df.shape[0]):
         if isinstance(val, float):
             val = ''
         else:
-            val = val.encode('gbk')
-        fl = open('%s-%s-%s.txt' % (df['name'].loc[i],df['organization'].loc[i],df['webName'].loc[i]), 'a')
+            val = val
+
+        fl = codecs.open('%s-%s-%s.txt' % (df['name'].loc[i],df['organization'].loc[i],df['webName'].loc[i]), 'a',"utf-8")
         if count<=len(df.columns)-4:
             if x == 'webName':
-                fl.write('{\n')
-                fl.write('\t\r"webUrl": "http://www.chictr.org.cn/searchproj.aspx",\n')
-                fl.write('\t\r"{}": "{}",'.format(x, str(val)))
-                fl.write("\n")
+                fl.write('\r{"webUrl": "http://www.chictr.org.cn/searchproj.aspx",')
+                fl.write('\r"{}": "{}",'.format(x, str(val).decode('utf-8')))
             elif x == 'remark':
-                fl.write('\t\r"remark":"",\n')
+                fl.write('\r"remark":"",')
             else:
-                fl.write('\t\r"{}": "{}",'.format(x, str(val)))
-                fl.write("\n")
+                fl.write('\r"{}": "{}",'.format(x, str(val).decode('utf-8')))
+
         elif count==len(df.columns)-3:
-            fl.write('\t\r"info": {\n')
-            fl.write('\t\t\r"name": "{}",\n'.format(str(val)))
+            fl.write('\r"info": {')
+            fl.write('\r"name": "{}",'.format(str(val).decode('utf-8')))
 
         elif count==len(df.columns)-1:
-            if val[-1]=='0':
-                fl.write('\t\t\r"{}": "{}",\n'.format(x, str(val)[:4]))
+            if val==0:
+                fl.write('\r"{}": "{}",'.format(x, u'暂无'))
             else:
-                fl.write('\t\t\r"{}": "{}",\n'.format(x, str(val)[4:]))
+                fl.write('\r"{}": "{}",'.format(x, str(val).decode('utf-8')))
 
         elif count == len(df.columns):
-            fl.write('\t\t\r"{}": "{}"\n'.format(x, str(val)))
-            fl.write('\t}\n')
+            fl.write('\r"{}": "{}"'.format(x, str(val).decode('utf-8')))
+            fl.write('}')
             fl.write('}')
         else:
-            fl.write('\t\t\r"{}": "{}",\n'.format(x, str(val)))
+            fl.write('\r"{}": "{}",'.format(x, str(val).decode('utf-8')))
 
 
 
