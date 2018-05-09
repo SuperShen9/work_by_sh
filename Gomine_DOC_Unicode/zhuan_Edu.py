@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 # author:Super
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+import codecs
 import pandas as pd
 import os,shutil
 pd.set_option('expand_frame_repr',False)
@@ -16,22 +20,21 @@ os.makedirs('C:\\Users\Administrator\Desktop\\RUN')
 
 os.chdir('C:\\Users\Administrator\Desktop\\RUN')
 
-
 for i in range(df.shape[0]):
-    fl = open('%s-%s-%s.txt' % (df['name'].loc[i], df['organization'].loc[i], df['webName'].loc[i]), 'a')
+    fl = codecs.open('%s-%s-%s.txt' % (df['name'].loc[i], df['organization'].loc[i], df['webName'].loc[i]), 'a',"utf-8")
     for x in df.columns:
         val = df[x].loc[i]
         if isinstance(val, float):
             val = ''
         else:
-            val = val.encode('gbk')
+            val = val
 
         if x == 'webName':
-            fl.write('{\r"webUrl": "http://xhgb.cma.org.cn/xuehui_project/listProjectGongbu.jsp?projectLevel=2&orgId=200100",')
-            fl.write('\r"{}": "{}",'.format(x, str(val)))
+            fl.write('\r{"webUrl": "http://xhgb.cma.org.cn/xuehui_project/listProjectGongbu.jsp?projectLevel=2&orgId=200100",')
+            fl.write('\r"{}": "{}",'.format(x, str(val).decode('utf-8')))
 
         else:
-            fl.write('\r"{}": "{}",'.format(x, str(val)))
+            fl.write('\r"{}": "{}",'.format(x, str(val).decode('utf-8')))
 
     uuid=df['uuid'].loc[i]
     fl.write('\r"years": [{')
@@ -59,7 +62,7 @@ for i in range(df.shape[0]):
             df_name = df_year[df_ren['unitName'] == n]
             df_name = df_name.reset_index(drop=True)
 
-            fl.write('\r"unitName": "{}",'.format(n.encode('gbk')) )
+            fl.write('\r"unitName": "{}",'.format(n))
             fl.write('\r"unitInfo": [{')
             for ii in range(df_name.shape[0]):
                 #原来底层循环在这
@@ -70,22 +73,22 @@ for i in range(df.shape[0]):
                     if xx == 'holdingPeriod' or xx == 'creditHour' or xx == 'year':
                         val_edu = val_edu
                     else:
-                        val_edu = val_edu.encode('gbk')
+                        val_edu = val_edu
                     if ii!=df_name.shape[0]-1:
                         if xx=='uuid' or xx=='year'or xx=='unitName':
                             pass
                         elif xx=='creditHour':
-                            fl.write('\r"{}": "{}"'.format(xx, str(val_edu)))
+                            fl.write('\r"{}": "{}"'.format(xx, str(val_edu).decode('utf-8')))
                             fl.write('\r},{')
                         else:
-                            fl.write('\r"{}": "{}",'.format(xx, str(val_edu)))
+                            fl.write('\r"{}": "{}",'.format(xx, str(val_edu).decode('utf-8')))
                     else:
                         if xx=='uuid' or xx=='year'or xx=='unitName' :
                             pass
                         elif xx == 'creditHour':
-                            fl.write('\r"{}": "{}"'.format(xx, str(val_edu)))
+                            fl.write('\r"{}": "{}"'.format(xx, str(val_edu).decode('utf-8')))
                         else:
-                            fl.write('\r"{}": "{}",'.format(xx, str(val_edu)))
+                            fl.write('\r"{}": "{}",'.format(xx, str(val_edu).decode('utf-8')))
 
             if count_all==len(df_ren):
                 fl.write("}]}]}]}")
