@@ -34,49 +34,59 @@ for i in range(df.shape[0]):
 # 合并PC表
     uuid=df['uuid'].loc[i]
     fl.write('\t\r"PCinfo": [{')
-    for ii in range(df_PC[df_PC['uuid']==uuid].shape[0]):
-        fl.write("\n")
-        for xx in df_PC.columns:
-            val_pc = df_PC[xx].loc[ii]
-            if  xx == 'time' :
-                val_pc = val_pc
-            else:
-                val_pc = val_pc.encode('gbk')
-            if xx=='uuid':
-                pass
-            elif xx=='WeChatSubName':
-                fl.write('\t\t\r"{}": "{}"\n'.format(xx, str(val_pc)))
+    # print df_PC[df_PC['uuid'] == uuid].shape[0], df_MV[df_MV['uuid'] == uuid].shape[0]
 
+    if df_PC[df_PC['uuid'] == uuid].shape[0]==0:
+        fl.write('"time": "","medicalPlatform": "","subjectContent": "","isMeeting": "","WeChatSubName": ""')
+        fl.write("}],")
+    else:
+        for ii in range(df_PC[df_PC['uuid']==uuid].shape[0]):
+            fl.write("\n")
+            for xx in df_PC.columns:
+                val_pc = df_PC[xx].loc[ii]
+                if  xx == 'time' :
+                    val_pc = val_pc
+                else:
+                    val_pc = val_pc.encode('gbk')
+                if xx=='uuid':
+                    pass
+                elif xx=='WeChatSubName':
+                    fl.write('\t\t\r"{}": "{}"\n'.format(xx, str(val_pc).replace('\n','')))
+
+                else:
+                    fl.write('\t\t\r"{}": "{}",\n'.format(xx, str(val_pc).replace('\n','')))
+            if ii<df_PC[df_PC['uuid']==uuid].shape[0]-1:
+                fl.write("\t}, {")
             else:
-                fl.write('\t\t\r"{}": "{}",\n'.format(xx, str(val_pc)))
-        if ii<df_PC[df_PC['uuid']==uuid].shape[0]-1:
-            fl.write("\t}, {")
-        else:
-            pass
-    fl.write("\t}],")
+                pass
+        fl.write("\t}],")
 
 # 合并MV表
     fl.write('\n\t\r"MVinfo": [{')
-    for iii in range(df_MV[df_MV['uuid']==uuid].shape[0]):
-        fl.write("\n")
-        for xxx in df_MV.columns:
-            val_mv = df_MV[xxx].loc[iii]
-            if xxx == 'time':
-                val_mv = val_mv
-            else:
-                val_mv = val_mv.encode('gbk')
-            if xxx == 'uuid':
-                pass
-            elif xxx=='WeChatSubName':
-                fl.write('\t\t\r"{}": "{}"\n'.format(xxx, str(val_mv)))
-            else:
-                fl.write('\t\t\r"{}": "{}",\n'.format(xxx, str(val_mv)))
+    if df_MV[df_MV['uuid'] == uuid].shape[0] == 0:
+        fl.write('"time": "","weChatViewpoint": "","WeChatSubName": "","isIndependentPub": ""')
+        fl.write("}],")
+    else:
+        for iii in range(df_MV[df_MV['uuid']==uuid].shape[0]):
+            fl.write("\n")
+            for xxx in df_MV.columns:
+                val_mv = df_MV[xxx].loc[iii]
+                if xxx == 'time'or xxx=='isIndependentPub':
+                    val_mv = val_mv
+                else:
+                    val_mv = val_mv.encode('gbk')
+                if xxx == 'uuid':
+                    pass
+                elif xxx=='isIndependentPub':
+                    fl.write('\t\t\r"{}": "{}"\n'.format(xxx, str(val_mv).replace('\n','')))
+                else:
+                    fl.write('\t\t\r"{}": "{}",\n'.format(xxx, str(val_mv).replace('\n','')))
 
-        if iii < df_MV[df_MV['uuid'] == uuid].shape[0] - 1:
-            fl.write("\t}, {")
-        else:
-            pass
-    fl.write("\t}],")
+            if iii < df_MV[df_MV['uuid'] == uuid].shape[0] - 1:
+                fl.write("\t}, {")
+            else:
+                pass
+        fl.write("\t}],")
 
 # 补充最后2个字段
     fl.write('\n\t\r"MDinfo": {')
