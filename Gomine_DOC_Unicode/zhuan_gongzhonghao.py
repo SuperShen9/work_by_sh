@@ -45,10 +45,6 @@ for i in range(df.shape[0]):
         for ii in range(df_PC[df_PC['uuid']==uuid].shape[0]):
             for xx in df_PC.columns:
                 val_pc = df_PC[xx].loc[ii]
-                if  xx == 'time' :
-                    val_pc = val_pc
-                else:
-                    val_pc = val_pc
                 if xx=='uuid':
                     pass
                 elif xx=='WeChatSubName':
@@ -72,10 +68,6 @@ for i in range(df.shape[0]):
         for iii in range(df_MV[df_MV['uuid']==uuid].shape[0]):
             for xxx in df_MV.columns:
                 val_mv = df_MV[xxx].loc[iii]
-                if xxx == 'time' or xxx=='isIndependentPub':
-                    val_mv = val_mv
-                else:
-                    val_mv = val_mv
                 if xxx == 'uuid':
                     pass
                 elif xxx=='isIndependentPub':

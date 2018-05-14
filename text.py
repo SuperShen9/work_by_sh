@@ -24,18 +24,14 @@ os.chdir('C:\\Users\Administrator\Desktop')
 #     f1.write(i)
 # exit()
 
-file=open('2.txt')
-lines=file.readlines()
-# print lines
-for i in lines:
-    print i
-
-
-
+# file=open('2.txt')
+# lines=file.readlines()
+# # print lines
+# for i in lines:
+#     print i
 
 
 # df=pd.read_excel('sheet1.xlsx')
-#
 #
 # for i in range(1,df.shape[0]):
 #     key = 'name'
@@ -46,7 +42,12 @@ for i in lines:
 #     fl.write("\n")
 
 
-# df = pd.read_excel('11.xlsx')
-# # print df[df['Flag'].isnull()]
-# df[df['Flag'].isnull()].to_excel('22.xlsx')
+df = pd.read_excel('account without oppty_Becky_Yvonne.xlsx')
+df_acc = pd.read_excel('HK_MODS list 20180510.xlsx')
+
+df_1=pd.merge(left=df,
+              right=df_acc,
+              on=['Account ID'],
+              how='left')
+df_1.to_excel('out.xlsx')
 
