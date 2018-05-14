@@ -9,10 +9,3 @@ import pandas as pd
 # f = codecs.open("text.txt", "a", "utf-8")
 # f.write(u'中文')
 # f.close()
-
-a='''沈元吉
-某均为
-呵呵
-'''
-b='沈元吉'
-print b.replace('\n','')

@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6684a8c8-57aa-4776-aeeb-1616023df675" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Gomine_DOC_utf/text.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Gomine_DOC_utf/zhuan_Edu_run.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Gomine_DOC_utf/zhuan_gongzhonghao_run.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Gomine_DOC_utf/zhuan_haodaifu_run.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Gomine_DOC_utf/zhuan_weiyi_run.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/CIN_hb.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/HLJ_hb.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/HLJ_htc.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/HLJ_project.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/New_templete.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/TEL.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/add_junk.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/charles_text.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/douban.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/dup_contact.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/email_text.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/inbound_hb.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/inbound_hb_jane.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/inbound_hb_new.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/linda_cf.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/muban_zz.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/wanneng_zz.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/weixin_png.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/zhuan_Edu.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/zhuan_gongzhonghao.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/work space/zhuan_weiyi.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gomine_DOC_Unicode/zhuan_gongzhonghao.py" afterPath="$PROJECT_DIR$/Gomine_DOC_Unicode/zhuan_gongzhonghao.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/text.py" afterPath="$PROJECT_DIR$/text.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TTT.py" afterPath="$PROJECT_DIR$/TTT.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,7 +17,7 @@
       <file leaf-file-name="TTT.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TTT.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
+            <state relative-caret-position="187">
               <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
@@ -161,10 +133,10 @@
         <option value="$PROJECT_DIR$/Gomine_DOC_Unicode/zhuan_gongzhonghao_run.py" />
         <option value="$PROJECT_DIR$/Gomine_DOC_Unicode/zhuan_haodaifu_run.py" />
         <option value="$PROJECT_DIR$/Gomine_DOC_Unicode/zhuan_Edu_run.py" />
-        <option value="$PROJECT_DIR$/TTT.py" />
         <option value="$PROJECT_DIR$/Old Sspider/Gomine_DOC/zhuan_gongzhonghao_run.py" />
         <option value="$PROJECT_DIR$/Gomine_DOC_Unicode/zhuan_gongzhonghao.py" />
         <option value="$PROJECT_DIR$/text.py" />
+        <option value="$PROJECT_DIR$/TTT.py" />
       </list>
     </option>
   </component>
@@ -432,17 +404,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21060172" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33916554" sideWeight="0.504298" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42261103" sideWeight="0.49713466" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42261103" sideWeight="0.49713466" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47779274" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33512786" sideWeight="0.495702" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33512786" sideWeight="0.495702" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39973083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -714,7 +686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TTT.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
+        <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>

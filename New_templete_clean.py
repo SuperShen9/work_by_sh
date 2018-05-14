@@ -120,7 +120,7 @@ list15=[u'标准職稱']
 list16=[u'具體預算(USD)']
 list16_wh=[u'Total','* Estimated budget (US$) ']
 list17=['# of PCs*','QAPCS__C']
-list18=['sex','Salutation_T1_V1*','Mr/Ms','Salutation','GENDER']
+# list18=['sex','Salutation_T1_V1*','Mr/Ms','Salutation','GENDER']
 list19=['First name','first name','First Name*','First Name','FIRSTNAME','First Name ','FIRST_NAME','first_name']
 list20=['Title','jobtitle','Job Title*','TITLE',u'原始職稱','JOB_TITLE'] #活动数据专用 --“職稱”
 # list20=[u'職稱','Title','jobtitle','Job Title*']
@@ -209,10 +209,10 @@ for foldername,subfolder,excels in os.walk(filepath):
                 sheet[lb_1 + '1'] = '标准金额'
                 sheet[lb_1 + '1'].font = ft1
                 sheet[lb_1 + str(jj)] = b_bug.get(sheet[lb + str(jj)].value)
-            if sheet[lb + '1'].value in list18 :
-                sheet[lb_1 + '1'] = '标准性别'
-                sheet[lb_1 + '1'].font = ft1
-                sheet[lb_1 + str(jj)] = sex.get(sheet[lb + str(jj)].value)
+            # if sheet[lb + '1'].value in list18 :
+            #     sheet[lb_1 + '1'] = '标准性别'
+            #     sheet[lb_1 + '1'].font = ft1
+            #     sheet[lb_1 + str(jj)] = sex.get(sheet[lb + str(jj)].value)
             if sheet[lb + '1'].value in list21 :
                 sheet[lb_1 + '1'] = '标准人数'
                 sheet[lb_1 + '1'].font = ft1
