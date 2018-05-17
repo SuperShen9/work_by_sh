@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 # author:Super
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 import pandas as pd
 import time,os,shutil
+import codecs
 pd.set_option('expand_frame_repr',False)
 os.chdir('C:\\Users\Administrator\Desktop')
 
@@ -14,7 +18,7 @@ os.chdir('C:\\Users\Administrator\Desktop\\RUN')
 
 # df.shape[0]
 
-for i in range(df.shape[0]):
+for i in range(3):
     count=0
     for x in df.columns:
         count+=1
@@ -23,18 +27,18 @@ for i in range(df.shape[0]):
         if isinstance(val, float):
             val = ''
         else:
-            val = val.encode('gbk')
-        fl = open('%s-%s-%s.txt' % (df['name'].loc[i],df['organization'].loc[i],df['webName'].loc[i]), 'a')
+            val = val
+        fl = codecs.open('%s-%s-%s.txt' % (df['name'].loc[i],df['organization'].loc[i],df['webName'].loc[i]), 'a', "utf-8")
 
         if x == 'webName':
             fl.write('{\n')
             fl.write('\t\r"webUrl": "http://www.haodf.com/",\n')
-            fl.write('\t\r"{}": "{}",'.format(x, str(val)))
+            fl.write('\t\r"{}": "{}",'.format(x, str(val).decode('utf-8')))
             fl.write("\n")
         elif x == 'remark':
             fl.write('\t\r"remark":"",\n')
         elif x == 'isPerZone':
-            fl.write('\t\r"{}": "{}",\n'.format(x, str(val)))
+            fl.write('\t\r"{}": "{}",\n'.format(x, str(val).decode('utf-8')))
             fl.write('\t\r"MD": {\n')
             fl.write('\t\t\r"hospital": "",\n')
             fl.write('\t\t\r"hospitalLevel": "",\n')
@@ -66,7 +70,9 @@ for i in range(df.shape[0]):
 
             fl.write('\t\r"AE": [{\n')
             fl.write('\t\t\r"time": "",\n')
-            fl.write('\t\t\r"school": ""\n')
+            fl.write('\t\t\r"school": "",\n')
+            fl.write('\t\t\r"major": "",\n')
+            fl.write('\t\t\r"degree": ""\n')
             fl.write('\t\r}],\n')
 
             fl.write('\t\r"AW": [{\n')

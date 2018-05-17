@@ -22,6 +22,8 @@ for i in range(df.shape[0]):
 
         if isinstance(val, float):
             val = ''
+        elif x=='hcpID':
+            val=val
         else:
             val = val.encode('gbk')
         fl = open('%s-%s-%s.txt' % (df['name'].loc[i],df['organization'].loc[i],df['webName'].loc[i]), 'a')
@@ -33,6 +35,8 @@ for i in range(df.shape[0]):
             fl.write("\n")
         elif x == 'remark':
             fl.write('\t\r"remark":"",\n')
+        elif x == 'title':
+            fl.write('\t\r"title":"",\n')
         elif x == 'isPerZone':
             fl.write('\t\r"{}": "{}",\n'.format(x, str(val)))
             fl.write('\t\r"MD": {\n')
@@ -66,7 +70,9 @@ for i in range(df.shape[0]):
 
             fl.write('\t\r"AE": [{\n')
             fl.write('\t\t\r"time": "",\n')
-            fl.write('\t\t\r"school": ""\n')
+            fl.write('\t\t\r"school": "",\n')
+            fl.write('\t\t\r"major": "",\n')
+            fl.write('\t\t\r"degree": ""\n')
             fl.write('\t\r}],\n')
 
             fl.write('\t\r"AW": [{\n')
