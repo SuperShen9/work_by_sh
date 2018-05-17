@@ -10,16 +10,19 @@ pd.set_option('expand_frame_repr',False)
 os.chdir('C:\\Users\Administrator\Desktop')
 
 df = pd.read_excel('sheet1.xlsx')
-df_PC = pd.read_excel('sheet_PC.xlsx')
-df_MV = pd.read_excel('sheet_MV.xlsx')
+# df_PC = pd.read_excel('sheet_PC.xlsx')
+# df_MV = pd.read_excel('sheet_MV.xlsx')
 
 if os.path.exists('RUN'):
     shutil.rmtree('RUN')
 os.makedirs('C:\\Users\Administrator\Desktop\\RUN')
 
-os.chdir('C:\\Users\Administrator\Desktop\\RUN')
 
 for i in range(df.shape[0]):
+    os.chdir('C:\\Users\Administrator\Desktop')
+    df_PC = pd.read_excel('sheet_PC.xlsx')
+    df_MV = pd.read_excel('sheet_MV.xlsx')
+    os.chdir('C:\\Users\Administrator\Desktop\\RUN')
     fl = codecs.open('%s-%s-%s.txt' % (df['name'].loc[i], df['organization'].loc[i], df['webName'].loc[i]), 'a',"utf-8")
     for x in df.columns[:-2]:
         val = df[x].loc[i]
@@ -36,8 +39,11 @@ for i in range(df.shape[0]):
             fl.write('\r"{}": "{}",'.format(x, str(val).decode('utf-8')))
 # 合并PC表
     uuid=df['uuid'].loc[i]
-    fl.write('\r"PCinfo": [{')
 
+    df_PC = df_PC[df_PC['uuid'] == uuid]
+    df_PC = df_PC.reset_index(drop=True)
+
+    fl.write('\r"PCinfo": [{')
     if df_PC[df_PC['uuid'] == uuid].shape[0]==0:
         fl.write('"time": "","medicalPlatform": "","subjectContent": "","isMeeting": "","WeChatSubName": ""')
         fl.write("}],")
@@ -59,8 +65,10 @@ for i in range(df.shape[0]):
         fl.write("}],")
 
 # 合并MV表
-    fl.write('\r"MVinfo": [{')
+    df_MV = df_MV[df_MV['uuid'] == uuid]
+    df_MV = df_MV.reset_index(drop=True)
 
+    fl.write('\r"MVinfo": [{')
     if df_MV[df_MV['uuid'] == uuid].shape[0] == 0:
         fl.write('"time": "","weChatViewpoint": "","WeChatSubName": "","isIndependentPub": ""')
         fl.write("}],")
