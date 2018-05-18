@@ -18,7 +18,7 @@ os.chdir('C:\\Users\Administrator\Desktop\\RUN')
 
 # df.shape[0]
 
-for i in range(3):
+for i in range(df.shape[0]):
     count=0
     for x in df.columns:
         count+=1
@@ -28,7 +28,7 @@ for i in range(3):
             val = ''
         else:
             val = val
-        fl = codecs.open('%s-%s-%s.txt' % (df['name'].loc[i],df['organization'].loc[i],df['webName'].loc[i]), 'a', "utf-8")
+        fl = open('%s-%s-%s.txt' % (df['name'].loc[i],df['organization'].loc[i],df['webName'].loc[i]), 'a')
 
         if x == 'webName':
             fl.write('{\n')
