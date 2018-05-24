@@ -33,10 +33,10 @@ for i in range(df.shape[0]):
 
         if x == 'webName':
             fl.write('\r{"webUrl": "",')
-            fl.write('\r"{}": "{}",'.format(x, str(val).decode('utf-8')))
+            fl.write('\r"{}": "{}",'.format(x, str(val).replace('\n', '').decode('utf-8')))
 
         else:
-            fl.write('\r"{}": "{}",'.format(x, str(val).decode('utf-8')))
+            fl.write('\r"{}": "{}",'.format(x, str(val).replace('\n', '').decode('utf-8')))
 # 合并PC表
     uuid=df['uuid'].loc[i]
 
@@ -54,10 +54,10 @@ for i in range(df.shape[0]):
                 if xx=='uuid':
                     pass
                 elif xx=='WeChatSubName':
-                    fl.write('\r"{}": "{}"'.format(xx, str(val_pc).replace('\n','').decode('utf-8')))
+                    fl.write('\r"{}": "{}"'.format(xx, str(val_pc).replace('\n', '').decode('utf-8')))
 
                 else:
-                    fl.write('\r"{}": "{}",'.format(xx, str(val_pc).replace('\n','').decode('utf-8')))
+                    fl.write('\r"{}": "{}",'.format(xx, str(val_pc).replace('\n', '').decode('utf-8')))
             if ii<df_PC[df_PC['uuid']==uuid].shape[0]-1:
                 fl.write("}, {")
             else:
@@ -79,9 +79,9 @@ for i in range(df.shape[0]):
                 if xxx == 'uuid':
                     pass
                 elif xxx=='isIndependentPub':
-                    fl.write('\r"{}": "{}"'.format(xxx, str(val_mv).replace('\n','').decode('utf-8')))
+                    fl.write('\r"{}": "{}"'.format(xxx, str(val_mv).replace('\n', '').decode('utf-8')))
                 else:
-                    fl.write('\r"{}": "{}",'.format(xxx, str(val_mv).replace('\n','').decode('utf-8')))
+                    fl.write('\r"{}": "{}",'.format(xxx, str(val_mv).replace('\n', '').decode('utf-8')))
 
             if iii < df_MV[df_MV['uuid'] == uuid].shape[0] - 1:
                 fl.write("}, {")
