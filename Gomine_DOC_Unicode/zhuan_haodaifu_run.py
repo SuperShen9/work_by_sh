@@ -81,6 +81,13 @@ for i in range(df.shape[0]):
             fl.write('\t\t\r"level": ""\n')
             fl.write('\t\r}],\n')
 
+            fl.write('\t\r"WE": [{\n')
+            fl.write('\t\t\r"startTime": "",\n')
+            fl.write('\t\t\r"endTime": "",\n')
+            fl.write('\t\t\r"workUnit": "",\n')
+            fl.write('\t\t\r"title": ""\n')
+            fl.write('\t\r}],\n')
+
             fl.write('\t\r"OC": [{\n')
             fl.write('\t\t\r"year": "",\n')
             fl.write('\t\t\r"territory": ""\n')
