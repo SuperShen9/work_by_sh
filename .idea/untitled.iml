@@ -3,10 +3,11 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
     <content url="file://D:/pandas" />
-    <orderEntry type="jdk" jdkName="Python 3.6.0 (D:\Program Files (x86)\Anaconda_3\python.exe)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 2.7.13 (D:\Program Files (x86)\Anaconda_double\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="coin_quant_class_0417" />
-    <orderEntry type="module" module-name="最后的代码练习" />
+    <orderEntry type="module" module-name="finally project" />
+    <orderEntry type="module" module-name="cpin_quant_class" />
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="Nosetests" />

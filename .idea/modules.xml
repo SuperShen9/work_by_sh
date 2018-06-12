@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://D:/coin_quant_class_0417/.idea/coin_quant_class_0417.iml" filepath="D:/coin_quant_class_0417/.idea/coin_quant_class_0417.iml" />
+      <module fileurl="file://D:\coin_quant_class_0417\.idea\coin_quant_class_0417.iml" filepath="D:\coin_quant_class_0417\.idea\coin_quant_class_0417.iml" />
+      <module fileurl="file://D:/BaiduYunDownload/coin_quant_class_0518/coin_quant_class/.idea/cpin_quant_class.iml" filepath="D:/BaiduYunDownload/coin_quant_class_0518/coin_quant_class/.idea/cpin_quant_class.iml" />
+      <module fileurl="file://D:/finally project/.idea/finally project.iml" filepath="D:/finally project/.idea/finally project.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/untitled.iml" filepath="$PROJECT_DIR$/.idea/untitled.iml" />
-      <module fileurl="file://D:/最后的代码练习/.idea/最后的代码练习.iml" filepath="D:/最后的代码练习/.idea/最后的代码练习.iml" />
     </modules>
   </component>
 </project>
