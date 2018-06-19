@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 # author:Super
 import pandas as pd
-import time,os,openpyxl
-# os.chdir('C:\\Users\Administrator\Desktop')
-# import codecs
-# print type('中文'.decode('utf-8')),type(u'中文')
-#
-# f = codecs.open("text.txt", "a", "utf-8")
-# f.write(u'中文')
-# f.close()
+import matplotlib.pyplot as plt
+pd.set_option('expand_frame_repr', False)
+df=pd.read_hdf('D:\BaiduYunDownload\coin_quant_class_0518\coin_quant_class\data\class8\eth_1min_data.h5')
+
+print df[df['candle_begin_time']>pd.to_datetime('20160606')].head(100)
+
+# x=df['candle_begin_time']
+# y=df['volume']
+# plt.plot(x, y)
+# plt.show()
